@@ -1,5 +1,5 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
-Deep Generative Models for Natural Language Processing, conference mapping and paper list
+Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list
 
 ![title](https://github.com/Francix/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/titlepage.jpeg)
 

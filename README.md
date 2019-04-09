@@ -3,12 +3,17 @@ Deep Generative Models for Natural Language Processing, conference mapping and p
 
 ----
 
-## Latent models for NLP 
+## Resources 
 
-#### A Tutorial on Deep Latent Variable Models of Natural Language, EMNLP 18 
-* Yoon Kim, Sam Wiseman and Alexander M. Rush
+#### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
+#### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
+* Yishu Miao
 
+#### Columbia STAT 8201, Deep Generative Models ([link](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
+
+#### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
 ----
 

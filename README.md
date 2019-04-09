@@ -17,6 +17,8 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 #### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
+#### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
+
 
 ----
 

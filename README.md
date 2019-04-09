@@ -11,7 +11,7 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
 #### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
-* Yishu Miao
+* Yishu Miao, Oxford
 
 #### Columbia STAT 8201, Deep Generative Models ([link](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
 
@@ -23,13 +23,13 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 ## Variational Inference, NLP Side 
 
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder
-* Caio Corro, Ivan Titov
+* Caio Corro, Ivan Titov, Edinburgh
 
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
-* Jiacheng Xu and Greg Durrett 
+* Jiacheng Xu and Greg Durrett, UT Austin
 
 #### Semi-amortized variational autoencoders, ICML 18 
-* Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush
+* Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
 * The **posterior collapse** phenomenon: the variational posterior collapses to the prior and the generative model ignores the latent variable (Dispite all the other stuffs in the intro, I think this is the most important point/ motivation of this paper since the whole NLP community suffer from this for a long time). 
 * SVI: view the variational posterior as a model parameter, optimize over is (i.e. the posterior dist. parameter)
 * AVI: view the variational posterior as a output of the recognition network (rather than the model parameter), Optimize the recognition network. 
@@ -39,7 +39,7 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 * Saliency analysis: a visualization of the relationship between the latent variable and the input/ output, as an example of interpretability (or just random guess and coincidence, who knows). 
 
 #### Neural variational inference for text processing, ICML 16 
-* Yishu Miao, Lei Yu, Phil Blunsom
+* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
 
 #### Lagging Inference Networks and Posterior Collapse in Variational Autoencoders, ICLR 19 
 * Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick

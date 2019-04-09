@@ -15,32 +15,6 @@ Deep Generative Models for Natural Language Processing, conference mapping and p
 
 #### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
-----
-
-## Paraphrase and Language Diversity 
-
-#### A Deep Generative Framework for Paraphrase Generation, AAAI 18
-* Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
-
-#### DP-GAN: Diversity-Promoting Generative Adversarial Network for Generating Informative and Diversified Text, EMNLP 18 
-* Jingjing Xu, Xuancheng Ren, Junyang Lin, Xu Sun
-
-#### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
-* Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
-
-
-----
-
-## Topic-aware Langauge Generation
-
-#### TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
-* Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
-
-#### Topic Compositional Neural Language Model, AISTATS 18 
-* Wenlin Wang, Zhe Gan, Wenqi Wang, Dinghan Shen, Jiaji Huang, Wei Ping, Sanjeev Satheesh, Lawrence Carin
-
-#### Topic Aware Neural Response Generation, AAAI 17 
-* Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
 
 ----
 
@@ -97,3 +71,30 @@ Deep Generative Models for Natural Language Processing, conference mapping and p
 * Inspired by the weighted reservoir sampling, we construct Gumbel-weights for each entry. (Also recall the relationship of Uniform dist., Exponential dist., Gumbel dist., and Discrete dist. we discussed last week.)
 * Then we use a differentiable top-k procedure to get a k-hot vector. This procedure repeat softmax k times, after each step, it set the weight of the previously sampled entry to be -inf (softly). I think this procedure is smart. 
 
+
+----
+
+## Paraphrase and Language Diversity 
+
+#### A Deep Generative Framework for Paraphrase Generation, AAAI 18
+* Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
+
+#### DP-GAN: Diversity-Promoting Generative Adversarial Network for Generating Informative and Diversified Text, EMNLP 18 
+* Jingjing Xu, Xuancheng Ren, Junyang Lin, Xu Sun
+
+#### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
+* Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
+
+
+----
+
+## Topic-aware Langauge Generation
+
+#### TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
+* Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
+
+#### Topic Compositional Neural Language Model, AISTATS 18 
+* Wenlin Wang, Zhe Gan, Wenqi Wang, Dinghan Shen, Jiaji Huang, Wei Ping, Sanjeev Satheesh, Lawrence Carin
+
+#### Topic Aware Neural Response Generation, AAAI 17 
+* Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma

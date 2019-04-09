@@ -12,12 +12,10 @@ Deep Generative Models for Natural Language Processing, conference mapping and p
 
 ----
 
-## Paraphrase and Language Diversity 
+## Paraphrase and Language Diversity 
 
 #### A Deep Generative Framework for Paraphrase Generation, AAAI 18
-
-- Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
-
+* Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
 
 #### DP-GAN: Diversity-Promoting Generative Adversarial Network for Generating Informative and Diversified Text, EMNLP 18 
 * Jingjing Xu, Xuancheng Ren, Junyang Lin, Xu Sun
@@ -37,8 +35,7 @@ Deep Generative Models for Natural Language Processing, conference mapping and p
 * Wenlin Wang, Zhe Gan, Wenqi Wang, Dinghan Shen, Jiaji Huang, Wei Ping, Sanjeev Satheesh, Lawrence Carin
 
 #### Topic Aware Neural Response Generation, AAAI 17 
-
-
+* Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
 
 ----
 

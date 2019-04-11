@@ -52,7 +52,8 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 #### Improved Variational Autoencoders for Text Modeling using Dilated Convolutions, ICML 17 
 * Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick
 
-
+#### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
+* Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
 
 ----
 
@@ -93,6 +94,12 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 ----
 
 ## Topic-aware Langauge Generation
+
+#### Topic-Guided Variational Autoencoders for Text Generation, NAACL 19 
+* Wenlin Wang, Zhe Gan, Hongteng Xu, Ruiyi Zhang, Guoyin Wang, Dinghan Shen, Changyou Chen, Lawrence Carin. Duke & MS & Infinia & U Buffalo
+* A neural topic model 
+* A Gaussian Mixture latent prior and posterior 
+* A Householder Flow for inferring the Gaussian Mixture
 
 #### TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
 * Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley

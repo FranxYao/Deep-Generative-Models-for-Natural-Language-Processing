@@ -7,6 +7,9 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 ## Resources 
 
+#### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
+* This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
+
 #### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
 * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
@@ -14,11 +17,11 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 * Yishu Miao, Oxford
 
 #### Columbia STAT 8201, Deep Generative Models ([link](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
+* This is the seminar course I took at Columbia. The first part of this course focus on VAEs and the second part focus on GANs. 
 
 #### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
 #### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
-
 
 ----
 

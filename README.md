@@ -59,6 +59,10 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 ## Variational Inference, ML Side 
 
+#### Adversarially Regularized Autoencoders, ICML 18 
+* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
+* A wrapup of the major VAE/ GANs 
+
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves
 * This paper gives a method for reparameterize Gaussian Mixture 

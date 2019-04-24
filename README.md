@@ -65,6 +65,7 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 #### Adversarially Regularized Autoencoders, ICML 18 
 * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
 * A wrapup of the major VAE/ GANs 
+* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
 
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves

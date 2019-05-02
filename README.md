@@ -25,10 +25,17 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 ----
 
-## Variational Inference, NLP Side 
+## NLP Side 
+
+Actually, whenever talking about using the DGM techniques for NLP, I always feel these are like black magic compared with seq2seq and MLE. 
 
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder
 * Caio Corro, Ivan Titov, Edinburgh
+* Model parsing tree as MRF, differentiable sampling by perturbing. 
+
+#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. Arxiv 19
+* Wouter Kool, Herke van Hoof, Max Welling
+* Gumbel topk, stochastic differentiable beam search 
 
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
 * Jiacheng Xu and Greg Durrett, UT Austin
@@ -60,7 +67,7 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 ----
 
-## Variational Inference, ML Side 
+## ML Side 
 
 #### Adversarially Regularized Autoencoders, ICML 18 
 * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR

@@ -23,17 +23,24 @@ Deep Generative Models for Natural Language Processing, resources, conference ma
 
 #### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
 
+#### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
+
 ----
+
+Amoung the three modern generative models (VAEs, GANs, and Normalizing Flows), we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
+
+Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to know.
 
 ## NLP Side 
 
-Actually, whenever talking about using the DGM techniques for NLP, I always feel these are like black magic compared with seq2seq and MLE. 
-
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder
 * Caio Corro, Ivan Titov, Edinburgh
-* Model parsing tree as MRF, differentiable sampling by perturbing. 
+* Model parsing tree as MRF, differentiable sampling by perturbing w. Gumbel noise. 
 
-#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. Arxiv 19
+#### Learning About Language with Normalizing Flows 
+* Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+
+#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling
 * Gumbel topk, stochastic differentiable beam search 
 
@@ -69,6 +76,12 @@ Actually, whenever talking about using the DGM techniques for NLP, I always feel
 
 ## ML Side 
 
+#### Auto-Encoding Variational Bayes, Arxiv 13 
+* Diederik P. Kingma, Max Welling
+
+#### Variational Inference: A Review for Statisticians, Arxiv 18
+* David M. Blei, Alp Kucukelbir, Jon D. McAuliffe 
+
 #### Adversarially Regularized Autoencoders, ICML 18 
 * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
 * A wrapup of the major VAE/ GANs 
@@ -77,12 +90,6 @@ Actually, whenever talking about using the DGM techniques for NLP, I always feel
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves
 * This paper gives a method for reparameterize Gaussian Mixture 
-
-#### Auto-Encoding Variational Bayes, Arxiv 13 
-* Diederik P. Kingma, Max Welling
-
-#### Variational Inference: A Review for Statisticians, Arxiv 18
-* David M. Blei, Alp Kucukelbir, Jon D. McAuliffe 
 
 #### Differentiable Subset Sampling
 * Sang Michael Xie and Stefano Ermon
@@ -98,9 +105,6 @@ Actually, whenever talking about using the DGM techniques for NLP, I always feel
 
 #### A Deep Generative Framework for Paraphrase Generation, AAAI 18
 * Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
-
-#### DP-GAN: Diversity-Promoting Generative Adversarial Network for Generating Informative and Diversified Text, EMNLP 18 
-* Jingjing Xu, Xuancheng Ren, Junyang Lin, Xu Sun
 
 #### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
 * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan

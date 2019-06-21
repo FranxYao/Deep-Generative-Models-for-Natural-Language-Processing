@@ -31,21 +31,38 @@ Amoung the three modern generative models (VAEs, GANs, and Normalizing Flows), w
 
 Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to know.
 
+The order of the papers are not very well organized. I will improve it. 
+
 ## NLP Side 
 
-#### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder
-* Caio Corro, Ivan Titov, Edinburgh
-* Model parsing tree as MRF, differentiable sampling by perturbing w. Gumbel noise. 
+We start from structural inference. Parsing is a typical example. 
 
-#### Learning About Language with Normalizing Flows 
-* Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+#### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
+* Caio Corro, Ivan Titov, Edinburgh
+* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
+
+#### Unsupervised Recurrent Neural Network Grammars, NAACL 19 
+* Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
+* Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
+
+#### Recurrent Neural Network Grammars. NAACL 16
+* Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
+* A transaction based generative model to model the joint prob of trees and sentences. 
+* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist.  
 
 #### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling
 * Gumbel topk, stochastic differentiable beam search 
 
+Now we come back to discuss the posterior collapse problem.
+
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
 * Jiacheng Xu and Greg Durrett, UT Austin
+
+#### Adversarially Regularized Autoencoders, ICML 18 
+* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
+* A wrapup of the major VAE/ GANs 
+* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
 
 #### Semi-amortized variational autoencoders, ICML 18 
 * Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
@@ -57,24 +74,26 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 * Experiments: higher KL (indicating that latent variables are not collepsed) and lower ppl (performance metrics). 
 * Saliency analysis: a visualization of the relationship between the latent variable and the input/ output, as an example of interpretability (or just random guess and coincidence, who knows). 
 
-#### Neural variational inference for text processing, ICML 16 
-* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
-
 #### Lagging Inference Networks and Posterior Collapse in Variational Autoencoders, ICLR 19 
 * Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick
 
 #### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
 * Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
+The back to more basic VI in NLP
+
+#### Neural variational inference for text processing, ICML 16 
+* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
+
 #### Improved Variational Autoencoders for Text Modeling using Dilated Convolutions, ICML 17 
 * Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick
 
-#### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
-* Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
 
 ----
 
 ## ML Side 
+
+Now the ML side, we start from classical literature
 
 #### Auto-Encoding Variational Bayes, Arxiv 13 
 * Diederik P. Kingma, Max Welling
@@ -82,10 +101,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 #### Variational Inference: A Review for Statisticians, Arxiv 18
 * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe 
 
-#### Adversarially Regularized Autoencoders, ICML 18 
-* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
-* A wrapup of the major VAE/ GANs 
-* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
+More on reparameterization: 
 
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves
@@ -98,6 +114,10 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 * Inspired by the weighted reservoir sampling, we construct Gumbel-weights for each entry. (Also recall the relationship of Uniform dist., Exponential dist., Gumbel dist., and Discrete dist. we discussed last week.)
 * Then we use a differentiable top-k procedure to get a k-hot vector. This procedure repeat softmax k times, after each step, it set the weight of the previously sampled entry to be -inf (softly). I think this procedure is smart. 
 
+Then we look at normalizing flows, will be more on this: 
+
+#### Learning About Language with Normalizing Flows 
+* Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
 
 ----
 
@@ -113,6 +133,9 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 ----
 
 ## Topic-aware Langauge Generation
+
+#### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
+* Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
 
 #### Topic-Guided Variational Autoencoders for Text Generation, NAACL 19 
 * Wenlin Wang, Zhe Gan, Hongteng Xu, Ruiyi Zhang, Guoyin Wang, Dinghan Shen, Changyou Chen, Lawrence Carin. Duke & MS & Infinia & U Buffalo

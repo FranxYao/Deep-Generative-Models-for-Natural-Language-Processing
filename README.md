@@ -1,6 +1,8 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
 Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list
 
+Yao Fu, Columbia University, yao.fu@columbia.edu
+
 ![title](https://github.com/Francix/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/titlepage.jpeg)
 
 ----

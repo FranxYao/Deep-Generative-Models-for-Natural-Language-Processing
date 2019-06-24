@@ -121,6 +121,12 @@ Then we look at normalizing flows, will be more on this:
 #### Learning About Language with Normalizing Flows 
 * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
 
+---- 
+
+## Latent Structures
+
+Now we take a look at more structural latent models. 
+
 ----
 
 ## Paraphrase and Language Diversity 

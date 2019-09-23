@@ -7,7 +7,26 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 ----
 
+When talking about deep generative models, one usually refers to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows.
+
+Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
+
+Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to know.
+
 ## Resources 
+
+Before the beginning of our journey, the fundation of the DGMs is build upon probabilistic graphical models. So we start from these models 
+
+#### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
+* This course talks about the foudations of probabilistic modeling, graphical models, and approximate inference. 
+
+#### Xing's Probabilistic Graphical Models, 10-708 at CMU ([link](https://sailinglab.github.io/pgm-spring-2019/))
+* This is a really heavy course with extensive materials. There are 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. All lecture notes, vedio recordings, and homeworks are open-sourced. 
+
+#### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
+* This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at many related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
+
+Now we go to the realm of DGMs
 
 #### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
 * This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
@@ -29,41 +48,27 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 ----
 
-Amoung the three modern generative models (VAEs, GANs, and Normalizing Flows), we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
-
-Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to know.
-
 The order of the papers are not very well organized. I will improve it. 
 
 ## NLP Side 
 
-We start from structural inference. Parsing is a typical example. 
+We will focus on two topics: generation and structural inference. We start from generation
 
-#### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
-* Caio Corro, Ivan Titov, Edinburgh
-* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
+#### Generating Sentences from a Continuous Space, CoNLL 15
+* Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
+* This seems to be the first paper using VAEs for NLP.
+* **BUT** it seems that many of the results in the paper are not that solid/ could be improved by better models ("not that solid" seems to be not a proper word choice, I am not a native speaker so appologize for (perhaps) the improper wording, please give me suggessions on how to critisize with suitable words)
+* An important point of this paper is about the posterior collapse. This problem is addressed by the following papers.
 
-#### Unsupervised Recurrent Neural Network Grammars, NAACL 19 
-* Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
-* Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
-
-#### Recurrent Neural Network Grammars. NAACL 16
-* Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
-* A transaction based generative model to model the joint prob of trees and sentences. 
-* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist.  
-
-#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
-* Wouter Kool, Herke van Hoof, Max Welling
-* Gumbel topk, stochastic differentiable beam search 
-
-Now we come back to discuss the posterior collapse problem.
 
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
 * Jiacheng Xu and Greg Durrett, UT Austin
+* A uniform distribution on a unit sphere is helpful to the posterior problem. 
 
 #### Adversarially Regularized Autoencoders, ICML 18 
 * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
 * A wrapup of the major VAE/ GANs 
+* A learned prior to tackle the posterior collapse. 
 * Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
 
 #### Semi-amortized variational autoencoders, ICML 18 
@@ -82,6 +87,33 @@ Now we come back to discuss the posterior collapse problem.
 #### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
 * Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
+
+Now we talk about structural inference. We start from the RNNG model, an important model combining language modeling and parsing. 
+
+#### Recurrent Neural Network Grammars. NAACL 16
+* Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
+* A transaction based generative model to model the joint prob of trees and sentences. 
+* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist.  
+
+Later the RNNG model is extended to be an unsupervised version:
+
+#### Unsupervised Recurrent Neural Network Grammars, NAACL 19 
+* Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
+* Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
+
+#### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
+* Caio Corro, Ivan Titov, Edinburgh
+* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
+
+
+
+#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+* Wouter Kool, Herke van Hoof, Max Welling
+* Gumbel topk, stochastic differentiable beam search 
+
+Now we come back to discuss the posterior collapse problem.
+
+
 The back to more basic VI in NLP
 
 #### Neural variational inference for text processing, ICML 16 
@@ -95,7 +127,7 @@ The back to more basic VI in NLP
 
 ## ML Side 
 
-Now the ML side, we start from classical literature
+Now the ML side, we start from VAEs
 
 #### Auto-Encoding Variational Bayes, Arxiv 13 
 * Diederik P. Kingma, Max Welling
@@ -109,23 +141,33 @@ More on reparameterization:
 * Alex Graves
 * This paper gives a method for reparameterize Gaussian Mixture 
 
-#### Differentiable Subset Sampling
-* Sang Michael Xie and Stefano Ermon
-* The gumbel-softmax gives sample of a single entry from a set. 
-* Instead of sampling one single entry, we want to sample a subset of size k from a set of size n. How to make this procedure differentiable? 
-* Inspired by the weighted reservoir sampling, we construct Gumbel-weights for each entry. (Also recall the relationship of Uniform dist., Exponential dist., Gumbel dist., and Discrete dist. we discussed last week.)
-* Then we use a differentiable top-k procedure to get a k-hot vector. This procedure repeat softmax k times, after each step, it set the weight of the previously sampled entry to be -inf (softly). I think this procedure is smart. 
 
-Then we look at normalizing flows, will be more on this: 
+Now GANs
+
+#### Generative Adversarial Networks, NIPS 
+* Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
+* GAN origin 
+* This original GAN paper use the KL divergence to measure the distance between probability distributions, which may lead to the vanishing of gradient. To tackle this problem, the wassertein GAN is proposed with the earch mover distance. The following two papers shows the birth of wGAN.
+
+#### Towards principled methods for training generative adversarial networks, ICLR 2017 
+* Martin Arjovsky and Leon Bottou
+* Discusses the distance between distributions, but uses many hacky methods.
+
+#### Wasserstein GAN
+* Martin Arjovsky, Soumith Chintala, Léon Bottou
+* The principled methods, born from hacky methods. 
+
+
+Then we look at normalizing flows: 
+
+#### Variational Inference with Normalizing Flows, ICML 15 
+* Danilo Jimenez Rezende, Shakir Mohamed
+
+#### Improved Variational Inference with Inverse Autoregressive Flow
+* Diederik P Kingma, Tim Salimans, Rafal Jozefowicz, Xi Chen, Ilya Sutskever, Max Welling
 
 #### Learning About Language with Normalizing Flows 
 * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
-
----- 
-
-## Latent Structures
-
-Now we take a look at more structural latent models. 
 
 ----
 

@@ -1,5 +1,5 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
-Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list
+DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 

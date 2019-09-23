@@ -144,7 +144,7 @@ More on reparameterization:
 
 Now GANs
 
-#### Generative Adversarial Networks, NIPS 
+#### Generative Adversarial Networks, NIPS 14
 * Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
 * GAN origin 
 * This original GAN paper use the KL divergence to measure the distance between probability distributions, which may lead to the vanishing of gradient. To tackle this problem, the wassertein GAN is proposed with the earch mover distance. The following two papers shows the birth of wGAN.

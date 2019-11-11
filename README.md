@@ -65,12 +65,19 @@ The order of the papers are not very well organized. I will improve it.
 
 We will focus on two topics: generation and structural inference. We start from generation
 
+### VAEs
+
 #### Generating Sentences from a Continuous Space, CoNLL 15
 * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
 * This seems to be the first paper using VAEs for NLP.
 * **BUT** it seems that many of the results in the paper are not that solid/ could be improved by better models ("not that solid" seems to be not a proper word choice, I am not a native speaker so appologize for (perhaps) the improper wording, please give me suggessions on how to critisize with suitable words)
 * An important point of this paper is about the posterior collapse. This problem is addressed by the following papers.
 
+#### Neural variational inference for text processing, ICML 16 
+* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
+
+#### Improved Variational Autoencoders for Text Modeling using Dilated Convolutions, ICML 17 
+* Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick
 
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
 * Jiacheng Xu and Greg Durrett, UT Austin
@@ -98,13 +105,22 @@ We will focus on two topics: generation and structural inference. We start from 
 #### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
 * Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
+### Structural Inference
 
-Now we talk about structural inference. We start from the RNNG model, an important model combining language modeling and parsing. 
+Now we talk about structural inference. This induces chunking, tagging and parsing. 
+
+#### An introduction to Conditional Random Fields. 
+
+#### Structured Attention Networks. 
+
+#### Differentiable Dynamic Programming for Structured Prediction and Attention 
+
+#### Inside-Outside and Forward-Backward Algorithms Are Just Backprop
 
 #### Recurrent Neural Network Grammars. NAACL 16
 * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
 * A transaction based generative model to model the joint prob of trees and sentences. 
-* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist.  
+* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist. 
 
 Later the RNNG model is extended to be an unsupervised version:
 
@@ -117,22 +133,12 @@ Later the RNNG model is extended to be an unsupervised version:
 * Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
 
 
+### The Gumbel Trick
+
 
 #### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling
 * Gumbel topk, stochastic differentiable beam search 
-
-Now we come back to discuss the posterior collapse problem.
-
-
-The back to more basic VI in NLP
-
-#### Neural variational inference for text processing, ICML 16 
-* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
-
-#### Improved Variational Autoencoders for Text Modeling using Dilated Convolutions, ICML 17 
-* Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick
-
 
 ----
 

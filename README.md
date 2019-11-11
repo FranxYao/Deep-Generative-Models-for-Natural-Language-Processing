@@ -26,7 +26,18 @@ Before the beginning of our journey, the fundation of the DGMs is build upon pro
 #### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
 * This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at many related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
 
-Now we go to the realm of DGMs
+Also there are many books that worth learning.
+
+#### Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
+* The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
+* If you only have time reading one chapter, read section 10. 
+* This book is also a great book for building systemacal knowledge of graphical models. 
+
+#### Machine Learning: A Probabilistic Perspective. Kevin P. Murphy. 2012
+* Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods, rather than a textbook, because it is super-detailed. 
+* Basically you can find a galary of every classical graphical models from this book. 
+
+Now we go to the realm of DGMs. 
 
 #### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
 * This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 

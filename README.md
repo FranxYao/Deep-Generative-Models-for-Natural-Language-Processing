@@ -135,6 +135,11 @@ Later the RNNG model is extended to be an unsupervised version:
 
 ### The Gumbel Trick
 
+#### Categorical Reparameterization with Gumbel-Softmax
+
+#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables.
+
+#### Reparameterizable Subset Sampling via Continuous Relaxations
 
 #### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling

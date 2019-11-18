@@ -63,6 +63,12 @@ Now we go to the realm of DGMs.
 
 ----
 
+<img src="src/DGM4NLP.jpg" alt="example"
+	title="Example" width="600"  />
+The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to it as fancy visualization). 
+
+----
+
 
 ## NLP Side 
 

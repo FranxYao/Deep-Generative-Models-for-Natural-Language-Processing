@@ -70,7 +70,7 @@ The above is a _really simplified_ mindmap. I am thinking about how to improve i
 
 One sidenote for my fellow Chinese peers is, I feel like this graphical modeling part is really missed in our college education curriculum. So I sincerely suggest taking a serious look. 
 
-想要跟国内的同学们分享的一点是，图模型的部分在国内计算机的课程体系中严重缺失，我在北大本科的时候几乎听都没听说过，很多内容都是到了哥大之后补上的。但这是机器学习中相当理论和核心的一部分，因此需要认真对待。PRML 中的变分推断一章是很好的入门材料。
+想要跟国内的同学们分享的一点是，图模型的部分在国内计算机的课程体系中严重缺失，我在北大本科的时候几乎听都没听说过，很多内容都是到了哥大之后补上的。但这是机器学习中相当理论和核心的一部分，因此需要认真对待。PRML 中的变分推断一章是很好的入门材料。 
 
 ----
 

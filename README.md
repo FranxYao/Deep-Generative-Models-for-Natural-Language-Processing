@@ -1,7 +1,7 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
 DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
 
-This list is continuously under construction. Some of the papers are not very well organized. I will improve it. Please do send me push requests or issues if you have any suggestions (and I'm looking for collaborators!). 
+This list is continuously under construction. Some of the papers are not very well organized. I will improve it. Please do send me issues if you have any suggestions (and I'm looking for collaborators!). 
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 

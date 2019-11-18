@@ -1,5 +1,7 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
-DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list
+DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
+
+This list is continuously under construction. Some of the papers are not very well organized. I will improve it. Please do send me push requests or issues if you have any suggestions (and I'm looking for collaborators!). 
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
@@ -26,7 +28,7 @@ Before the beginning of our journey, the fundation of the DGMs is build upon pro
 #### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
 * This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at many related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
 
-Also there are many books that worth learning.
+The following two books are the very classical textbooks. I have not read all of them but I do know certain nlp-related parts. 
 
 #### Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
 * The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
@@ -36,6 +38,7 @@ Also there are many books that worth learning.
 #### Machine Learning: A Probabilistic Perspective. Kevin P. Murphy. 2012
 * Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods, rather than a textbook, because it is super-detailed. 
 * Basically you can find a galary of every classical graphical models from this book. 
+* One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
 
 Now we go to the realm of DGMs. 
 
@@ -50,6 +53,7 @@ Now we go to the realm of DGMs.
 
 #### Columbia STAT 8201, Deep Generative Models ([link](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
 * This is the seminar course I took at Columbia. The first part of this course focus on VAEs and the second part focus on GANs. 
+* The discussion about wesserstein GANs in this course is amazing. Do take a look. 
 
 #### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
@@ -59,13 +63,12 @@ Now we go to the realm of DGMs.
 
 ----
 
-The order of the papers are not very well organized. I will improve it. 
 
 ## NLP Side 
 
 We will focus on two topics: generation and structural inference. We start from generation
 
-### VAEs
+### Generation w. VAEs
 
 #### Generating Sentences from a Continuous Space, CoNLL 15
 * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
@@ -109,13 +112,16 @@ We will focus on two topics: generation and structural inference. We start from 
 
 Now we talk about structural inference. This induces chunking, tagging and parsing. 
 
-#### An introduction to Conditional Random Fields. 
+#### An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
+* Linear-chain CRFs. Modeling, inference and parameter estimation
 
-#### Structured Attention Networks. 
+#### Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
 
-#### Differentiable Dynamic Programming for Structured Prediction and Attention 
+#### Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
+* To differentiate the max operator in dynamic programming. 
 
-#### Inside-Outside and Forward-Backward Algorithms Are Just Backprop
+#### Structured Attention Networks. ICLR 2017 
+* Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
 
 #### Recurrent Neural Network Grammars. NAACL 16
 * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
@@ -133,13 +139,16 @@ Later the RNNG model is extended to be an unsupervised version:
 * Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
 
 
-### The Gumbel Trick
+### The Gumbel trick to reparameterize discrete distributions. 
 
-#### Categorical Reparameterization with Gumbel-Softmax
+#### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
+* Eric Jang, Shixiang Gu, Ben Poole
 
-#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables.
+#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
+* Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
-#### Reparameterizable Subset Sampling via Continuous Relaxations
+#### Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
+* Sang Michael Xie and Stefano Ermon
 
 #### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling
@@ -151,20 +160,27 @@ Later the RNNG model is extended to be an unsupervised version:
 
 Now the ML side, we start from VAEs
 
+### VAEs 
+
 #### Auto-Encoding Variational Bayes, Arxiv 13 
 * Diederik P. Kingma, Max Welling
 
 #### Variational Inference: A Review for Statisticians, Arxiv 18
 * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe 
 
-More on reparameterization: 
+More on reparameterization: to reparameterize gaussian mixture, permutation matrix, and rejection samplers(Gamma and Dirichlet).   
 
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves
-* This paper gives a method for reparameterize Gaussian Mixture 
+* To reparameterize Gaussian Mixture 
 
+#### Reparameterization Gradients through Acceptance-Rejection Sampling Algorithms. AISTATS 2017 
+* Christian A. Naesseth, Francisco J. R. Ruiz, Scott W. Linderman, David M. Blei
 
-Now GANs
+#### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
+* Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
+
+### GANs
 
 #### Generative Adversarial Networks, NIPS 14
 * Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
@@ -180,7 +196,7 @@ Now GANs
 * The principled methods, born from hacky methods. 
 
 
-Then we look at normalizing flows: 
+### Normalizing Flows
 
 #### Variational Inference with Normalizing Flows, ICML 15 
 * Danilo Jimenez Rezende, Shakir Mohamed
@@ -193,7 +209,12 @@ Then we look at normalizing flows:
 
 ----
 
-## Paraphrase and Language Diversity 
+## More Applications. 
+
+### Paraphrase and Diversity 
+
+#### Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
+* Yao Fu, Yansong Feng, and John P. Cunningham 
 
 #### A Deep Generative Framework for Paraphrase Generation, AAAI 18
 * Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
@@ -202,9 +223,7 @@ Then we look at normalizing flows:
 * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
 
 
-----
-
-## Topic-aware Langauge Generation
+### Topic-aware Langauge Generation
 
 #### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
 * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford

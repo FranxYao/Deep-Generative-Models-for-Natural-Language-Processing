@@ -17,6 +17,8 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 
 ## Resources 
 
+### Graphical Models Foundations
+
 Before the beginning of our journey, the fundation of the DGMs is build upon probabilistic graphical models. So we start from these models 
 
 #### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
@@ -39,6 +41,8 @@ The following two books are the very classical textbooks. I have not read all of
 * Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods, rather than a textbook, because it is super-detailed. 
 * Basically you can find a galary of every classical graphical models from this book. 
 * One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
+
+### Deep Generative Models
 
 Now we go to the realm of DGMs. 
 

@@ -169,7 +169,25 @@ Later the RNNG model is extended to be an unsupervised version:
 
 ## ML Side 
 
-Now the ML side, we start from VAEs
+Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC and VI, as the two most widely used approximate inference methods 
+
+### Markov Chain Monte Carlo, MCMC 
+
+#### Probabilistic inference using Markov chain Monte Carlo methods. 1993 
+* Radford M Neal 
+* Markov Chains; Gibbs Sampling; Metropolis-Hastings 
+
+Sequential Monte Carlo and Hamiltonian Monte Carlo TBC. 
+
+### Variational Inference, VI 
+
+#### Variational Inference: A Review for Statisticians. 
+* David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
+* Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
+
+#### Stochastic Variational Inference
+* Matthew D. Hoffman, David M. Blei, Chong Wang, John Paisley
+* Natural gradient of the ELBO; stochastic optimization; bayesian non-parameterics for the hierarchical dirichlet process. 
 
 ### VAEs 
 

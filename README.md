@@ -17,6 +17,8 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 
 ## Resources 
 
+### Graphical Models Foundations
+
 Before the beginning of our journey, the fundation of the DGMs is build upon probabilistic graphical models. So we start from these models 
 
 #### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
@@ -40,6 +42,8 @@ The following two books are the very classical textbooks. I have not read all of
 * Basically you can find a galary of every classical graphical models from this book. 
 * One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
 
+### Deep Generative Models
+
 Now we go to the realm of DGMs. 
 
 #### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
@@ -61,7 +65,10 @@ Now we go to the realm of DGMs.
 
 #### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
 
+#### Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
+
 ----
+## A Roadmap 
 
 <img src="src/DGM4NLP.jpg" alt="example"
 	title="Example" width="600"  />
@@ -209,6 +216,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
 * Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
 
+#### Implicit Reparameterization Gradients. NeurIPS 2018. 
+* Michael Figurnov, Shakir Mohamed, and Andriy Mnih
+* Really smart way to reparameterize many complex distributions.
+
+
 ### GANs
 
 #### Generative Adversarial Networks, NIPS 14
@@ -235,6 +247,17 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Learning About Language with Normalizing Flows 
 * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+
+#### Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
+* Zachary M. Ziegler and Alexander M. Rush
+
+----
+## Reflections and Critics
+
+Really need more papers for on this part 
+
+#### Do Deep Generative Models Know What They Don't Know? ICLR 2019 
+* Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
 ----
 

@@ -236,6 +236,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Martin Arjovsky, Soumith Chintala, Léon Bottou
 * The principled methods, born from hacky methods. 
 
+#### InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets. NIPS 2016
+* Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel. UC Berkeley. OpenAI
+* Variational mutual information maximization; unsupervised disentangled representation learning. 
+* NOTE: in ICML 19, the unsupervised disentangled representation learning is challenged by: _Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations_. 
+* But still, this is an informative and interesting paper that worth reading. Contrasting the two papers will be more interesting. 
 
 ### Normalizing Flows
 

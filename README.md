@@ -135,12 +135,14 @@ Now we talk about structural inference. This induces chunking, tagging and parsi
 * Linear-chain CRFs. Modeling, inference and parameter estimation
 
 #### Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
+* As the name indicates. Check out [Sasha's implementation](https://github.com/harvardnlp/pytorch-struct) of the algos using pytorch automatic differentiation
 
 #### Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
 * To differentiate the max operator in dynamic programming. 
 
 #### Structured Attention Networks. ICLR 2017 
 * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
+* Structured attention w. linear chain and tree crfs. 
 
 #### Recurrent Neural Network Grammars. NAACL 16
 * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
@@ -202,8 +204,9 @@ Sequential Monte Carlo and Hamiltonian Monte Carlo TBC.
 #### Auto-Encoding Variational Bayes, Arxiv 13 
 * Diederik P. Kingma, Max Welling
 
-#### Variational Inference: A Review for Statisticians, Arxiv 18
-* David M. Blei, Alp Kucukelbir, Jon D. McAuliffe 
+#### Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
+* Danilo Jimenez Rezende, Shakir Mohamed, Daan Wierstra
+* Reparameterization w. deep gaussian models. 
 
 More on reparameterization: to reparameterize gaussian mixture, permutation matrix, and rejection samplers(Gamma and Dirichlet).   
 

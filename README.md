@@ -29,6 +29,7 @@ Before the beginning of our journey, the fundation of the DGMs is build upon pro
 
 #### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
 * This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at many related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
+* also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
 The following two books are the very classical textbooks. I have not read all of them but I do know certain nlp-related parts. 
 

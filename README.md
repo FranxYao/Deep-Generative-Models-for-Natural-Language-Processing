@@ -17,9 +17,33 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 
 ## Resources 
 
+### Deep Generative Models
+
+#### Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+* The DGM seminar course I took at Columbia. The first part of this course focus on VAEs and the second part focus on GANs. 
+* The discussion about the [relationships between gumbel, uniform, exponential, and categorical](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec03.pdf) is interesting, do take a look. 
+* The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
+
+#### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
+* This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
+
+#### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
+
+#### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
+* Yishu Miao, Oxford
+
+#### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
+
+#### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
+
+#### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
+
+#### Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
+
 ### Graphical Models Foundations
 
-Before the beginning of our journey, the fundation of the DGMs is build upon probabilistic graphical models. So we start from these models 
+The fundation of the DGMs is build upon probabilistic graphical models. So we take a look 
 
 #### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
 * This course talks about the foudations of probabilistic modeling, graphical models, and approximate inference. 
@@ -43,42 +67,13 @@ The following two books are the very classical textbooks. I have not read all of
 * Basically you can find a galary of every classical graphical models from this book. 
 * One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
 
-### Deep Generative Models
-
-Now we go to the realm of DGMs. 
-
-#### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
-* This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
-
-#### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
-* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
-
-#### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
-* Yishu Miao, Oxford
-
-#### Columbia STAT 8201, Deep Generative Models ([link](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
-* This is the seminar course I took at Columbia. The first part of this course focus on VAEs and the second part focus on GANs. 
-* The discussion about wesserstein GANs in this course is amazing. Do take a look. 
-
-#### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
-
-#### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
-
-#### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
-
-#### Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
-
 ----
 ## A Roadmap 
 
 <img src="src/DGM4NLP.jpg" alt="example"
 	title="Example" width="600"  />
 
-The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to it as fancy visualization). Please do give me suggestions. 
-
-One sidenote for my fellow Chinese peers is, I feel like this graphical modeling part is really missed in our college education curriculum. So I sincerely suggest taking a serious look. 
-
-想要跟国内的同学们分享的一点是，图模型的部分在国内计算机的课程体系中严重缺失，我在北大本科的时候几乎听都没听说过，很多内容都是到了哥大之后补上的。但这是机器学习中相当理论和核心的一部分，因此需要认真对待。PRML 中的变分推断一章是很好的入门材料。 
+The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to it as fancy visualization). Please do give me suggestions.  
 
 ----
 
@@ -157,8 +152,11 @@ Later the RNNG model is extended to be an unsupervised version:
 
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
 * Caio Corro, Ivan Titov, Edinburgh
-* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). Smart move! 
+* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). 
 
+#### Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
+* Yao Fu, Yansong Feng, and John P. Cunningham 
+* Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
 
 ### The Gumbel trick to reparameterize discrete distributions. 
 
@@ -265,6 +263,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 Really need more papers for on this part 
 
+#### The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
+* Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
+* In science, many things are intuitively right yet actually wrong. Discovering these knowledges is always nontrivial and requires inspiration. 
+* This paper is an example: using the bernoulli on [0, 1] valued data (continuous) is not equivelent to binary data, and will result in a normalization constant gap. 
+
 #### Do Deep Generative Models Know What They Don't Know? ICLR 2019 
 * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
@@ -275,9 +278,6 @@ Really need more papers for on this part
 Really need more papers here. 
 
 ### Paraphrase and Diversity 
-
-#### Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
-* Yao Fu, Yansong Feng, and John P. Cunningham 
 
 #### A Deep Generative Framework for Paraphrase Generation, AAAI 18
 * Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 

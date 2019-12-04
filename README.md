@@ -1,7 +1,7 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
 DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
 
-This list is continuously under construction. Some of the papers are not very well organized. I will improve it. Please do send me issues if you have any suggestions (and I'm looking for collaborators!). 
+This list is under construction. Some of the papers are not very well organized. I will improve it. Please do send me suggestions if you have any(and I'm looking for collaborators!). 
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
@@ -13,19 +13,19 @@ When talking about deep generative models, one usually refers to three model fam
 
 Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
 
-Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to know.
+Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to be known.
 
 ## Resources 
 
 ### Deep Generative Models
 
 #### Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
-* The DGM seminar course I took at Columbia. The first part of this course focus on VAEs and the second part focus on GANs. 
+* The DGM seminar course I took at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
 * The discussion about the [relationships between gumbel, uniform, exponential, and categorical](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec03.pdf) is interesting, do take a look. 
 * The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
 
 #### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
-* This is a great guidebook for VI. It is a graph over the VI literature and discuss the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
+* This is a great guidebook for VI. It is a graph over the VI literature and it discusses the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
 
 #### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
 * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
@@ -43,19 +43,19 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 
 ### Graphical Models Foundations
 
-The fundation of the DGMs is build upon probabilistic graphical models. So we take a look 
+The fundation of the DGMs is built upon probabilistic graphical models. So we take a look at the following resources
 
 #### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
-* This course talks about the foudations of probabilistic modeling, graphical models, and approximate inference. 
+* This course talks about the foundation of probabilistic modeling, graphical models, and approximate inference. 
 
 #### Xing's Probabilistic Graphical Models, 10-708 at CMU ([link](https://sailinglab.github.io/pgm-spring-2019/))
-* This is a really heavy course with extensive materials. There are 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. All lecture notes, vedio recordings, and homeworks are open-sourced. 
+* This is a really heavy course with extensive materials. There are 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. All the lecture notes, vedio recordings, and homeworks are open-sourced. 
 
 #### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
-* This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at many related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
+* This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
 * also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
-The following two books are the very classical textbooks. I have not read all of them but I do know certain nlp-related parts. 
+The following two are classical textbooks on machine learning. I have not read all of them but I do know certain nlp-related parts. 
 
 #### Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
 * The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
@@ -73,7 +73,7 @@ The following two books are the very classical textbooks. I have not read all of
 <img src="src/DGM4NLP.jpg" alt="example"
 	title="Example" width="600"  />
 
-The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to it as fancy visualization). Please do give me suggestions.  
+The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to the visualization). Please do give me suggestions.  
 
 ----
 
@@ -87,7 +87,7 @@ We will focus on two topics: generation and structural inference. We start from 
 #### Generating Sentences from a Continuous Space, CoNLL 15
 * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
 * This seems to be the first paper using VAEs for NLP.
-* **BUT** it seems that many of the results in the paper are not that solid/ could be improved by better models ("not that solid" seems to be not a proper word choice, I am not a native speaker so appologize for (perhaps) the improper wording, please give me suggessions on how to critisize with suitable words)
+* **BUT** it seems that many of the results in the paper are not that solid/ could be improved by better models ("not that solid" seems to be not a proper word choice, I am not a native speaker so apologize for (perhaps) the improper wording, please give me suggessions on how to critisize with suitable words)
 * An important point of this paper is about the posterior collapse. This problem is addressed by the following papers.
 
 #### Neural variational inference for text processing, ICML 16 
@@ -98,7 +98,7 @@ We will focus on two topics: generation and structural inference. We start from 
 
 #### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
 * Jiacheng Xu and Greg Durrett, UT Austin
-* A uniform distribution on a unit sphere is helpful to the posterior problem. 
+* An uniform distribution on a unit sphere is helpful to the posterior problem. 
 
 #### Adversarially Regularized Autoencoders, ICML 18 
 * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
@@ -108,7 +108,7 @@ We will focus on two topics: generation and structural inference. We start from 
 
 #### Semi-amortized variational autoencoders, ICML 18 
 * Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
-* The **posterior collapse** phenomenon: the variational posterior collapses to the prior and the generative model ignores the latent variable (Dispite all the other stuffs in the intro, I think this is the most important point/ motivation of this paper since the whole NLP community suffer from this for a long time). 
+* The **posterior collapse** phenomenon: the variational posterior collapses to the prior and the generative model ignores the latent variable (Dispite all the other stuffs in the intro, I think this is the most important point/ motivation of this paper since the whole NLP community suffers from it for a long time). 
 * SVI: view the variational posterior as a model parameter, optimize over is (i.e. the posterior dist. parameter)
 * AVI: view the variational posterior as a output of the recognition network (rather than the model parameter), Optimize the recognition network. 
 * Semi-armortized VAE: first use a recognition network to predict the variational parameter (the armortized part), then optimize over this parameter (stochastic part.)
@@ -124,7 +124,7 @@ We will focus on two topics: generation and structural inference. We start from 
 
 ### Structural Inference
 
-Now we talk about structural inference. This induces chunking, tagging and parsing. 
+Now we talk about structural inference. This includes chunking, tagging and parsing. 
 
 #### An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
 * Linear-chain CRFs. Modeling, inference and parameter estimation

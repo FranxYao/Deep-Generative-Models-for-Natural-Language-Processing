@@ -9,7 +9,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 ----
 
-When talking about deep generative models, one usually refers to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows.
+When we talk about deep generative models, we usually refer to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows.
 
 Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
 

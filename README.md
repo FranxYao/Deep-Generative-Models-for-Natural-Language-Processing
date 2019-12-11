@@ -1,7 +1,7 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
 DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
 
-This list is under construction. Some of the papers are not very well organized. I will improve it. Please do send me suggestions if you have any(and I'm looking for collaborators!). 
+This list is under construction. Some of the papers are not very well organized. I will improve it. Please do send me suggestions! 
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
@@ -11,7 +11,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 When we talk about deep generative models, we usually refer to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows.
 
-Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong.
+Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong. As for flow models, they seem to be on a really early stage for NLP application. 
 
 Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to be known.
 
@@ -19,16 +19,16 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 
 ### Deep Generative Models
 
-#### Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+#### John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
 * The DGM seminar course I took at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
 * The discussion about the [relationships between gumbel, uniform, exponential, and categorical](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec03.pdf) is interesting, do take a look. 
 * The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
 
+#### Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
+
 #### Wilker Aziz's DGM Landscape ([link](http://wilkeraziz.github.io/pages/landscape))
 * This is a great guidebook for VI. It is a graph over the VI literature and it discusses the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
-
-#### A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
-* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
 #### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
 * Yishu Miao, Oxford
@@ -122,6 +122,8 @@ We will focus on two topics: generation and structural inference. We start from 
 #### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
 * Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
+Although we have a lot of papers discussing better latent representations, I feel like there lack in-depth exploitation of the latent space. Any thoughts? 
+
 ### Structural Inference
 
 Now we talk about structural inference. This includes chunking, tagging and parsing. 
@@ -150,6 +152,8 @@ Later the RNNG model is extended to be an unsupervised version:
 * Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
 * Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
 
+I have to say I really like the RNNG and the structured attention models. Really good modeling techniques for fundamental language structures. 
+
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
 * Caio Corro, Ivan Titov, Edinburgh
 * Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). 
@@ -157,6 +161,7 @@ Later the RNNG model is extended to be an unsupervised version:
 #### Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
 * Yao Fu, Yansong Feng, and John P. Cunningham 
 * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
+* Interpretable stage-by-stage generation yet fully differentiable. 
 
 ### The Gumbel trick to reparameterize discrete distributions. 
 

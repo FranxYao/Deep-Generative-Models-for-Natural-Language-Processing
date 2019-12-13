@@ -1,3 +1,4 @@
+
 # Deep-Generative-Models-for-Natural-Language-Processing
 DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
 
@@ -16,6 +17,14 @@ When we talk about deep generative models, we usually refer to three model famil
 Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong. As for flow models, they seem to be on a really early stage for NLP application. 
 
 Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to be known.
+
+### Table of Content 
+* [Resources](#resources)
+* [NLP Side](#nlp-side)
+* [ML Side](#ml-side)
+* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#representations--differentiablity--and-continuous-relexations-of-discrete-structures)
+* [Reflections and Critics](#reflections-and-critics)
+* [More Applications.](#more-applications)
 
 ## Resources 
 

@@ -2,19 +2,15 @@
 # Deep-Generative-Models-for-Natural-Language-Processing
 DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
 
-\*\*update\*\* new section: continuous relexations of discrete structures. 
-
-This list is under construction. Some of the papers are not very well organized. I will improve it. Please do send me suggestions! 
-
 Yao Fu, Columbia University, yao.fu@columbia.edu
+
+\*\*update\*\* new section: continuous relexations of discrete structures. 
 
 ![title](https://github.com/Francix/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/titlepage.jpeg)
 
 ----
 
-When we talk about deep generative models, we usually refer to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows.
-
-Amoung the three model families, we will focus more on VAEs side since they are more effective. Whether GAN really works is still an open question. The effectiveness of GANs is more like the discriminator's regularization, rather than the 'generative' part. Or correct me if I am wrong. As for flow models, they seem to be on a really early stage for NLP application. 
+When we talk about deep generative models, we usually refer to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows. We focus primarily on these models. 
 
 Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to be known.
 

@@ -220,9 +220,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Reparameterization Gradients through Acceptance-Rejection Sampling Algorithms. AISTATS 2017 
 * Christian A. Naesseth, Francisco J. R. Ruiz, Scott W. Linderman, David M. Blei
 
-#### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
-* Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
-
 #### Implicit Reparameterization Gradients. NeurIPS 2018. 
 * Michael Figurnov, Shakir Mohamed, and Andriy Mnih
 * Really smart way to reparameterize many complex distributions.
@@ -262,6 +259,33 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
 * Zachary M. Ziegler and Alexander M. Rush
+
+----
+## Representations, Differentiablity, and Continuous Relexations of Discrete Structures
+
+There are many discrete structures in language. In this section, we discuss the representation, (non-)differentiablility, and continuous relexations to differentiate/ back-propagate through these structures. 
+
+#### Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders
+* Emile Mathieu, Charline Le Lan, Chris J. Maddison, Ryota Tomioka, Yee Whye Teh
+
+#### Differentiable Dynamic Programming for Structured Prediction and Attention
+* Arthur Mensch, Mathieu Blondel
+
+#### Direct Optimization through arg max for Discrete Variational Auto-Encoder
+* Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
+
+#### Backpropagating through Structured Argmax using a SPIGOT
+* Hao Peng, Sam Thomson, Noah A. Smith
+
+#### Stochastic Optimization of Sorting Networks via Continuous Relaxations
+* Aditya Grover, Eric Wang, Aaron Zweig, Stefano Ermon
+
+#### Differentiable Ranks and Sorting using Optimal Transport
+* Guy Lorberbom, Andreea Gane, Tommi Jaakkola, and Tamir Hazan
+
+#### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
+* Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
+
 
 ----
 ## Reflections and Critics

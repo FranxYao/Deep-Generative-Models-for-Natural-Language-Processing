@@ -8,7 +8,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*  sampling methods.
 
-![title](https://github.com/Francix/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/titlepage.jpeg)
+![title](src/titlepage.jpeg)
 
 ----
 

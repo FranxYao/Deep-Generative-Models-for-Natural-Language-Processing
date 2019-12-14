@@ -17,7 +17,15 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 ### Table of Content 
 * [Resources](#resources)
 * [NLP Side](#nlp-side)
+  * [Generation w. VAEs](#Generation-w.-VAEs)
+  * [Structured Prediction](#Structured-Prediction)
+  * [Gumbel Reparameterization](#The-Gumbel-trick-to-reparameterize-discrete-distributions.)
 * [ML Side](#ml-side)
+  * [Samplig Methods, Markov Chain Monte Carlo](#Samplig-Methods,-Markov-Chain-Monte-Carlo)
+  * [Variational Inference](#Variational-Inference,-VI)
+  * [VAEs](#VAEs)
+  * [GANs](#GANs)
+  * [Normalizing Flows](#Normalizing-flows)
 * [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#representations--differentiablity--and-continuous-relexations-of-discrete-structures)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
@@ -131,7 +139,7 @@ We will focus on two topics: generation and structural inference. We start from 
 
 Although we have a lot of papers discussing better latent representations, I feel like there lack in-depth exploitation of the latent space. Any thoughts? 
 
-### Structural Inference
+### Structured Prediction
 
 Now we talk about structural inference. This includes chunking, tagging and parsing. 
 
@@ -191,13 +199,21 @@ I have to say I really like the RNNG and the structured attention models. Really
 
 Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC and VI, as the two most widely used approximate inference methods 
 
-### Markov Chain Monte Carlo, MCMC 
+### Samplig Methods, Markov Chain Monte Carlo
 
 #### Probabilistic inference using Markov chain Monte Carlo methods. 1993 
 * Radford M Neal 
 * Markov Chains; Gibbs Sampling; Metropolis-Hastings 
 
-Sequential Monte Carlo and Hamiltonian Monte Carlo TBC. 
+#### Elements of Sequential Monte Carlo ([link](https://arxiv.org/abs/1903.04797))
+* Christian A. Naesseth, Fredrik Lindsten, Thomas B. Schön
+
+#### A Conceptual Introduction to Hamiltonian Monte Carlo ([link](https://arxiv.org/abs/1701.02434))
+* Michael Betancourt
+
+#### Candidate Sampling ([link](https://www.tensorflow.org/extras/candidate_sampling.pdf))
+* Google Tensorflow Blog
+
 
 ### Variational Inference, VI 
 

@@ -4,7 +4,9 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\* new section: continuous relexations of discrete structures. 
+\*\*update\*\*  continuous relexations of discrete structures.
+
+\*\*update\*\*  sampling methods.
 
 ![title](https://github.com/Francix/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/titlepage.jpeg)
 
@@ -26,7 +28,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
   * [VAEs](#VAEs)
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
-* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#representations--differentiablity--and-continuous-relexations-of-discrete-structures)
+* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#representations,-differentiablity,-and-continuous-relexations-of-discrete-structures)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
 

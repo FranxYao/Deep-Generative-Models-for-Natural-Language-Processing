@@ -28,7 +28,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
   * [VAEs](#VAEs)
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
-* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#representations,-differentiablity,-and-continuous-relexations-of-discrete-structures)
+* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#Representations,-Differentiablity,-and-Continuous-Relexations-of-Discrete-Structures)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
 

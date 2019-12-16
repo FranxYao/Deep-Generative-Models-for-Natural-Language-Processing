@@ -99,7 +99,7 @@ The above is a _really simplified_ mindmap. I am thinking about how to improve i
 
 We will focus on two topics: generation and structural inference. We start from generation
 
-### Generation w. VAEs
+### Variational Inference
 
 #### Generating Sentences from a Continuous Space, CoNLL 15
 * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
@@ -140,6 +140,9 @@ We will focus on two topics: generation and structural inference. We start from 
 * Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
 Although we have a lot of papers discussing better latent representations, I feel like there lack in-depth exploitation of the latent space. Any thoughts? 
+
+#### Specializing Word Embeddings (for Parsing) by Information Bottleneck. EMNLP 19 
+* Xiang Lisa Li and Jason Eisner
 
 ### Structured Prediction
 
@@ -273,17 +276,25 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Normalizing Flows
 
+#### Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
+
 #### Variational Inference with Normalizing Flows, ICML 15 
 * Danilo Jimenez Rezende, Shakir Mohamed
 
 #### Improved Variational Inference with Inverse Autoregressive Flow
 * Diederik P Kingma, Tim Salimans, Rafal Jozefowicz, Xi Chen, Ilya Sutskever, Max Welling
 
+#### Density estimation using Real NVP. ICLR 17 
+* Laurent Dinh, Jascha Sohl-Dickstein, Samy Bengio
+
 #### Learning About Language with Normalizing Flows 
 * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
 
 #### Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
 * Zachary M. Ziegler and Alexander M. Rush
+
+#### Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
+* Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
 ----
 ## Representations, Differentiablity, and Continuous Relexations of Discrete Structures

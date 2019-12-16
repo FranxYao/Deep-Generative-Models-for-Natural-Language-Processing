@@ -8,7 +8,9 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*:  sampling methods.
 
-\*\*TODO\*\*: information theory; more detailed graphical visualization; more organized analysis; future direction. 
+\*\*TODO\*\*: a table for how different DGM techniques are applied to different NLP models/ tasks. 
+
+\*\*TODO\*\*: score function estimator; information theory; more detailed graphical visualization; more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 
@@ -21,7 +23,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 ### Table of Content 
 * [Resources](#resources)
 * [NLP Side](#nlp-side)
-  * [Generation w. VAEs](#Generation-w.-VAEs)
+  * [Variational Inference](#Variational-Inference)
   * [Structured Prediction](#Structured-Prediction)
   * [Gumbel Reparameterization](#The-Gumbel-trick-to-reparameterize-discrete-distributions.)
 * [ML Side](#ml-side)
@@ -175,6 +177,9 @@ Later the RNNG model is extended to be an unsupervised version:
 * Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
 
 I have to say I really like the RNNG and the structured attention models. Really good modeling techniques for fundamental language structures. 
+
+#### Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
+* Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling,Phil Blunsom, Karl Moritz Hermann
 
 #### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
 * Caio Corro, Ivan Titov, Edinburgh

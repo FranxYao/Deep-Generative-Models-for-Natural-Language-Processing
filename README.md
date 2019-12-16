@@ -4,9 +4,11 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*  continuous relexations of discrete structures.
+\*\*update\*\*:  continuous relexations of discrete structures.
 
-\*\*update\*\*  sampling methods.
+\*\*update\*\*:  sampling methods.
+
+\*\*TODO\*\*: information theory; more detailed graphical visualization; more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 

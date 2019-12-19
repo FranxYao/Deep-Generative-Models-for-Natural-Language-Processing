@@ -23,7 +23,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 ### Table of Content 
 * [Resources](#resources)
 * [NLP Side](#nlp-side)
-  * [Variational Inference](#Variational-Inference)
+  * [Generation](#Generation)
   * [Structured Prediction](#Structured-Prediction)
   * [Gumbel Reparameterization](#The-Gumbel-trick-to-reparameterize-discrete-distributions.)
 * [ML Side](#ml-side)
@@ -103,7 +103,7 @@ The above is a _really simplified_ mindmap. I am thinking about how to improve i
 
 We will focus on two topics: generation and structural inference. We start from generation
 
-### Variational Inference
+### Generation
 
 #### Generating Sentences from a Continuous Space, CoNLL 15
 * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
@@ -148,6 +148,9 @@ Although we have a lot of papers discussing better latent representations, I fee
 #### Specializing Word Embeddings (for Parsing) by Information Bottleneck. EMNLP 19 
 * Xiang Lisa Li and Jason Eisner
 
+#### Latent Variable Model for Multi-modal Translation. ACL 19 
+* Iacer Calixto, Miguel Rios and Wilker Aziz
+
 ### Structured Prediction
 
 Now we talk about structural inference. This includes chunking, tagging and parsing. 
@@ -189,6 +192,9 @@ I have to say I really like the RNNG and the structured attention models. Really
 * Yao Fu, Yansong Feng, and John P. Cunningham 
 * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
 * Interpretable stage-by-stage generation yet fully differentiable. 
+
+#### Interpretable Neural Predictions with Differentiable Binary Variables. ACL 2019
+* Joost Bastings, Wilker Aziz and Ivan Titov. 
 
 ### The Gumbel trick to reparameterize discrete distributions. 
 

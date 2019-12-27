@@ -4,9 +4,7 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*:  continuous relexations of discrete structures.
-
-\*\*update\*\*:  sampling methods.
+\*\*update\*\*:  continuous relexations of discrete structures. sampling methods.
 
 \*\*TODO\*\*: a table for how different DGM techniques are applied to different NLP models/ tasks. 
 
@@ -35,6 +33,16 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
 * [Representations, Differentiablity, and Continuous Relexations](#Representations,-Differentiablity-and-Continuous-Relexations)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
+
+Citation:
+```
+@article{yao2019DGM4NLP,
+  title   = "Deep Generative Models for Natual Language Processing",
+  author  = "Yao Fu",
+  year    = "2018",
+  url     = "https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing"
+}
+```
 
 ## Resources 
 

@@ -10,7 +10,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*TODO\*\*: a table for how different DGM techniques are applied to different NLP models/ tasks. 
 
-\*\*TODO\*\*: score function estimator; information theory; more detailed graphical visualization; more organized analysis; future direction. 
+\*\*TODO\*\*: score function estimator; information theory; more detailed graphical visualization (current one really bad); more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 
@@ -32,7 +32,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
   * [VAEs](#VAEs)
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
-* [Representations, Differentiablity, and Continuous Relexations of Discrete Structures](#Representations,-Differentiablity,-and-Continuous-Relexations-of-Discrete-Structures)
+* [Representations, Differentiablity, and Continuous Relexations](#Representations,-Differentiablity-and-Continuous-Relexations)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
 
@@ -310,7 +310,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
 ----
-## Representations, Differentiablity, and Continuous Relexations of Discrete Structures
+## Representations, Differentiablity and Continuous Relexations
 
 There are many discrete structures in language. In this section, we discuss the representation, (non-)differentiablility, and continuous relexations to differentiate/ back-propagate through these structures. 
 
@@ -334,6 +334,18 @@ There are many discrete structures in language. In this section, we discuss the 
 
 #### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
 * Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
+
+
+----
+## Information Theory 
+
+#### MINE: Mutual Information Neural Estimation
+* R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
+
+#### Deep Variational Information Bottleneck. ICLR 2017 
+* Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
+
+TBC
 
 
 ----

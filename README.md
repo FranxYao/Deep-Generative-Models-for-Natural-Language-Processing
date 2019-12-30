@@ -347,6 +347,9 @@ There are many discrete structures in language. In this section, we discuss the 
 ----
 ## Information Theory 
 
+#### Elements of Information Theory. Cover and Thomas. 1991 
+* I just read chapter 2 so I do not have much to say. But do read chapter 2! Including the problems at the end. 
+
 #### MINE: Mutual Information Neural Estimation
 * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
 

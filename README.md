@@ -362,7 +362,7 @@ There are many discrete structures in language. In this section, we discuss the 
 
 Also check the InfoGAN paper and Lisa's _Specializing Word Embeddings (for Parsing) by Information Bottleneck_. 
 
-There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfortunately their formulation of mutual information is just wrong. When you read this paper by any chance, double check it with the definition of conditional MI in Cover and Thomas paper, chapter 2. Also check my notes about the definition of conditional mutual information. 
+There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfortunately their formulation of mutual information is just wrong. If you read this paper by any chance, double check it with the definition of conditional MI in Cover and Thomas book, chapter 2. Also check my notes about the definition of conditional mutual information. 
 
 
 ----
@@ -386,9 +386,6 @@ Really need more papers here.
 
 ### Paraphrase and Diversity 
 
-#### A Deep Generative Framework for Paraphrase Generation, AAAI 18
-* Ankush Gupta, Arvind Agarwal, Prawaan Singh, Piyush Rai 
-
 #### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
 * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
 
@@ -398,17 +395,10 @@ Really need more papers here.
 #### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
 * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
 
-#### Topic-Guided Variational Autoencoders for Text Generation, NAACL 19 
-* Wenlin Wang, Zhe Gan, Hongteng Xu, Ruiyi Zhang, Guoyin Wang, Dinghan Shen, Changyou Chen, Lawrence Carin. Duke & MS & Infinia & U Buffalo
-* A neural topic model 
-* A Gaussian Mixture latent prior and posterior 
-* A Householder Flow for inferring the Gaussian Mixture
-
 #### TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
 * Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
 
-#### Topic Compositional Neural Language Model, AISTATS 18 
-* Wenlin Wang, Zhe Gan, Wenqi Wang, Dinghan Shen, Jiaji Huang, Wei Ping, Sanjeev Satheesh, Lawrence Carin
-
 #### Topic Aware Neural Response Generation, AAAI 17 
 * Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
+
+

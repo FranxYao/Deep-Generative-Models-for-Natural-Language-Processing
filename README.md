@@ -4,19 +4,19 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*:  continuous relexations of discrete structures. sampling methods.
+\*\*update\*\*: mutual information estimation.
 
 \*\*TODO\*\*: a table for how different DGM techniques are applied to different NLP models/ tasks. 
 
-\*\*TODO\*\*: score function estimator; information theory; more detailed graphical visualization (current one really bad); more organized analysis; future direction. 
+\*\*TODO\*\*: score function estimator; more detailed graphical visualization (current one really bad); more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 
 ----
 
-When we talk about deep generative models, we usually refer to three model families: the Variational Autoencoders (VAEs), the Generative Adversarial Networks (GANs), and the Normalizing Flows. We focus primarily on these models. 
+Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
-Many discrete structures are involved in VAE models for NLP. Inference over these structures is tricky and smart. Many of them deserve to be known.
+How to model them in a statistically principled way? Can we have a flexable framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or hard/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer (guess) whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of neural networks while still being mathematical and probabilistic, instead of being hacky and sinking into neural architecture engineering? DGMs allow us to achieve these goals. 
 
 ### Table of Content 
 * [Resources](#resources)

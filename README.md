@@ -25,7 +25,7 @@ Many discrete structures are involved in VAE models for NLP. Inference over thes
   * [Structured Prediction](#Structured-Prediction)
   * [Gumbel Reparameterization](#The-Gumbel-trick-to-reparameterize-discrete-distributions.)
 * [ML Side](#ml-side)
-  * [Samplig Methods, Markov Chain Monte Carlo](#Samplig-Methods,-Markov-Chain-Monte-Carlo)
+  * [Samplig Methods](#Samplig-Methods)
   * [Variational Inference](#Variational-Inference,-VI)
   * [VAEs](#VAEs)
   * [GANs](#GANs)
@@ -226,7 +226,7 @@ I have to say I really like the RNNG and the structured attention models. Really
 
 Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC and VI, as the two most widely used approximate inference methods 
 
-### Samplig Methods, Markov Chain Monte Carlo
+### Samplig Methods
 
 #### Probabilistic inference using Markov chain Monte Carlo methods. 1993 
 * Radford M Neal 
@@ -241,6 +241,7 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 #### Candidate Sampling ([link](https://www.tensorflow.org/extras/candidate_sampling.pdf))
 * Google Tensorflow Blog
 
+TODO: NCE
 
 ### Variational Inference, VI 
 
@@ -357,7 +358,7 @@ There are many discrete structures in language. In this section, we discuss the 
 #### Deep Variational Information Bottleneck. ICLR 2017 
 * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
 
-TBC
+TODO: Deep InfoMAX 
 
 
 ----

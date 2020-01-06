@@ -351,9 +351,14 @@ There are many discrete structures in language. In this section, we discuss the 
 
 #### My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
 * Many important basics and detailed discussions.
+* Clears out the definition of conditional entropy and conditional mutual information. 
 
 #### Elements of Information Theory. Cover and Thomas. 1991 
 * I just read chapter 2 so I do not have much to say. But do read chapter 2! Including the problems at the end. 
+
+#### Learning Deep Representations By Mutual Information Estimation And Maximization. ICLR 2019 
+* R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, and Yoshua Bengio
+* In section 3.2 there is a detailed comparison between different MI estimators. Do take a look!
 
 #### MINE: Mutual Information Neural Estimation
 * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
@@ -361,7 +366,9 @@ There are many discrete structures in language. In this section, we discuss the 
 #### Deep Variational Information Bottleneck. ICLR 2017 
 * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
 
-TODO: Deep InfoMAX 
+Also check the InfoGAN paper and Lisa's _Specializing Word Embeddings (for Parsing) by Information Bottleneck_. 
+
+There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfortunately their formulation of mutual information is just wrong. When you read this paper by any chance, double check it with the definition of conditional MI in Cover and Thomas paper, chapter 2. Also check my notes about the definition of conditional mutual information. 
 
 
 ----

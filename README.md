@@ -349,6 +349,9 @@ There are many discrete structures in language. In this section, we discuss the 
 ----
 ## Information Theory 
 
+#### My [notes on mutual information](src/MINotes.pdf). Yao Fu, 2019
+* Many important basics and detailed discussions.
+
 #### Elements of Information Theory. Cover and Thomas. 1991 
 * I just read chapter 2 so I do not have much to say. But do read chapter 2! Including the problems at the end. 
 

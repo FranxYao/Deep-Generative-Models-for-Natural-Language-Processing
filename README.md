@@ -8,7 +8,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*TODO\*\*: a table for how different DGM techniques are applied to different NLP models/ tasks. 
 
-\*\*TODO\*\*: score function estimator; more detailed graphical visualization (current one really bad); more organized analysis; future direction. 
+\*\*TODO\*\*: score function estimator; more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 
@@ -17,6 +17,8 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
 How to model them in a statistically principled way? Can we have a flexable framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or hard/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer (guess) whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of neural networks while still being mathematical and probabilistic, instead of being hacky and sinking into neural architecture engineering? DGMs allow us to achieve these goals. 
+
+Let us begin the journey. 
 
 ### Table of Content 
 * [Resources](#resources)
@@ -96,14 +98,6 @@ The following two are classical textbooks on machine learning. I have not read a
 * Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods, rather than a textbook, because it is super-detailed. 
 * Basically you can find a galary of every classical graphical models from this book. 
 * One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
-
-----
-## A Roadmap 
-
-<img src="src/DGM4NLP.jpg" alt="example"
-	title="Example" width="600"  />
-
-The above is a _really simplified_ mindmap. I am thinking about how to improve it (and adding links to the visualization). Please do give me suggestions.  
 
 ----
 

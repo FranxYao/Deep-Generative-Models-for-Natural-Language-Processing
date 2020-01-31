@@ -6,9 +6,9 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: All the best for Wuhan and Hubei in fighting [the new coronavirus](https://www.thelancet.com/coronavirus). "We shall fight at every part of China, we shall defend our land, whatever the cost may be, we shall never surrender"
 
-\*\*update\*\*: Mutual information estimation; notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
+\*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
 
-\*\*TODO\*\*: Identifiability, Disentanglement, and Interpretability.
+\*\*update\*\*: [Identifiability, Disentanglement, and Interpretability](#Identifiability,-Disentanglement,-Interpretability)
 
 \*\*TODO\*\*: A table for how different DGM tools are applied to different NLP models/ tasks. 
 
@@ -36,8 +36,9 @@ Let us begin the journey.
   * [VAEs](#VAEs)
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
-* [Representations, Differentiablity, and Continuous Relexations](#Representations,-Differentiablity-and-Continuous-Relexations)
+* [Differentiablity and Continuous Relexations](#Differentiablity-and-Continuous-Relexations)
 * [Information Theory](#Information-Theory)
+* [Identifiability, Disentanglement, Interpretability](#Identifiability,-Disentanglement,-Interpretability)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
 
@@ -318,7 +319,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
 ----
-## Representations, Differentiablity and Continuous Relexations
+## Differentiablity and Continuous Relexations
 
 There are many discrete structures in language. In this section, we discuss the representation, (non-)differentiablility, and continuous relexations to differentiate/ back-propagate through these structures. 
 
@@ -368,6 +369,24 @@ Also check the InfoGAN paper and Lisa's _Specializing Word Embeddings (for Parsi
 
 There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfortunately their formulation of mutual information is just wrong. If you read this paper by any chance, double check it with the definition of conditional MI in Cover and Thomas book, chapter 2. Also check my notes about the definition of conditional mutual information. 
 
+
+----
+## Identifiability, Disentanglement, Interpretability
+
+#### Identifying Bayesian Mixture Models 
+* Michael Betancourt
+* The source of non-identifiability is symmetry and exchangability in both prior and conditional.
+* Two ways of breaking the symmetry:
+  * Ordering of the mixture component
+  * non-exchangeable prior 
+
+#### Disentangling Disentanglement in Variational Autoencoders. ICML 2019 
+* Emile Mathieu, Tom Rainforth, N. Siddharth, Yee Whye Teh
+
+#### Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML 2019 
+* Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
+
+TODO: more on disentangled representation learning
 
 ----
 ## Reflections and Critics

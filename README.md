@@ -8,7 +8,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
 
-\*\*update\*\*: [Identifiability, Disentanglement, and Interpretability](#Identifiability,-Disentanglement,-Interpretability)
+\*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 
 \*\*TODO\*\*: A table for how different DGM tools are applied to different NLP models/ tasks. 
 
@@ -38,7 +38,7 @@ Let us begin the journey.
   * [Normalizing Flows](#Normalizing-flows)
 * [Differentiablity and Continuous Relexations](#Differentiablity-and-Continuous-Relexations)
 * [Information Theory](#Information-Theory)
-* [Identifiability, Disentanglement, Interpretability](#Identifiability,-Disentanglement,-Interpretability)
+* [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 * [Reflections and Critics](#reflections-and-critics)
 * [More Applications.](#more-applications)
 
@@ -355,6 +355,10 @@ There are many discrete structures in language. In this section, we discuss the 
 #### Elements of Information Theory. Cover and Thomas. 1991 
 * I just read chapter 2 so I do not have much to say. But do read chapter 2! Including the problems at the end. 
 
+#### On Variational Bounds of Mutual Information. ICML 2019 
+* Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
+* A comprehensive discussion of all these MI variational bounds 
+
 #### Learning Deep Representations By Mutual Information Estimation And Maximization. ICLR 2019 
 * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, and Yoshua Bengio
 * In section 3.2 there is a detailed comparison between different MI estimators. Do take a look!
@@ -371,7 +375,7 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 
 
 ----
-## Identifiability, Disentanglement, Interpretability
+## Disentanglement and Interpretability
 
 #### Identifying Bayesian Mixture Models 
 * Michael Betancourt

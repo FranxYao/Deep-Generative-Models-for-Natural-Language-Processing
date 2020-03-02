@@ -4,7 +4,7 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*: All the best for Wuhan and Hubei in fighting [the new coronavirus](https://www.thelancet.com/coronavirus). "We shall fight at every part of China, we shall defend our land, whatever the cost may be, we shall never surrender"
+\*\*update\*\*: [The annotated gumbel-softmax](franxyao.github.io/blog/annotated_gumbel.html)
 
 \*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
 

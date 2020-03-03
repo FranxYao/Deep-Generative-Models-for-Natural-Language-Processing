@@ -4,7 +4,7 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*: [The annotated gumbel-softmax](https://franxyao.github.io/blog/annotated_gumbel.html)
+\*\*update\*\*: [The annotated gumbel-softmax and score function estimator](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function)
 
 \*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
 
@@ -13,8 +13,6 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 \*\*TODO\*\*: Decoding
 
 \*\*TODO\*\*: A table for how different DGM tools are applied to different NLP models/ tasks. 
-
-\*\*TODO\*\*: Score function estimator; more organized analysis; future direction. 
 
 ![title](src/titlepage.jpeg)
 
@@ -207,6 +205,8 @@ I have to say I really like the RNNG and the structured attention models. Really
 * Joost Bastings, Wilker Aziz and Ivan Titov. 
 
 ### The Gumbel trick to reparameterize discrete distributions. 
+
+#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
 
 #### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
 * Eric Jang, Shixiang Gu, Ben Poole

@@ -10,7 +10,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 
-\*\*TODO\*\*: Decoding
+\*\*TODO\*\*: Decodingl; A* sampling
 
 \*\*TODO\*\*: A table for how different DGM tools are applied to different NLP models/ tasks. 
 

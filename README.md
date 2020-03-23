@@ -346,6 +346,10 @@ There are many discrete structures in language. In this section, we discuss the 
 #### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
 * Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
 
+#### A Regularized Framework for Sparse and Structured Neural Attention. NeurIPS 2017
+
+#### SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
+
 
 ----
 ## Information Theory 

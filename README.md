@@ -424,9 +424,10 @@ Really need more papers here.
 
 ### Paraphrase and Diversity 
 
+TODO: summarization; machine translation; dialog
+
 #### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
 * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
-
 
 ### Topic-aware Langauge Generation
 

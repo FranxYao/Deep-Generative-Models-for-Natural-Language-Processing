@@ -350,6 +350,7 @@ There are many discrete structures in language. In this section, we discuss the 
 
 #### SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
+TODO: projected gradients; direct loss minimization
 
 ----
 ## Information Theory 
@@ -397,6 +398,8 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 * Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
 
 TODO: more on disentangled representation learning
+
+TODO: invariance; indentifiability
 
 ----
 ## Reflections and Critics

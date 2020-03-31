@@ -221,6 +221,8 @@ I have to say I really like the RNNG and the structured attention models. Really
 * Wouter Kool, Herke van Hoof, Max Welling
 * Gumbel topk, stochastic differentiable beam search 
 
+TODO: gumbel relaxation for CRFs
+
 ----
 
 ## ML Side 

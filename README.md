@@ -10,7 +10,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 
-\*\*TODO\*\*: Decoding methods; A* sampling; Contrastive Divergence; EBM; continuous relaxation of structured inference; optimization for discrete structures
+\*\*TODO\*\*: Decoding methods; A* sampling; Contrastive Divergence; EBM; continuous relaxation of structured inference; optimization for discrete structures; Langevin Dynamics
 
 \*\*TODO\*\*: A roadmap for how different DGM tools are derived from/ applied to different NLP models/ tasks. 
 

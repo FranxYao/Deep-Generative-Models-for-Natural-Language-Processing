@@ -10,7 +10,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 
-\*\*TODO\*\*: Decoding methods; A* sampling; Contrastive Divergence; EBM; continuous relaxation of structured inference; optimization for discrete structures; Langevin Dynamics
+\*\*TODO\*\*: Decoding methods; A* sampling; Contrastive Divergence; EBM; continuous relaxation of structured inference; optimization for discrete structures; Langevin Dynamics; Posterior Regularization
 
 \*\*TODO\*\*: A roadmap for how different DGM tools are derived from/ applied to different NLP models/ tasks. 
 
@@ -20,7 +20,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
-How to model them in a statistically principled way? Can we have a flexable framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer (guess) whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of neural networks while still being mathematical and probabilistic, instead of being hacky and sinking into neural architecture engineering? DGMs allow us to achieve these goals. 
+How to model them in a statistically principled way? Can we have a flexable framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of neural networks while still being mathematical and probabilistic, instead of being hacky and sinking into neural architecture engineering? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
 
@@ -77,6 +77,8 @@ Citation:
 #### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
 
 #### Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
+
+#### Columbia [STCS 8101](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html) Representation Learning: A Probabilistic Perspective
 
 ### Graphical Models Foundations
 
@@ -161,7 +163,14 @@ Although we have a lot of papers discussing better latent representations, I fee
 
 ### Structured Prediction
 
-Now we talk about structural inference. This includes chunking, tagging and parsing. 
+Now we talk about structured prediction. This includes the so-called core-nlp tasks like chunking, tagging and parsing. 
+
+We would like to start with Sasha's recent library, TorchStruct, as it is an integration of multiple core and advanced techniques. 
+
+#### Torch-Struct: Deep Structured Prediction Library
+* Alexander M. Rush. Cornell University 
+* [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
+* Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
 #### An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
 * Linear-chain CRFs. Modeling, inference and parameter estimation
@@ -204,24 +213,6 @@ I have to say I really like the RNNG and the structured attention models. Really
 #### Interpretable Neural Predictions with Differentiable Binary Variables. ACL 2019
 * Joost Bastings, Wilker Aziz and Ivan Titov. 
 
-### The Gumbel trick to reparameterize discrete distributions. 
-
-#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
-
-#### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
-* Eric Jang, Shixiang Gu, Ben Poole
-
-#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
-* Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
-
-#### Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
-* Sang Michael Xie and Stefano Ermon
-
-#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
-* Wouter Kool, Herke van Hoof, Max Welling
-* Gumbel topk, stochastic differentiable beam search 
-
-TODO: gumbel relaxation for CRFs
 
 ----
 
@@ -277,6 +268,23 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Implicit Reparameterization Gradients. NeurIPS 2018. 
 * Michael Figurnov, Shakir Mohamed, and Andriy Mnih
 * Really smart way to reparameterize many complex distributions.
+
+### Reparameterization 
+
+#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
+
+#### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
+* Eric Jang, Shixiang Gu, Ben Poole
+
+#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
+* Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
+
+#### Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
+* Sang Michael Xie and Stefano Ermon
+
+#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+* Wouter Kool, Herke van Hoof, Max Welling
+* Gumbel topk, stochastic differentiable beam search 
 
 
 ### GANs
@@ -399,14 +407,29 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 #### Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML 2019 
 * Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
 
-TODO: more on disentangled representation learning
+----
 
-TODO: invariance; indentifiability
+## Invariance
+
+#### Emergence of Invariance and Disentanglement in Deep Representations
+* Alessandro Achillo and Stefano Soatto. UCLA. JMLR 2018 
+
+#### Invariant Risk Minimization
+* Martin Arjovsky, Leon Bottou, Ishaan Gulrajani, David Lopez-Paz. 2019. 
+
+---- 
+
+## Posterior Regularization 
+
+#### Posterior Regularization for Structured Latent Variable Models
+* Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
+
+#### Posterior Control of Blackbox Generation 
+* Xiang Lisa Li and Alexander M. Rush. 2019.
 
 ----
 ## Reflections and Critics
 
-Really need more papers for on this part 
 
 #### The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
 * Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
@@ -419,8 +442,6 @@ Really need more papers for on this part
 ----
 
 ## More Applications. 
-
-Really need more papers here. 
 
 ### Paraphrase and Diversity 
 

@@ -4,8 +4,6 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*: [The annotated gumbel-softmax and score function estimator](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function)
-
 \*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
 
 \*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)

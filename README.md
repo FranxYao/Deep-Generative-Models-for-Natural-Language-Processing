@@ -4,9 +4,7 @@ DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, c
 
 Yao Fu, Columbia University, yao.fu@columbia.edu
 
-\*\*update\*\*: [Mutual information estimation](#Information-Theory), notes on [the basics of information theory](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/MINotes.md). TODO: the equation chain in _On the Variational Bounds of Mutual Information_
-
-\*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
+\*\*Update\*\*: Advanced Neural Architectures; Monte-Carlo Gradient Estimation; Continuous Relaxations
 
 \*\*TODO\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; continuous relaxation of discrete structures; optimization for discrete structures; Langevin Dynamics; Posterior Regularization
 
@@ -186,9 +184,16 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
   * Reparameterize the sampling from a CRF by using gumbel perturbation and continuous relexation of Eisner Algo. 
 
 
-
-
 ### Advanced Neural Network Architectures
+
+* THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
+  * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
+
+* Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
+  * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
+
+* Cascaded Text Generation with Markov Transformers. Arxiv 20
+  * Yuntian Deng and Alexander Rush
 
 ----
 

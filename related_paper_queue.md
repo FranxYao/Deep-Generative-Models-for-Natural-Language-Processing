@@ -17,3 +17,10 @@
 
 * Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders
   * Emile Mathieu, Charline Le Lan, Chris J. Maddison, Ryota Tomioka, Yee Whye Teh
+
+
+* Direct Optimization through arg max for Discrete Variational Auto-Encoder
+  * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
+
+* Backpropagating through Structured Argmax using a SPIGOT
+  * Hao Peng, Sam Thomson, Noah A. Smith

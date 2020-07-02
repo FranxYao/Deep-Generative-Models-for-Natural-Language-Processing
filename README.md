@@ -287,6 +287,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
   * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
+* Invertible Gaussian Reparameterization:  Revisiting the Gumbel-Softmax. 2020
+  *  Andres Potapczynski, Gabriel Loaiza-Ganem, John P. Cunningham 
+
 * Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
   * Sang Michael Xie and Stefano Ermon
 
@@ -359,17 +362,13 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
 
-* Direct Optimization through arg max for Discrete Variational Auto-Encoder
-  * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
-
-* Backpropagating through Structured Argmax using a SPIGOT
-  * Hao Peng, Sam Thomson, Noah A. Smith
-
 ### Continuous Relexation of Discrete Structures
+
+* Gradient Estimation with Stochastic Softmax Tricks. 2020 
+  * Max B. Paulus, Dami Choi, Daniel Tarlow, Andreas Krause, Chris J. Maddison. 
 
 * Differentiable Dynamic Programming for Structured Prediction and Attention. ICML 18 
   * Arthur Mensch, Mathieu Blondel. Inria Parietal and NTT Communication Science Laboratories 
-
 
 * Stochastic Optimization of Sorting Networks via Continuous Relaxations
   * Aditya Grover, Eric Wang, Aaron Zweig, Stefano Ermon

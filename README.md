@@ -36,7 +36,7 @@ Let us begin the journey.
   * [Normalizing Flows](#Normalizing-flows)
 * [Advanced Topics](#Advanced-Topics)
   * [Gradient Estimation and Optimization](#Gradient-Estimation-and-Optimization)
-  * [Continuous Relexation](#Differentiablity-and-Continuous-Relexations)
+  * [Continuous Relexation of Discrete Structures](#Continuous-Relexation-of-Discrete-Structures)
   * [Information Theory](#Information-Theory)
   * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
   * [Invariance](#Invariance)

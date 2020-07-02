@@ -8,9 +8,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 \*\*update\*\*: [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
 
-\*\*TODO\*\*: Decoding methods; A* sampling; Contrastive Divergence; EBM; continuous relaxation of structured inference; optimization for discrete structures; Langevin Dynamics; Posterior Regularization
-
-\*\*TODO\*\*: A roadmap for how different DGM tools are derived from/ applied to different NLP models/ tasks. 
+\*\*TODO\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; continuous relaxation of discrete structures; optimization for discrete structures; Langevin Dynamics; Posterior Regularization
 
 ![title](src/titlepage.jpeg)
 
@@ -18,15 +16,19 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
-How to model them in a statistically principled way? Can we have a flexable framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of neural networks while still being mathematical and probabilistic, instead of being hacky and sinking into neural architecture engineering? DGMs allow us to achieve these goals. 
+How to model them in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
 
 ### Table of Content 
 * [Resources](#resources)
+  * [Deep Generative Models](#Deep-Generative-Models)
+  * [Graphical Model Foundations](#Graphical-Models-Foundations)
+  * [Textbooks and Phd Thesis](#Textbooks-and-Phd-Thesis)
 * [NLP Side](#nlp-side)
   * [Generation](#Generation)
   * [Structured Prediction](#Structured-Prediction)
+  * [Advanced Neural Network Architectures](#Advanced-Neural-Network-Architectures)
 * [ML Side](#ml-side)
   * [Samplig Methods](#Samplig-Methods)
   * [Variational Inference](#Variational-Inference,-VI)
@@ -34,13 +36,15 @@ Let us begin the journey.
   * [Reparameterization](#Reparameterization)
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
-* [Differentiablity and Continuous Relexations](#Differentiablity-and-Continuous-Relexations)
-* [Information Theory](#Information-Theory)
-* [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
-* [Invariance](#Invariance)
-* [Posterior Regularization](#Posterior-Regularization)
-* [Reflections and Critics](#reflections-and-critics)
-* [More Applications.](#more-applications)
+* [Advanced Topics](#Advanced-Topics)
+  * [Gradient Estimation](#Gradient-Estimation)
+  * [Continuous Relexation](#Differentiablity-and-Continuous-Relexations)
+  * [Information Theory](#Information-Theory)
+  * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
+  * [Invariance](#Invariance)
+  * [Posterior Regularization](#Posterior-Regularization)
+  * [Reflections and Critics](#reflections-and-critics)
+* [Applications](#applications)
 
 Citation:
 ```
@@ -56,169 +60,144 @@ Citation:
 
 ### Deep Generative Models
 
-#### John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
-* The DGM seminar course I took at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
-* The discussion about the [relationships between gumbel, uniform, exponential, and categorical](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec03.pdf) is interesting, do take a look. 
-* The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
+* John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+  * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
+  * The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
 
-#### Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
-* Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
+* Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+  * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
-#### Wilker Aziz's [DGM Landscape](http://wilkeraziz.github.io/pages/landscape) and their [tutorial](https://github.com/vitutorial/VITutorial)
-* This is a great guidebook for VI. It is a graph over the VI literature and it discusses the connections of different techniques. Definitely go over this to have a rough sense/ go deep about DGMs 
+* Wilker Aziz's [DGM Landscape](http://wilkeraziz.github.io/pages/landscape) and their [tutorial](https://github.com/vitutorial/VITutorial)
+  * A great guidebook for VI. A graph over the VI literature and discusses the connections of different techniques. 
 
-#### Deep Generative Models for Natural Language Processing, Ph.D. Thesis 17, ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
-* Yishu Miao, Oxford
+* Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
-#### Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
+* NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
 
-#### NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
+* U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
 
-#### U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
+* Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
 
-#### Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
-
-#### Columbia [STCS 8101](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html) Representation Learning: A Probabilistic Perspective
+* Columbia [STCS 8101](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html) Representation Learning: A Probabilistic Perspective
 
 ### Graphical Models Foundations
 
 The fundation of the DGMs is built upon probabilistic graphical models. So we take a look at the following resources
 
-#### Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
-* This course talks about the foundation of probabilistic modeling, graphical models, and approximate inference. 
+* Blei's Foundation of Graphical Models course, STAT 6701 at Columbia ([link](http://www.cs.columbia.edu/~blei/fogm/2019F/index.html))
+  * Foundation of probabilistic modeling, graphical models, and approximate inference. 
 
-#### Xing's Probabilistic Graphical Models, 10-708 at CMU ([link](https://sailinglab.github.io/pgm-spring-2019/))
-* This is a really heavy course with extensive materials. There are 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. All the lecture notes, vedio recordings, and homeworks are open-sourced. 
+* Xing's Probabilistic Graphical Models, 10-708 at CMU ([link](https://sailinglab.github.io/pgm-spring-2019/))
+  * A really heavy course with extensive materials.
+  * 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. 
+  * All the lecture notes, vedio recordings, and homeworks are open-sourced. 
 
-#### Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
-* This course may look like an NLP course, but it has a graphical models core (with an NLP surface.) Many structural inference methods are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
-* also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
+* Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
+  * Many inference methods for structured models are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
+  * Also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
-The following two are classical textbooks on machine learning. I have not read all of them but I do know certain nlp-related parts. 
+### Textbooks and Phd Thesis
 
-#### Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
-* The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
-* If you only have time reading one chapter, read section 10. 
-* This book is also a great book for building systemacal knowledge of graphical models. 
+* Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
+  * Probabily the most classical textbook 
+  * The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
 
-#### Machine Learning: A Probabilistic Perspective. Kevin P. Murphy. 2012
-* Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods, rather than a textbook, because it is super-detailed. 
-* Basically you can find a galary of every classical graphical models from this book. 
-* One sidenote is, I do not see many application of State-space models and Bayesian non-parameterics in NLP. If you do know some, please do send me emails to discuss. 
+* Machine Learning: A Probabilistic Perspective. Kevin P. Murphy. 2012
+  * Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods. 
+
+* Deep Generative Models for Natural Language Processing. ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
+  * Yishu Miao, Oxford, 2017
+
+* Deep Latent Variable Models for Natural Language ([link](https://www.people.fas.harvard.edu/~yoonkim/data/kim-dissertation-2020.pdf))
+  * Yoon Kim, Havard, 2020
 
 ----
 
 
 ## NLP Side 
 
-We will focus on two topics: generation and structural inference. We start from generation
+We will focus on two topics: generation and structural inference, and the advanced neural network architectures for them. We start from generation
 
 ### Generation
 
-#### Generating Sentences from a Continuous Space, CoNLL 15
-* Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
-* This seems to be the first paper using VAEs for NLP.
-* **BUT** it seems that many of the results in the paper are not that solid/ could be improved by better models ("not that solid" seems to be not a proper word choice, I am not a native speaker so apologize for (perhaps) the improper wording, please give me suggessions on how to critisize with suitable words)
-* An important point of this paper is about the posterior collapse. This problem is addressed by the following papers.
+* Generating Sentences from a Continuous Space, CoNLL 15
+  * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
+  * Seems to be the first paper using VAEs for NLP
+  * An important point of this paper is about the posterior collapse problems, which has many follow-ups
 
-#### Neural variational inference for text processing, ICML 16 
-* Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
+* Neural variational inference for text processing, ICML 16 
+  * Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
 
-#### Improved Variational Autoencoders for Text Modeling using Dilated Convolutions, ICML 17 
-* Zichao Yang, Zhiting Hu, Ruslan Salakhutdinov, Taylor Berg-Kirkpatrick
+* Learning Neural Templates for Text Generation. EMNLP 2018 
+  * Sam Wiseman, Stuart M. Shieber, Alexander Rush. Havard 
 
-#### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
-* Jiacheng Xu and Greg Durrett, UT Austin
-* An uniform distribution on a unit sphere is helpful to the posterior problem. 
+* Residual Energy Based Models for Text Generation. ICLR 20
+  * Yuntian Deng, Anton Bakhtin, Myle Ott, Arthur Szlam, Marc' Aurelio Ranzato. Havard and FAIR
 
-#### Adversarially Regularized Autoencoders, ICML 18 
-* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
-* A wrapup of the major VAE/ GANs 
-* A learned prior to tackle the posterior collapse. 
-* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
+* Cascaded Text Generation with Markov Transformers. Arxiv 20
+  * Yuntian Deng and Alexander Rush
 
-#### Semi-amortized variational autoencoders, ICML 18 
-* Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
-* The **posterior collapse** phenomenon: the variational posterior collapses to the prior and the generative model ignores the latent variable (Dispite all the other stuffs in the intro, I think this is the most important point/ motivation of this paper since the whole NLP community suffers from it for a long time). 
-* SVI: view the variational posterior as a model parameter, optimize over is (i.e. the posterior dist. parameter)
-* AVI: view the variational posterior as a output of the recognition network (rather than the model parameter), Optimize the recognition network. 
-* Semi-armortized VAE: first use a recognition network to predict the variational parameter (the armortized part), then optimize over this parameter (stochastic part.)
-* The implementation heavily involves optimization techniques/ tricks. 
-* Experiments: higher KL (indicating that latent variables are not collepsed) and lower ppl (performance metrics). 
-* Saliency analysis: a visualization of the relationship between the latent variable and the input/ output, as an example of interpretability (or just random guess and coincidence, who knows). 
+* Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
+  * Yao Fu, Yansong Feng, and John P. Cunningham. Columbia 
+  * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
+  * Interpretable stage-by-stage generation yet fully differentiable. 
 
-#### Lagging Inference Networks and Posterior Collapse in Variational Autoencoders, ICLR 19 
-* Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick
 
-#### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
-* Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
 
-Although we have a lot of papers discussing better latent representations, I feel like there lack in-depth exploitation of the latent space. Any thoughts? 
-
-#### Specializing Word Embeddings (for Parsing) by Information Bottleneck. EMNLP 19 
-* Xiang Lisa Li and Jason Eisner
-
-#### Latent Variable Model for Multi-modal Translation. ACL 19 
-* Iacer Calixto, Miguel Rios and Wilker Aziz
 
 ### Structured Prediction
 
-Now we talk about structured prediction. This includes the so-called core-nlp tasks like chunking, tagging and parsing. 
+Structured Prediction is about the so-called core-nlp tasks like chunking, tagging and parsing and so on. 
 
-We would like to start with Sasha's recent library, TorchStruct, as it is an integration of multiple core and advanced techniques. 
+A good start point is Sasha's library, TorchStruct, as it is an integration of multiple core and advanced techniques. 
 
-#### Torch-Struct: Deep Structured Prediction Library
-* Alexander M. Rush. Cornell University 
-* [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
-* Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
+* Torch-Struct: Deep Structured Prediction Library
+  * Alexander M. Rush. Cornell University 
+  * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
+  * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
-#### An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
-* Linear-chain CRFs. Modeling, inference and parameter estimation
+* An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
+  * Linear-chain CRFs. Modeling, inference and parameter estimation
 
-#### Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
-* As the name indicates. Check out [Sasha's implementation](https://github.com/harvardnlp/pytorch-struct) of the algos using pytorch automatic differentiation
+* Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
+  * The relationships between CRF inference and Autograd. 
 
-#### Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
-* To differentiate the max operator in dynamic programming. 
+* Structured Attention Networks. ICLR 2017 
+  * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
+  * Structured attention w. linear chain and tree crfs. 
 
-#### Structured Attention Networks. ICLR 2017 
-* Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
-* Structured attention w. linear chain and tree crfs. 
+* Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
+  * To differentiate the max operator in dynamic programming. 
 
-#### Recurrent Neural Network Grammars. NAACL 16
-* Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
-* A transaction based generative model to model the joint prob of trees and sentences. 
-* Smart inference trick: use importance sampling to calculate the sentence marginal prob. Use a discriminative model as the proposal dist. 
+* Recurrent Neural Network Grammars. NAACL 16
+  * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
+  * A transaction based generative model to model the joint prob of trees and sentences. 
+  * Inference: use importance sampling to calculate the sentence marginal prob. Use the discriminative model as the proposal dist. 
 
-Later the RNNG model is extended to be an unsupervised version:
+* Unsupervised Recurrent Neural Network Grammars, NAACL 19 
+  * Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
 
-#### Unsupervised Recurrent Neural Network Grammars, NAACL 19 
-* Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
-* Compared with the above perturb-and-parse paper, this paper does not use continuous relexation of the sampling over the CRF, so it use the score function estimator with control variate. 
 
-I have to say I really like the RNNG and the structured attention models. Really good modeling techniques for fundamental language structures. 
+* Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
+  * Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling, Phil Blunsom, Karl Moritz Hermann
 
-#### Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
-* Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling,Phil Blunsom, Karl Moritz Hermann
+* Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
+  * Caio Corro, Ivan Titov, Edinburgh
+  * Reparameterize the sampling from a CRF by using gumbel perturbation and continuous relexation of Eisner Algo. 
 
-#### Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
-* Caio Corro, Ivan Titov, Edinburgh
-* Reparameterize the sampling from a CRF by using gumbel perturbation (so one can inject randomness to the potential) and continuous relexation of Eisner (so one can perform efficient inference). 
 
-#### Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
-* Yao Fu, Yansong Feng, and John P. Cunningham 
-* Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
-* Interpretable stage-by-stage generation yet fully differentiable. 
 
-#### Interpretable Neural Predictions with Differentiable Binary Variables. ACL 2019
-* Joost Bastings, Wilker Aziz and Ivan Titov. 
 
+### Advanced Neural Network Architectures
 
 ----
 
 ## ML Side 
 
 Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC and VI, as the two most widely used approximate inference methods 
+
+
+
 
 ### Samplig Methods
 
@@ -237,6 +216,10 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 TODO: NCE
 
+
+
+
+
 ### Variational Inference, VI 
 
 #### Variational Inference: A Review for Statisticians. 
@@ -247,16 +230,45 @@ TODO: NCE
 * Matthew D. Hoffman, David M. Blei, Chong Wang, John Paisley
 * Natural gradient of the ELBO; stochastic optimization; bayesian non-parameterics for the hierarchical dirichlet process. 
 
+
+
+
+
 ### VAEs 
 
-#### Auto-Encoding Variational Bayes, Arxiv 13 
+#### Auto-Encoding Variational Bayes, ICLR 13 
 * Diederik P. Kingma, Max Welling
 
 #### Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
 * Danilo Jimenez Rezende, Shakir Mohamed, Daan Wierstra
 * Reparameterization w. deep gaussian models. 
 
+#### Semi-amortized variational autoencoders, ICML 18 
+* Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
+
+#### Adversarially Regularized Autoencoders, ICML 18 
+* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
+* A wrapup of the major VAE/ GANs 
+* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
+
+#### Lagging Inference Networks and Posterior Collapse in Variational Autoencoders, ICLR 19 
+* Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick
+
+#### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
+* Jiacheng Xu and Greg Durrett, UT Austin
+
+#### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
+* Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
+
+
+
+
+
+### Reparameterization 
 More on reparameterization: to reparameterize gaussian mixture, permutation matrix, and rejection samplers(Gamma and Dirichlet).   
+
+
+#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
 
 #### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
 * Alex Graves
@@ -268,10 +280,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Implicit Reparameterization Gradients. NeurIPS 2018. 
 * Michael Figurnov, Shakir Mohamed, and Andriy Mnih
 * Really smart way to reparameterize many complex distributions.
-
-### Reparameterization 
-
-#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
 
 #### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
 * Eric Jang, Shixiang Gu, Ben Poole
@@ -285,6 +293,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
 * Wouter Kool, Herke van Hoof, Max Welling
 * Gumbel topk, stochastic differentiable beam search 
+
+
+
 
 
 ### GANs
@@ -308,7 +319,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * NOTE: in ICML 19, the unsupervised disentangled representation learning is challenged by: _Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations_. 
 * But still, this is an informative and interesting paper that worth reading. Contrasting the two papers will be more interesting. 
 
-### Normalizing Flows
+
+
+
+
+### Flows
 
 #### Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
 
@@ -330,40 +345,59 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
 * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
+
+
+
 ----
-## Differentiablity and Continuous Relexations
+## Advanced-Topics
 
-There are many discrete structures in language. In this section, we discuss the representation, (non-)differentiablility, and continuous relexations to differentiate/ back-propagate through these structures. 
+### Gradient Estimation
 
-#### Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders
+Monte Carlo Gradient Estimation in Machine Learning 
+* Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
+
+REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models 
+* George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
+
+Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation
+* Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
+
+
+### Differentiablity and Continuous Relexations
+
+There are many discrete structures in language. In this section, we discuss the representation,differentiablility, and continuous relexations for these structures. 
+
+Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders
 * Emile Mathieu, Charline Le Lan, Chris J. Maddison, Ryota Tomioka, Yee Whye Teh
 
-#### Differentiable Dynamic Programming for Structured Prediction and Attention
+Differentiable Dynamic Programming for Structured Prediction and Attention
 * Arthur Mensch, Mathieu Blondel
 
-#### Direct Optimization through arg max for Discrete Variational Auto-Encoder
+Direct Optimization through arg max for Discrete Variational Auto-Encoder
 * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
 
-#### Backpropagating through Structured Argmax using a SPIGOT
+Backpropagating through Structured Argmax using a SPIGOT
 * Hao Peng, Sam Thomson, Noah A. Smith
 
-#### Stochastic Optimization of Sorting Networks via Continuous Relaxations
+Stochastic Optimization of Sorting Networks via Continuous Relaxations
 * Aditya Grover, Eric Wang, Aaron Zweig, Stefano Ermon
 
-#### Differentiable Ranks and Sorting using Optimal Transport
+Differentiable Ranks and Sorting using Optimal Transport
 * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, and Tamir Hazan
 
-#### Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
+Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
 * Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
 
-#### A Regularized Framework for Sparse and Structured Neural Attention. NeurIPS 2017
+A Regularized Framework for Sparse and Structured Neural Attention. NeurIPS 2017
 
-#### SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
+SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
 TODO: projected gradients; direct loss minimization
 
-----
-## Information Theory 
+
+
+
+### Information Theory 
 
 #### My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
 * Many important basics and detailed discussions.
@@ -386,13 +420,11 @@ TODO: projected gradients; direct loss minimization
 #### Deep Variational Information Bottleneck. ICLR 2017 
 * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
 
-Also check the InfoGAN paper and Lisa's _Specializing Word Embeddings (for Parsing) by Information Bottleneck_. 
-
-There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfortunately their formulation of mutual information is just wrong. If you read this paper by any chance, double check it with the definition of conditional MI in Cover and Thomas book, chapter 2. Also check my notes about the definition of conditional mutual information. 
 
 
-----
-## Disentanglement and Interpretability
+
+
+### Disentanglement and Interpretability
 
 #### Identifying Bayesian Mixture Models 
 * Michael Betancourt
@@ -407,9 +439,11 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 #### Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML 2019 
 * Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
 
-----
 
-## Invariance
+
+
+
+### Invariance
 
 #### Emergence of Invariance and Disentanglement in Deep Representations
 * Alessandro Achillo and Stefano Soatto. UCLA. JMLR 2018 
@@ -417,9 +451,10 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 #### Invariant Risk Minimization
 * Martin Arjovsky, Leon Bottou, Ishaan Gulrajani, David Lopez-Paz. 2019. 
 
----- 
 
-## Posterior Regularization 
+
+
+### Posterior Regularization 
 
 #### Posterior Regularization for Structured Latent Variable Models
 * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
@@ -427,9 +462,11 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 #### Posterior Control of Blackbox Generation 
 * Xiang Lisa Li and Alexander M. Rush. 2019.
 
-----
-## Reflections and Critics
 
+
+
+
+### Reflections and Critics
 
 #### The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
 * Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
@@ -439,18 +476,13 @@ There is a CVPR paper _Information Maximizing Visual Question Generation_. Unfor
 #### Do Deep Generative Models Know What They Don't Know? ICLR 2019 
 * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
-----
 
-## More Applications. 
-
-### Paraphrase and Diversity 
+### More Applications. 
 
 TODO: summarization; machine translation; dialog
 
 #### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
 * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
-
-### Topic-aware Langauge Generation
 
 #### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
 * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford

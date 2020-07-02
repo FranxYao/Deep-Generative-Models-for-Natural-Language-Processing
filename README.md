@@ -58,11 +58,11 @@ Citation:
 
 ### Deep Generative Models
 
-* John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+* ♦︎ John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
   * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
   * The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
 
-* Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+* ♦︎ Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
   * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
 * Wilker Aziz's [DGM Landscape](http://wilkeraziz.github.io/pages/landscape) and their [tutorial](https://github.com/vitutorial/VITutorial)
@@ -90,13 +90,13 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
   * 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. 
   * All the lecture notes, vedio recordings, and homeworks are open-sourced. 
 
-* Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
+* ♦︎ Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
   * Many inference methods for structured models are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
   * Also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
 ### Textbooks and Phd Thesis
 
-* Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
+* ♦︎ Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
   * Probabily the most classical textbook 
   * The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
 
@@ -118,7 +118,7 @@ We will focus on two topics: generation and structural inference, and the advanc
 
 ### Generation
 
-* Generating Sentences from a Continuous Space, CoNLL 15
+* ♦︎ Generating Sentences from a Continuous Space, CoNLL 15
   * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
   * Seems to be the first paper using VAEs for NLP
   * An important point of this paper is about the posterior collapse problems, which has many follow-ups
@@ -132,14 +132,14 @@ We will focus on two topics: generation and structural inference, and the advanc
 * Residual Energy Based Models for Text Generation. ICLR 20
   * Yuntian Deng, Anton Bakhtin, Myle Ott, Arthur Szlam, Marc' Aurelio Ranzato. Havard and FAIR
 
-* Cascaded Text Generation with Markov Transformers. Arxiv 20
+* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
   * Yuntian Deng and Alexander Rush
 
 * Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
   * Yao Fu, Yansong Feng, and John P. Cunningham. Columbia 
   * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
 
-* Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+* ♦︎ Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
   * Wouter Kool, Herke van Hoof, Max Welling
   * Gumbel topk, stochastic differentiable beam search 
 
@@ -152,18 +152,18 @@ Structured Prediction is about the so-called core-nlp tasks like chunking, taggi
 
 A good start point is Sasha's library, TorchStruct, as it is an integration of multiple core and advanced techniques. 
 
-* Torch-Struct: Deep Structured Prediction Library
+* ♦︎♦︎ Torch-Struct: Deep Structured Prediction Library
   * Alexander M. Rush. Cornell University 
   * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
   * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
-* An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
+* ♦︎ An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
   * Linear-chain CRFs. Modeling, inference and parameter estimation
 
-* Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
+* ♦︎ Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
   * The relationships between CRF inference and Autograd. 
 
-* Structured Attention Networks. ICLR 2017 
+* ♦︎ Structured Attention Networks. ICLR 2017 
   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
   * Structured attention w. linear chain and tree crfs. 
 
@@ -195,7 +195,7 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
 * Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
   * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
 
-* Cascaded Text Generation with Markov Transformers. Arxiv 20
+* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
   * Yuntian Deng and Alexander Rush
 
 ----
@@ -209,7 +209,7 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 ### Samplig Methods
 
-* Probabilistic inference using Markov chain Monte Carlo methods. 1993 
+* ♦︎ Probabilistic inference using Markov chain Monte Carlo methods. 1993 
   * Radford M Neal 
   * Markov Chains; Gibbs Sampling; Metropolis-Hastings 
 
@@ -231,10 +231,10 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 ### Variational Inference, VI 
 
-* Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
+* ♦︎ Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
   * Sam Power. University of Cambridge 
 
-* Variational Inference: A Review for Statisticians. 
+* ♦︎ Variational Inference: A Review for Statisticians. 
   * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
   * Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
 
@@ -249,7 +249,7 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 ### VAEs 
 
-* Auto-Encoding Variational Bayes, ICLR 14
+* ♦︎ Auto-Encoding Variational Bayes, ICLR 14
   * Diederik P. Kingma, Max Welling
 
 * Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
@@ -284,7 +284,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
   * Eric Jang, Shixiang Gu, Ben Poole
 
-* The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
+* ♦︎ The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
   * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
 * Invertible Gaussian Reparameterization:  Revisiting the Gumbel-Softmax. 2020
@@ -308,7 +308,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Martin Arjovsky and Leon Bottou
   * Discusses the distance between distributions, but uses many hacky methods.
 
-* ♦︎ Wasserstein GAN
+* ♦︎ Wasserstein GAN 
   * Martin Arjovsky, Soumith Chintala, Léon Bottou
   * The principled methods, born from hacky methods. 
 
@@ -322,7 +322,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Flows
 
-* Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
+* ♦︎ Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html) 
 
 * Variational Inference with Normalizing Flows, ICML 15 
   * Danilo Jimenez Rezende, Shakir Mohamed
@@ -350,7 +350,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Gradient Estimation and Optimization
 
-* Monte Carlo Gradient Estimation in Machine Learning 
+* ♦︎ Monte Carlo Gradient Estimation in Machine Learning 
   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
 
 * Variational Inference for Monte Carlo Objectives. ICML 16
@@ -359,12 +359,12 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models. NIPS 17
   * George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
 
-* Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
+* ♦︎ Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
 
 ### Continuous Relexation of Discrete Structures
 
-* Gradient Estimation with Stochastic Softmax Tricks. 2020 
+* ♦︎♦︎ Gradient Estimation with Stochastic Softmax Tricks. 2020 
   * Max B. Paulus, Dami Choi, Daniel Tarlow, Andreas Krause, Chris J. Maddison. 
 
 * Differentiable Dynamic Programming for Structured Prediction and Attention. ICML 18 
@@ -391,9 +391,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
   * Basics of information theory 
 
-*  Elements of Information Theory. Cover and Thomas. 1991 
+* ♦︎ Elements of Information Theory. Cover and Thomas. 1991 
 
-* On Variational Bounds of Mutual Information. ICML 2019 
+* ♦︎ On Variational Bounds of Mutual Information. ICML 2019 
   * Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
   * A comprehensive discussion of all these MI variational bounds 
 

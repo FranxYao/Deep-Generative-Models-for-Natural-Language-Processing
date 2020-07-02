@@ -308,7 +308,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Martin Arjovsky and Leon Bottou
   * Discusses the distance between distributions, but uses many hacky methods.
 
-* Wasserstein GAN
+* ♦︎ Wasserstein GAN
   * Martin Arjovsky, Soumith Chintala, Léon Bottou
   * The principled methods, born from hacky methods. 
 

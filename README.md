@@ -14,7 +14,7 @@ Yao Fu, Columbia University, yao.fu@columbia.edu
 
 Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
-How to model them in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicite supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
+How to model them in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicit supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
 
@@ -35,7 +35,7 @@ Let us begin the journey.
   * [GANs](#GANs)
   * [Normalizing Flows](#Normalizing-flows)
 * [Advanced Topics](#Advanced-Topics)
-  * [Gradient Estimation](#Gradient-Estimation)
+  * [Gradient Estimation and Optimization](#Gradient-Estimation-and-Optimization)
   * [Continuous Relexation](#Differentiablity-and-Continuous-Relexations)
   * [Information Theory](#Information-Theory)
   * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
@@ -138,7 +138,10 @@ We will focus on two topics: generation and structural inference, and the advanc
 * Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
   * Yao Fu, Yansong Feng, and John P. Cunningham. Columbia 
   * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
-  * Interpretable stage-by-stage generation yet fully differentiable. 
+
+* Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+  * Wouter Kool, Herke van Hoof, Max Welling
+  * Gumbel topk, stochastic differentiable beam search 
 
 
 
@@ -206,20 +209,21 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 ### Samplig Methods
 
-#### Probabilistic inference using Markov chain Monte Carlo methods. 1993 
-* Radford M Neal 
-* Markov Chains; Gibbs Sampling; Metropolis-Hastings 
+* Probabilistic inference using Markov chain Monte Carlo methods. 1993 
+  * Radford M Neal 
+  * Markov Chains; Gibbs Sampling; Metropolis-Hastings 
 
-#### Elements of Sequential Monte Carlo ([link](https://arxiv.org/abs/1903.04797))
-* Christian A. Naesseth, Fredrik Lindsten, Thomas B. Schön
+* Elements of Sequential Monte Carlo ([link](https://arxiv.org/abs/1903.04797))
+  * Christian A. Naesseth, Fredrik Lindsten, Thomas B. Schön
 
-#### A Conceptual Introduction to Hamiltonian Monte Carlo ([link](https://arxiv.org/abs/1701.02434))
-* Michael Betancourt
+* A Conceptual Introduction to Hamiltonian Monte Carlo ([link](https://arxiv.org/abs/1701.02434))
+  * Michael Betancourt
 
-#### Candidate Sampling ([link](https://www.tensorflow.org/extras/candidate_sampling.pdf))
-* Google Tensorflow Blog
+* Candidate Sampling ([link](https://www.tensorflow.org/extras/candidate_sampling.pdf))
+  * Google Tensorflow Blog
 
-TODO: NCE
+* Noise-constrastive estimation: A new estimation principle for unnormalized statistical models. AISTATA 2010 
+  * Michael Gutmann, Hyvarinen. University of Helsinki
 
 
 
@@ -227,44 +231,38 @@ TODO: NCE
 
 ### Variational Inference, VI 
 
-#### Variational Inference: A Review for Statisticians. 
-* David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
-* Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
+* Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
+  * Sam Power. University of Cambridge 
 
-#### Stochastic Variational Inference
-* Matthew D. Hoffman, David M. Blei, Chong Wang, John Paisley
-* Natural gradient of the ELBO; stochastic optimization; bayesian non-parameterics for the hierarchical dirichlet process. 
+* Variational Inference: A Review for Statisticians. 
+  * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
+  * Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
 
+* Stochastic Variational Inference
+  * Matthew D. Hoffman, David M. Blei, Chong Wang, John Paisley
+  * Natural gradient of the ELBO; stochastic optimization; bayesian non-parameterics for the hierarchical dirichlet process. 
 
+* Variational Bayesian Inference with Stochastic Search. ICML 12
+  * John Paisley, David Blei, Michael Jordan. Berkeley and Princeton 
 
 
 
 ### VAEs 
 
-#### Auto-Encoding Variational Bayes, ICLR 13 
-* Diederik P. Kingma, Max Welling
+* Auto-Encoding Variational Bayes, ICLR 14
+  * Diederik P. Kingma, Max Welling
 
-#### Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
-* Danilo Jimenez Rezende, Shakir Mohamed, Daan Wierstra
-* Reparameterization w. deep gaussian models. 
+* Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
+  * Danilo Jimenez Rezende, Shakir Mohamed, Daan Wierstra
+  * Reparameterization w. deep gaussian models. 
 
-#### Semi-amortized variational autoencoders, ICML 18 
-* Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
+* Semi-amortized variational autoencoders, ICML 18 
+  * Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
 
-#### Adversarially Regularized Autoencoders, ICML 18 
-* Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
-* A wrapup of the major VAE/ GANs 
-* Although this paper looks like more ML, but essentially it tackles an NLP problem. I [presented this paper](src/annotated_arae.pdf) in the Columbia DGM seminar course. 
-
-#### Lagging Inference Networks and Posterior Collapse in Variational Autoencoders, ICLR 19 
-* Junxian He, Daniel Spokoyny, Graham Neubig, Taylor Berg-Kirkpatrick
-
-#### Spherical Latent Spaces for Stable Variational Autoencoders, EMNLP 18 
-* Jiacheng Xu and Greg Durrett, UT Austin
-
-#### Avoiding Latent Variable Collapse with Generative Skip Models, AISTATS 19 
-* Adji B. Dieng, Yoon Kim, Alexander M. Rush, David M. Blei
-
+* Adversarially Regularized Autoencoders, ICML 18 
+  * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
+  * A wrapup of the major VAE/ GANs 
+  * The presentation of [this paper](src/annotated_arae.pdf) at the Columbia DGM seminar course. 
 
 
 
@@ -272,32 +270,25 @@ TODO: NCE
 ### Reparameterization 
 More on reparameterization: to reparameterize gaussian mixture, permutation matrix, and rejection samplers(Gamma and Dirichlet).   
 
+* Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
+  * Alex Graves
+  * To reparameterize Gaussian Mixture 
 
-#### The Annotated Gumbel-softmax. Yao Fu. 2020 ([link](https://github.com/FranxYao/Annotated-Gumbel-Softmax-and-Score-Function))
+* Reparameterization Gradients through Acceptance-Rejection Sampling Algorithms. AISTATS 2017 
+  * Christian A. Naesseth, Francisco J. R. Ruiz, Scott W. Linderman, David M. Blei
 
-#### Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
-* Alex Graves
-* To reparameterize Gaussian Mixture 
+* Implicit Reparameterization Gradients. NeurIPS 2018. 
+  * Michael Figurnov, Shakir Mohamed, and Andriy Mnih
+  * Really smart way to reparameterize many complex distributions.
 
-#### Reparameterization Gradients through Acceptance-Rejection Sampling Algorithms. AISTATS 2017 
-* Christian A. Naesseth, Francisco J. R. Ruiz, Scott W. Linderman, David M. Blei
+* Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
+  * Eric Jang, Shixiang Gu, Ben Poole
 
-#### Implicit Reparameterization Gradients. NeurIPS 2018. 
-* Michael Figurnov, Shakir Mohamed, and Andriy Mnih
-* Really smart way to reparameterize many complex distributions.
+* The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
+  * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
-#### Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
-* Eric Jang, Shixiang Gu, Ben Poole
-
-#### The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
-* Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
-
-#### Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
-* Sang Michael Xie and Stefano Ermon
-
-#### Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
-* Wouter Kool, Herke van Hoof, Max Welling
-* Gumbel topk, stochastic differentiable beam search 
+* Reparameterizable Subset Sampling via Continuous Relaxations. IJCAI 2019 
+  * Sang Michael Xie and Stefano Ermon
 
 
 
@@ -305,24 +296,22 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### GANs
 
-#### Generative Adversarial Networks, NIPS 14
-* Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
-* GAN origin 
-* This original GAN paper use the KL divergence to measure the distance between probability distributions, which may lead to the vanishing of gradient. To tackle this problem, the wassertein GAN is proposed with the earch mover distance. The following two papers shows the birth of wGAN.
+* Generative Adversarial Networks, NIPS 14
+  * Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
+  * GAN origin 
+  * This original GAN paper use the KL divergence to measure the distance between probability distributions, which may lead to the vanishing of gradient. To tackle this problem, the wassertein GAN is proposed with the earch mover distance. The following two papers shows the birth of wGAN.
 
-#### Towards principled methods for training generative adversarial networks, ICLR 2017 
-* Martin Arjovsky and Leon Bottou
-* Discusses the distance between distributions, but uses many hacky methods.
+* Towards principled methods for training generative adversarial networks, ICLR 2017 
+  * Martin Arjovsky and Leon Bottou
+  * Discusses the distance between distributions, but uses many hacky methods.
 
-#### Wasserstein GAN
-* Martin Arjovsky, Soumith Chintala, Léon Bottou
-* The principled methods, born from hacky methods. 
+* Wasserstein GAN
+  * Martin Arjovsky, Soumith Chintala, Léon Bottou
+  * The principled methods, born from hacky methods. 
 
-#### InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets. NIPS 2016
-* Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel. UC Berkeley. OpenAI
-* Variational mutual information maximization; unsupervised disentangled representation learning. 
-* NOTE: in ICML 19, the unsupervised disentangled representation learning is challenged by: _Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations_. 
-* But still, this is an informative and interesting paper that worth reading. Contrasting the two papers will be more interesting. 
+* InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets. NIPS 2016
+  * Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel. UC Berkeley. OpenAI
+  * Variational mutual information maximization; unsupervised disentangled representation learning. 
 
 
 
@@ -330,25 +319,25 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Flows
 
-#### Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
+* Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html)
 
-#### Variational Inference with Normalizing Flows, ICML 15 
-* Danilo Jimenez Rezende, Shakir Mohamed
+* Variational Inference with Normalizing Flows, ICML 15 
+  * Danilo Jimenez Rezende, Shakir Mohamed
 
-#### Improved Variational Inference with Inverse Autoregressive Flow
-* Diederik P Kingma, Tim Salimans, Rafal Jozefowicz, Xi Chen, Ilya Sutskever, Max Welling
+* Improved Variational Inference with Inverse Autoregressive Flow
+  * Diederik P Kingma, Tim Salimans, Rafal Jozefowicz, Xi Chen, Ilya Sutskever, Max Welling
 
-#### Density estimation using Real NVP. ICLR 17 
-* Laurent Dinh, Jascha Sohl-Dickstein, Samy Bengio
+* Density estimation using Real NVP. ICLR 17 
+  * Laurent Dinh, Jascha Sohl-Dickstein, Samy Bengio
 
-#### Learning About Language with Normalizing Flows 
-* Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+* Learning About Language with Normalizing Flows 
+  * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
 
-#### Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
-* Zachary M. Ziegler and Alexander M. Rush
+* Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
+  * Zachary M. Ziegler and Alexander M. Rush
 
-#### Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
-* Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
+* Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
+  * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
 
 
@@ -356,73 +345,67 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 ----
 ## Advanced-Topics
 
-### Gradient Estimation
+### Gradient Estimation and Optimization
 
-Monte Carlo Gradient Estimation in Machine Learning 
-* Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
+* Monte Carlo Gradient Estimation in Machine Learning 
+  * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
 
-REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models 
-* George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
+* Variational Inference for Monte Carlo Objectives. ICML 16
+  * Andriy Mnih,  Danilo J. Rezende. DeepMind
 
-Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation
-* Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
+* REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models. NIPS 17
+  * George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
+
+* Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
+  * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
+
+* Direct Optimization through arg max for Discrete Variational Auto-Encoder
+  * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
+
+* Backpropagating through Structured Argmax using a SPIGOT
+  * Hao Peng, Sam Thomson, Noah A. Smith
+
+### Continuous Relexation of Discrete Structures
+
+* Differentiable Dynamic Programming for Structured Prediction and Attention. ICML 18 
+  * Arthur Mensch, Mathieu Blondel. Inria Parietal and NTT Communication Science Laboratories 
 
 
-### Differentiablity and Continuous Relexations
+* Stochastic Optimization of Sorting Networks via Continuous Relaxations
+  * Aditya Grover, Eric Wang, Aaron Zweig, Stefano Ermon
 
-There are many discrete structures in language. In this section, we discuss the representation,differentiablility, and continuous relexations for these structures. 
+* Differentiable Ranks and Sorting using Optimal Transport
+  * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, and Tamir Hazan
 
-Continuous Hierarchical Representations with Poincaré Variational Auto-Encoders
-* Emile Mathieu, Charline Le Lan, Chris J. Maddison, Ryota Tomioka, Yee Whye Teh
+* Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
+  * Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
 
-Differentiable Dynamic Programming for Structured Prediction and Attention
-* Arthur Mensch, Mathieu Blondel
+* A Regularized Framework for Sparse and Structured Neural Attention. NeurIPS 2017
 
-Direct Optimization through arg max for Discrete Variational Auto-Encoder
-* Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
-
-Backpropagating through Structured Argmax using a SPIGOT
-* Hao Peng, Sam Thomson, Noah A. Smith
-
-Stochastic Optimization of Sorting Networks via Continuous Relaxations
-* Aditya Grover, Eric Wang, Aaron Zweig, Stefano Ermon
-
-Differentiable Ranks and Sorting using Optimal Transport
-* Guy Lorberbom, Andreea Gane, Tommi Jaakkola, and Tamir Hazan
-
-Reparameterizing the Birkhoff Polytope for Variational Permutation Inference. AISTATS 2018 
-* Scott W. Linderman, Gonzalo E. Mena, Hal Cooper, Liam Paninski, John P. Cunningham. 
-
-A Regularized Framework for Sparse and Structured Neural Attention. NeurIPS 2017
-
-SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
-
-TODO: projected gradients; direct loss minimization
+* SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
 
 
 
 ### Information Theory 
 
-#### My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
-* Many important basics and detailed discussions.
-* Clears out the definition of conditional entropy and conditional mutual information. 
+* My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
+  * Basics of information theory 
 
-#### Elements of Information Theory. Cover and Thomas. 1991 
-* I just read chapter 2 so I do not have much to say. But do read chapter 2! Including the problems at the end. 
+*  Elements of Information Theory. Cover and Thomas. 1991 
 
-#### On Variational Bounds of Mutual Information. ICML 2019 
-* Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
-* A comprehensive discussion of all these MI variational bounds 
+* On Variational Bounds of Mutual Information. ICML 2019 
+  * Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
+  * A comprehensive discussion of all these MI variational bounds 
 
-#### Learning Deep Representations By Mutual Information Estimation And Maximization. ICLR 2019 
-* R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, and Yoshua Bengio
-* In section 3.2 there is a detailed comparison between different MI estimators. Do take a look!
+* Learning Deep Representations By Mutual Information Estimation And Maximization. ICLR 2019 
+  * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, and Yoshua Bengio
+  * A detailed comparison between different MI estimators, section 3.2. 
 
-#### MINE: Mutual Information Neural Estimation
+* MINE: Mutual Information Neural Estimation
 * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
 
-#### Deep Variational Information Bottleneck. ICLR 2017 
+* Deep Variational Information Bottleneck. ICLR 2017 
 * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
 
 
@@ -431,18 +414,18 @@ TODO: projected gradients; direct loss minimization
 
 ### Disentanglement and Interpretability
 
-#### Identifying Bayesian Mixture Models 
-* Michael Betancourt
-* The source of non-identifiability is symmetry and exchangability in both prior and conditional.
-* Two ways of breaking the symmetry:
-  * Ordering of the mixture component
-  * non-exchangeable prior 
+* Identifying Bayesian Mixture Models 
+  * Michael Betancourt
+  * The source of non-identifiability is symmetry and exchangability in both prior and conditional.
+  * Two ways of breaking the symmetry:
+    * Ordering of the mixture component
+    * non-exchangeable prior 
 
-#### Disentangling Disentanglement in Variational Autoencoders. ICML 2019 
-* Emile Mathieu, Tom Rainforth, N. Siddharth, Yee Whye Teh
+* Disentangling Disentanglement in Variational Autoencoders. ICML 2019 
+  * Emile Mathieu, Tom Rainforth, N. Siddharth, Yee Whye Teh
 
-#### Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML 2019 
-* Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
+* Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations. ICML 2019 
+  * Francesco Locatello, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain Gelly, Bernhard Schölkopf, Olivier Bachem
 
 
 
@@ -450,22 +433,22 @@ TODO: projected gradients; direct loss minimization
 
 ### Invariance
 
-#### Emergence of Invariance and Disentanglement in Deep Representations
-* Alessandro Achillo and Stefano Soatto. UCLA. JMLR 2018 
+* Emergence of Invariance and Disentanglement in Deep Representations
+  * Alessandro Achillo and Stefano Soatto. UCLA. JMLR 2018 
 
-#### Invariant Risk Minimization
-* Martin Arjovsky, Leon Bottou, Ishaan Gulrajani, David Lopez-Paz. 2019. 
+* Invariant Risk Minimization
+  * Martin Arjovsky, Leon Bottou, Ishaan Gulrajani, David Lopez-Paz. 2019. 
 
 
 
 
 ### Posterior Regularization 
 
-#### Posterior Regularization for Structured Latent Variable Models
-* Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
+* Posterior Regularization for Structured Latent Variable Models
+  * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
 
-#### Posterior Control of Blackbox Generation 
-* Xiang Lisa Li and Alexander M. Rush. 2019.
+* Posterior Control of Blackbox Generation 
+  * Xiang Lisa Li and Alexander M. Rush. 2019.
 
 
 
@@ -473,29 +456,29 @@ TODO: projected gradients; direct loss minimization
 
 ### Reflections and Critics
 
-#### The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
-* Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
-* In science, many things are intuitively right yet actually wrong. Discovering these knowledges is always nontrivial and requires inspiration. 
-* This paper is an example: using the bernoulli on [0, 1] valued data (continuous) is not equivelent to binary data, and will result in a normalization constant gap. 
+* The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
+  * Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
+  * In science, many things are intuitively right yet actually wrong. Discovering these knowledges is always nontrivial and requires inspiration. 
+  * This paper is an example: using the bernoulli on [0, 1] valued data (continuous) is not equivelent to binary data, and will result in a normalization constant gap. 
 
-#### Do Deep Generative Models Know What They Don't Know? ICLR 2019 
-* Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
+* Do Deep Generative Models Know What They Don't Know? ICLR 2019 
+  * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
 
 ### More Applications. 
 
 TODO: summarization; machine translation; dialog
 
-#### Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
-* Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
+* Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
+  * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
 
-#### Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
-* Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
+* Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
+  * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
 
-#### TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
-* Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
+* TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
+  * Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
 
-#### Topic Aware Neural Response Generation, AAAI 17 
-* Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
+* Topic Aware Neural Response Generation, AAAI 17 
+  * Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
 
 

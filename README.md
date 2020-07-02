@@ -33,7 +33,7 @@ Let us begin the journey.
   * [VAEs](#VAEs)
   * [Reparameterization](#Reparameterization)
   * [GANs](#GANs)
-  * [Normalizing Flows](#Normalizing-flows)
+  * [Flows](#Flows)
 * [Advanced Topics](#Advanced-Topics)
   * [Gradient Estimation and Optimization](#Gradient-Estimation-and-Optimization)
   * [Continuous Relexation of Discrete Structures](#Continuous-Relexation-of-Discrete-Structures)

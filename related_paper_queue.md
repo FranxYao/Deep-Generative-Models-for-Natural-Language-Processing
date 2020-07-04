@@ -24,3 +24,6 @@
 
 * Backpropagating through Structured Argmax using a SPIGOT
   * Hao Peng, Sam Thomson, Noah A. Smith
+
+* My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
+  * Basics of information theory 

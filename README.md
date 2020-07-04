@@ -362,6 +362,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * ♦︎ Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
 
+
+
+
 ### Continuous Relexation of Discrete Structures
 
 * ♦︎♦︎ Gradient Estimation with Stochastic Softmax Tricks. 2020 
@@ -388,9 +391,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Information Theory 
 
-* My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
-  * Basics of information theory 
-
 * ♦︎ Elements of Information Theory. Cover and Thomas. 1991 
 
 * ♦︎ On Variational Bounds of Mutual Information. ICML 2019 
@@ -402,7 +402,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * A detailed comparison between different MI estimators, section 3.2. 
 
 * MINE: Mutual Information Neural Estimation
-* R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
+  * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
 
 * Deep Variational Information Bottleneck. ICLR 2017 
 * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 

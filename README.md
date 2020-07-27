@@ -41,8 +41,8 @@ Let us begin the journey.
   * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
   * [Invariance](#Invariance)
   * [Posterior Regularization](#Posterior-Regularization)
-  * [Reflections and Critics](#reflections-and-critics)
-* [Applications](#applications)
+  * [Analysis and  Critics](#Analysis-and-Critics)
+* [Applications](#Applications)
 
 Citation:
 ```
@@ -453,7 +453,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-### Reflections and Critics
+### Analysis and Critics
 
 * Fixing a Broken ELBO. ICML 2018. 
   * Alexander A. Alemi, Ben Poole, Ian Fischer, Joshua V. Dillon, Rif A. Saurous, Kevin Murphy
@@ -468,7 +468,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
 
-### More Applications. 
+### Applications
 
 TODO: summarization; machine translation; dialog
 

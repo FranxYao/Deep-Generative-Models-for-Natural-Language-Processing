@@ -455,10 +455,14 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Reflections and Critics
 
+* Fixing a Broken ELBO. ICML 2018. 
+  * Alexander A. Alemi, Ben Poole, Ian Fischer, Joshua V. Dillon, Rif A. Saurous, Kevin Murphy
+
+* Tighter Variational Bounds are Not Necessarily Better. ICML 2018 
+  * Tom Rainforth, Adam R. Kosiorek, Tuan Anh Le, Chris J. Maddison, Maximilian Igl, Frank Wood, Yee Whye Teh
+
 * The continuous Bernoulli: fixing a pervasive error in variational autoencoders. NeurIPS 2019 
   * Gabriel Loaiza-Ganem and John P. Cunningham. Columbia. 
-  * In science, many things are intuitively right yet actually wrong. Discovering these knowledges is always nontrivial and requires inspiration. 
-  * This paper is an example: using the bernoulli on [0, 1] valued data (continuous) is not equivelent to binary data, and will result in a normalization constant gap. 
 
 * Do Deep Generative Models Know What They Don't Know? ICLR 2019 
   * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan

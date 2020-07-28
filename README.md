@@ -167,6 +167,9 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
   * Structured attention w. linear chain and tree crfs. 
 
+* ♦︎ Linguistically-Informed Self-Attention for Semantic Role Labeling. EMNLP 2018 Best paper award
+  * Emma Strubell, Patrick Verga, Daniel Andor, David Weiss and Andrew McCallum. UMass Amherst and Google AI Language
+
 * Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
   * To differentiate the max operator in dynamic programming. 
 
@@ -224,6 +227,9 @@ Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC an
 
 * Noise-constrastive estimation: A new estimation principle for unnormalized statistical models. AISTATA 2010 
   * Michael Gutmann, Hyvarinen. University of Helsinki
+
+* ♦︎ A* Sampling. NIPS 2014 Best paper award
+  * Chris J. Maddison, Daniel Tarlow, Tom Minka. University of Toronto and MSR
 
 
 

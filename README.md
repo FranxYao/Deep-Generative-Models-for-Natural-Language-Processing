@@ -157,6 +157,9 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
   * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
   * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
+* Latent Structure Models for NLP. ACL 2019 [link](https://deep-spin.github.io/tutorial/)
+  * André Martinns, Tsvetomila Mihaylova, Nikita Nangia, Vlad Niculae.
+
 * ♦︎ An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
   * Linear-chain CRFs. Modeling, inference and parameter estimation
 

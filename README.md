@@ -476,6 +476,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Do Deep Generative Models Know What They Don't Know? ICLR 2019 
   * Eric Nalisnick, Akihiro Matsukawa, Yee Whye Teh, Dilan Gorur, Balaji Lakshminarayanan
 
+* Effective Estimation of Deep Generative Language Models. ACL 2020 
+  * Tom Pelsmaeker and Wilker Aziz. University of Edinburgh and University of Amsterdam 
+
 
 ### Applications
 

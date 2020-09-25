@@ -351,7 +351,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
   * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
 
-
+* Variational Neural Machine Translation with Normalizing Flows. ACL 2020 
+  * Hendra Setiawan, Matthias Sperber, Udhay Nallasamy, Matthias Paulik. Apple 
 
 
 ----

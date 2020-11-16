@@ -6,7 +6,7 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: Advanced Neural Architectures; Monte-Carlo Gradient Estimation; Continuous Relaxations
 
-\*\*TODO 1\*\*: More on continuous relaxations; More on gradient estimation and optimization for discrete structures; Semantics
+\*\*TODO 1\*\*: More on continuous relaxations; More on gradient estimation and optimization for discrete structures; Semantics; Invariance and identifiability
 
 \*\*TODO 2\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics
 

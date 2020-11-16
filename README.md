@@ -1,12 +1,14 @@
 
 # Deep-Generative-Models-for-Natural-Language-Processing
-DGMs 4 NLP, Deep Generative Models for Natural Language Processing, resources, conference mapping and paper list. 
+DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap. 
 
-Yao Fu, Columbia University, yao.fu@columbia.edu
+Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: Advanced Neural Architectures; Monte-Carlo Gradient Estimation; Continuous Relaxations
 
-\*\*TODO\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; continuous relaxation of discrete structures; optimization for discrete structures; Langevin Dynamics; Posterior Regularization
+\*\*TODO 1\*\*: More on continuous relaxations; More on gradient estimation and optimization for discrete structures; Semantics
+
+\*\*TODO 2\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics
 
 ![title](src/titlepage.jpeg)
 
@@ -17,6 +19,8 @@ Why do we want deep generative models? Because we want to learn the latent repre
 How to model them in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicit supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
+
+(This list originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/) then extended this far)
 
 ### Table of Content 
 * [Resources](#resources)

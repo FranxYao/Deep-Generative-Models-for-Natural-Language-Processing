@@ -24,13 +24,16 @@ Let us begin the journey.
 
 ### Table of Content 
 * [Resources](#resources)
-  * [Deep Generative Models](#Deep-Generative-Models)
-  * [Graphical Model Foundations](#Graphical-Models-Foundations)
-  * [Textbooks and Phd Thesis](#Textbooks-and-Phd-Thesis)
+  * [DGM Seminars](#DGM-Seminars)
+  * [Courses](#Courses)
+  * [Books](#Books)
 * [NLP Side](#nlp-side)
   * [Generation](#Generation)
+  * [Decoding and Search](#Decoding-and-Search)
   * [Structured Prediction](#Structured-Prediction)
-  * [Advanced Neural Network Architectures](#Advanced-Neural-Network-Architectures)
+  * [Syntax](#Syntax)
+  * [Semantics](#Semantics)
+  * [Compositionality](#Compositionality)
 * [ML Side](#ml-side)
   * [Samplig Methods](#Samplig-Methods)
   * [Variational Inference](#Variational-Inference,-VI)
@@ -39,13 +42,15 @@ Let us begin the journey.
   * [GANs](#GANs)
   * [Flows](#Flows)
 * [Advanced Topics](#Advanced-Topics)
-  * [Gradient Estimation and Optimization](#Gradient-Estimation-and-Optimization)
-  * [Continuous Relexation of Discrete Structures](#Continuous-Relexation-of-Discrete-Structures)
+  * [Neural Network Architectures](#Neural-Network-Architectures)
+  * [Optimization and Gradient Estimation](#Optimization-and-Gradient-Estimation)
+  * [Optimization and Discrete Structures](#Optimization-and-Discrete-Structures)
+  * [Efficient Inference](#Efficient-Marginalization)
   * [Information Theory](#Information-Theory)
   * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
   * [Invariance](#Invariance)
   * [Posterior Regularization](#Posterior-Regularization)
-  * [Analysis and  Critics](#Analysis-and-Critics)
+  * [Analysis and Critics](#Analysis-and-Critics)
 * [Applications](#Applications)
 
 Citation:
@@ -60,7 +65,7 @@ Citation:
 
 ## Resources 
 
-### Deep Generative Models
+### DGM Seminars
 
 * ♦︎ John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
   * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
@@ -82,7 +87,7 @@ Citation:
 
 * Columbia [STCS 8101](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html) Representation Learning: A Probabilistic Perspective
 
-### Graphical Models Foundations
+### Courses
 
 The fundation of the DGMs is built upon probabilistic graphical models. So we take a look at the following resources
 
@@ -98,20 +103,23 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
   * Many inference methods for structured models are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
   * Also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
-### Textbooks and Phd Thesis
+### Books
 
-* ♦︎ Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
+* Pattern Recognition and Machine Learning. Christopher M. Bishop. 2006
   * Probabily the most classical textbook 
   * The _core part_, according to my own understanding, of this book, should be section 8 - 13, especially section 10 since this is the section that introduces variational inference. 
 
 * Machine Learning: A Probabilistic Perspective. Kevin P. Murphy. 2012
   * Compared with the PRML Bishop book, this book may be used as a super-detailed handbook for various graphical models and inference methods. 
 
-* Deep Generative Models for Natural Language Processing. ([link](https://ora.ox.ac.uk/catalog/uuid:e4e1f1f9-e507-4754-a0ab-0246f1e1e258/download_file?file_format=pdf&safe_filename=PhD_Thesis_of_University_of_Oxford%2B%25287%2529.pdf&type_of_work=Thesis))
-  * Yishu Miao, Oxford, 2017
+* Graphical Models, Exponential Families, and Variational Inference. 2008
+  * Martin J. Wainwright and Michael I. Jordan
 
-* Deep Latent Variable Models for Natural Language ([link](https://www.people.fas.harvard.edu/~yoonkim/data/kim-dissertation-2020.pdf))
-  * Yoon Kim, Havard, 2020
+* Linguistic Structure Prediction. 2011
+  * Noah Smith 
+
+* The Syntactic Process. 2000 
+  * Mark Steedman
 
 ----
 
@@ -147,21 +155,18 @@ We will focus on two topics: generation and structural inference, and the advanc
   * Wouter Kool, Herke van Hoof, Max Welling
   * Gumbel topk, stochastic differentiable beam search 
 
+### Decoding and Search
 
-
+TBC 
 
 ### Structured Prediction
-
-Structured Prediction is about the so-called core-nlp tasks like chunking, tagging and parsing and so on. 
-
-A good start point is Sasha's library, TorchStruct, as it is an integration of multiple core and advanced techniques. 
 
 * ♦︎♦︎ Torch-Struct: Deep Structured Prediction Library
   * Alexander M. Rush. Cornell University 
   * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
   * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
-* Latent Structure Models for NLP. ACL 2019 [link](https://deep-spin.github.io/tutorial/)
+* Latent Structure Models for NLP. ACL 2019 tutorial [link](https://deep-spin.github.io/tutorial/)
   * André Martinns, Tsvetomila Mihaylova, Nikita Nangia, Vlad Niculae.
 
 * ♦︎ An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
@@ -174,11 +179,11 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
   * Structured attention w. linear chain and tree crfs. 
 
-* ♦︎ Linguistically-Informed Self-Attention for Semantic Role Labeling. EMNLP 2018 Best paper award
-  * Emma Strubell, Patrick Verga, Daniel Andor, David Weiss and Andrew McCallum. UMass Amherst and Google AI Language
-
 * Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
   * To differentiate the max operator in dynamic programming. 
+
+
+### Syntax
 
 * Recurrent Neural Network Grammars. NAACL 16
   * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
@@ -188,25 +193,26 @@ A good start point is Sasha's library, TorchStruct, as it is an integration of m
 * Unsupervised Recurrent Neural Network Grammars, NAACL 19 
   * Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
 
-
-* Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
-  * Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling, Phil Blunsom, Karl Moritz Hermann
-
 * Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
   * Caio Corro, Ivan Titov, Edinburgh
   * Reparameterize the sampling from a CRF by using gumbel perturbation and continuous relexation of Eisner Algo. 
 
 
-### Advanced Neural Network Architectures
+### Semantics
 
-* THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
-  * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
+* The Syntactic Process. 2020 
+  * Mark Steedman
 
-* Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
-  * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
+* Linguistically-Informed Self-Attention for Semantic Role Labeling. EMNLP 2018 Best paper award
+  * Emma Strubell, Patrick Verga, Daniel Andor, David Weiss and Andrew McCallum. UMass Amherst and Google AI Language
 
-* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
-  * Yuntian Deng and Alexander Rush
+* Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
+  * Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling, Phil Blunsom, Karl Moritz Hermann
+
+### Compositionality
+
+* Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks. ICML 2019
+  * 
 
 ----
 
@@ -362,7 +368,21 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 ----
 ## Advanced-Topics
 
-### Gradient Estimation and Optimization
+
+### Neural Network Architectures
+
+* THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
+  * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
+
+* Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
+  * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
+
+* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
+  * Yuntian Deng and Alexander Rush
+
+* 
+
+### Optimization and Gradient Estimation
 
 * ♦︎ Monte Carlo Gradient Estimation in Machine Learning 
   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
@@ -379,9 +399,12 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-### Continuous Relexation of Discrete Structures
+### Optimization and Discrete Structures
 
-* ♦︎♦︎ Gradient Estimation with Stochastic Softmax Tricks. 2020 
+* Learning with Differentiable Perturbed Optimizers. NeurIPS 2020
+  * Quentin Berthet, Mathieu Blondel, Olivier Teboul, Marco Cuturi, Jean-Philippe Vert, Francis Bach
+
+* Gradient Estimation with Stochastic Softmax Tricks. NeurIPS 2020 
   * Max B. Paulus, Dami Choi, Daniel Tarlow, Andreas Krause, Chris J. Maddison. 
 
 * Differentiable Dynamic Programming for Structured Prediction and Attention. ICML 18 
@@ -401,7 +424,16 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
 
+### Efficient Inference
 
+* Nested Named Entity Recognition with Partially-Observed TreeCRFs. AAAI 2021
+  * Yao Fu, Chuanqi Tan, Mosha Chen, Songfang Huang, Fei Huang
+
+* Rao-Blackwellized Stochastic Gradients for Discrete Distributions. ICML 2019.
+  * Runjing Liu, Jeffrey Regier, Nilesh Tripuraneni, Michael I. Jordan, Jon McAuliffe
+
+* Efficient Marginalization of Discrete and Structured Latent Variables via Sparsity. NeurIPS 2020 
+  * Gonçalo M. Correia, Vlad Niculae, Wilker Aziz, André F. T. Martins
 
 ### Information Theory 
 

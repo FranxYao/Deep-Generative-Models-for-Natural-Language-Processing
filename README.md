@@ -41,16 +41,21 @@ Let us begin the journey.
   * [Reparameterization](#Reparameterization)
   * [GANs](#GANs)
   * [Flows](#Flows)
-* [Advanced Topics](#Advanced-Topics)
-  * [Neural Network Architectures](#Neural-Network-Architectures)
-  * [Optimization and Gradient Estimation](#Optimization-and-Gradient-Estimation)
-  * [Optimization and Discrete Structures](#Optimization-and-Discrete-Structures)
-  * [Efficient Inference](#Efficient-Marginalization)
+* [Advanced Topics: Neural Architextures](#Advanced-Topics:-Neural-Architextures)
+  * [RNNs](#RNNs)
+  * [Transformers](#Transformers)
+* [Advanced Topics: Optimization](#Advanced-Topics:-Optimization)
+  * [Gradient Estimation](#Gradient-Estimation)
+  * [Discrete Structures](#Discrete-Structures)
+* [Advanced Topics: Inference](#Advanced-Topics:-Inference)
+  * [Efficient Inference](#Efficient-Inference)
+  * [Structured Family](#Structured-Family)
+  * [Posterior Regularization](#Posterior-Regularization)
+* [Advanced Topics: Representation](Advanced-Topics:-Representation)
   * [Information Theory](#Information-Theory)
   * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
   * [Invariance](#Invariance)
-  * [Posterior Regularization](#Posterior-Regularization)
-  * [Analysis and Critics](#Analysis-and-Critics)
+* [Analysis and Critics](#Analysis-and-Critics)
 * [Applications](#Applications)
 
 Citation:
@@ -368,23 +373,33 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 ----
-## Advanced-Topics
-
-
-### Neural Network Architectures
+## Advanced Topics: Neural Architectures
 
 * THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
 
+### RNNs
+
 * Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
   * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
 
-* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
-  * Yuntian Deng and Alexander Rush
+* RNNs can generate bounded hierarchical languages with optimal memory
+  * John Hewitt, Michael Hahn, Surya Ganguli, Percy Liang, Christopher D. Manning
 
-* 
+### Transformers
 
-### Optimization and Gradient Estimation
+* Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned. ACL 2019
+  * Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, Ivan Titov
+
+* Theoretical Limitations of Self-Attention in Neural Sequence Models. TACL 2019
+  * Michael Hahn
+
+* Rethinking Attention with Performers. 2020
+  * Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, David Belanger, Lucy Colwell, Adrian Weller
+
+## Advanced Topics: Optimization
+
+### Gradient Estimation
 
 * ♦︎ Monte Carlo Gradient Estimation in Machine Learning 
   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
@@ -401,7 +416,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-### Optimization and Discrete Structures
+### Discrete Structures
 
 * Learning with Differentiable Perturbed Optimizers. NeurIPS 2020
   * Quentin Berthet, Mathieu Blondel, Olivier Teboul, Marco Cuturi, Jean-Philippe Vert, Francis Bach
@@ -426,6 +441,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
 
+## Advanced Topics: Inference
+
 ### Efficient Inference
 
 * Nested Named Entity Recognition with Partially-Observed TreeCRFs. AAAI 2021
@@ -436,6 +453,21 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Efficient Marginalization of Discrete and Structured Latent Variables via Sparsity. NeurIPS 2020 
   * Gonçalo M. Correia, Vlad Niculae, Wilker Aziz, André F. T. Martins
+
+### Structured Family
+
+TBC 
+
+### Posterior Regularization 
+
+* Posterior Regularization for Structured Latent Variable Models
+  * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
+
+* Posterior Control of Blackbox Generation 
+  * Xiang Lisa Li and Alexander M. Rush. 2019.
+
+
+## Advanced Topics: Representation
 
 ### Information Theory 
 
@@ -489,13 +521,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-### Posterior Regularization 
 
-* Posterior Regularization for Structured Latent Variable Models
-  * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
-
-* Posterior Control of Blackbox Generation 
-  * Xiang Lisa Li and Alexander M. Rush. 2019.
 
 
 

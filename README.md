@@ -212,15 +212,17 @@ TBC
 ### Compositionality
 
 * Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks. ICML 2019
-  * 
+  * Brenden Lake and Marco Baroni 
+
+* Improving Text-to-SQL Evaluation Methodology. ACL 2018 
+  * Catherine Finegan-Dollak, Jonathan K. Kummerfeld, Li Zhang, Karthik Ramanathan, Sesh Sadasivam, Rui Zhang, Dragomir Radev
+
+* Span-based Semantic Parsing for Compositional Generalization. 2020 
+  * Jonathan Herzig, Jonathan Berant
 
 ----
 
 ## ML Side 
-
-Now the ML side, before discussing VAEs, GANs and Flows, we first review MCMC and VI, as the two most widely used approximate inference methods 
-
-
 
 
 ### Samplig Methods

@@ -4,11 +4,11 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: Advanced Neural Architectures; Monte-Carlo Gradient Estimation; Continuous Relaxations
+\*\*Update\*\*: Re-organized sections, expand NLP section; Semantics, compositionality, optimization for discrete structures
 
-\*\*TODO 1\*\*: Efficient Inference; More on continuous relaxations; More on gradient estimation and optimization for discrete structures; Semantics; Invariance and identifiability
+\*\*TODO 1\*\*: Decoding and Search, Efficient Inference; More on gradient estimation and optimization for discrete structures
 
-\*\*TODO 2\*\*: Non-autoregressive Generation; Decoding methods; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics
+\*\*TODO 2\*\*: Non-autoregressive Generation; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
 
 ![title](src/titlepage.jpeg)
 

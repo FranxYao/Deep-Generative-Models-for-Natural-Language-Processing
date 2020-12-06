@@ -41,21 +41,22 @@ Let us begin the journey.
   * [Reparameterization](#Reparameterization)
   * [GANs](#GANs)
   * [Flows](#Flows)
-* [Advanced Topics - Neural Architextures](#Advanced-Topics---Neural-Architextures)
-  * [RNNs](#RNNs)
-  * [Transformers](#Transformers)
-* [Advanced Topics: Optimization](#Advanced-Topics:-Optimization)
-  * [Gradient Estimation](#Gradient-Estimation)
-  * [Discrete Structures](#Discrete-Structures)
-* [Advanced Topics: Inference](#Advanced-Topics:-Inference)
-  * [Efficient Inference](#Efficient-Inference)
-  * [Structured Family](#Structured-Family)
-  * [Posterior Regularization](#Posterior-Regularization)
-* [Advanced Topics: Representation](Advanced-Topics:-Representation)
-  * [Information Theory](#Information-Theory)
-  * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
-  * [Invariance](#Invariance)
-* [Analysis and Critics](#Analysis-and-Critics)
+* [Advanced Topics](#Advanced-Topics)
+  * [Neural Architextures](#Neural-Architextures)
+    * [RNNs](#RNNs)
+    * [Transformers](#Transformers)
+  * Optimization](#Optimization)
+    * [Gradient Estimation](#Gradient-Estimation)
+    * [Discrete Structures](#Discrete-Structures)
+  * [Inference](#Inference)
+    * [Efficient Inference](#Efficient-Inference)
+    * [Structured Family](#Structured-Family)
+    * [Posterior Regularization](#Posterior-Regularization)
+  * [Representation](#Representation)
+    * [Information Theory](#Information-Theory)
+    * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
+    * [Invariance](#Invariance)
+  * [Analysis and Critics](#Analysis-and-Critics)
 * [Applications](#Applications)
 
 Citation:
@@ -373,12 +374,14 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 ----
-## Advanced Topics - Neural Architectures
+## Advanced Topics
+
+### Neural Architectures
 
 * THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
 
-### RNNs
+#### RNNs
 
 * Ordered Neurons: Integrating Tree Structured into Recurrent Neural Networks
   * Yikang Shen, Shawn Tan, Alessandro Sordoni, Aaron Courville. Mila, MSR
@@ -386,7 +389,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * RNNs can generate bounded hierarchical languages with optimal memory
   * John Hewitt, Michael Hahn, Surya Ganguli, Percy Liang, Christopher D. Manning
 
-### Transformers
+#### Transformers
 
 * Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned. ACL 2019
   * Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, Ivan Titov
@@ -397,9 +400,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Rethinking Attention with Performers. 2020
   * Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, David Belanger, Lucy Colwell, Adrian Weller
 
-## Advanced Topics: Optimization
+### Optimization
 
-### Gradient Estimation
+#### Gradient Estimation
 
 * ♦︎ Monte Carlo Gradient Estimation in Machine Learning 
   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
@@ -416,7 +419,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-### Discrete Structures
+#### Discrete Structures
 
 * Learning with Differentiable Perturbed Optimizers. NeurIPS 2020
   * Quentin Berthet, Mathieu Blondel, Olivier Teboul, Marco Cuturi, Jean-Philippe Vert, Francis Bach
@@ -441,9 +444,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * SparseMAP: Differentiable Sparse Structured Inference. ICML 2018
 
 
-## Advanced Topics: Inference
+### Inference
 
-### Efficient Inference
+#### Efficient Inference
 
 * Nested Named Entity Recognition with Partially-Observed TreeCRFs. AAAI 2021
   * Yao Fu, Chuanqi Tan, Mosha Chen, Songfang Huang, Fei Huang
@@ -454,11 +457,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Efficient Marginalization of Discrete and Structured Latent Variables via Sparsity. NeurIPS 2020 
   * Gonçalo M. Correia, Vlad Niculae, Wilker Aziz, André F. T. Martins
 
-### Structured Family
+#### Structured Family
 
 TBC 
 
-### Posterior Regularization 
+#### Posterior Regularization 
 
 * Posterior Regularization for Structured Latent Variable Models
   * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
@@ -467,9 +470,9 @@ TBC
   * Xiang Lisa Li and Alexander M. Rush. 2019.
 
 
-## Advanced Topics: Representation
+### Representation
 
-### Information Theory 
+#### Information Theory 
 
 * ♦︎ Elements of Information Theory. Cover and Thomas. 1991 
 
@@ -491,7 +494,7 @@ TBC
 
 
 
-### Disentanglement and Interpretability
+#### Disentanglement and Interpretability
 
 * Identifying Bayesian Mixture Models 
   * Michael Betancourt
@@ -510,7 +513,7 @@ TBC
 
 
 
-### Invariance
+#### Invariance
 
 * Emergence of Invariance and Disentanglement in Deep Representations
   * Alessandro Achillo and Stefano Soatto. UCLA. JMLR 2018 

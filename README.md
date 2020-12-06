@@ -415,6 +415,12 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * ♦︎ Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
+  
+* Backpropagating through Structured Argmax using a SPIGOT. ACL 2018 Best Paper Honorable Mention. 
+  * Hao Peng, Sam Thomson, and Noah A. Smith
+  
+* Understanding the Mechanics of SPIGOT: Surrogate Gradients for Latent Structure Learning. EMNLP 2020 
+  * Tsvetomila Mihaylova, Vlad Niculae, and Andre ́ F. T. Martins
 
 
 

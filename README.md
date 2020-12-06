@@ -373,7 +373,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 ----
-## Advanced Topics: Neural Architectures
+## Advanced Topics - Neural Architectures
 
 * THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 

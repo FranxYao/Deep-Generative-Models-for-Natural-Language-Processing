@@ -41,7 +41,7 @@ Let us begin the journey.
   * [Reparameterization](#Reparameterization)
   * [GANs](#GANs)
   * [Flows](#Flows)
-* [Advanced Topics: Neural Architextures](#Advanced-Topics:-Neural-Architextures)
+* [Advanced Topics - Neural Architextures](#Advanced-Topics---Neural-Architextures)
   * [RNNs](#RNNs)
   * [Transformers](#Transformers)
 * [Advanced Topics: Optimization](#Advanced-Topics:-Optimization)

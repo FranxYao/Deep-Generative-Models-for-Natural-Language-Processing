@@ -391,6 +391,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Transformers
 
+* Long Range Arena: A Benchmark for Efficient Transformers
+  * Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
+
 * Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned. ACL 2019
   * Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, Ivan Titov
 

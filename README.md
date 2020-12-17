@@ -1,7 +1,8 @@
 
 
-DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap. 
 ![title](src/titlepage.jpeg)
+
+DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap. 
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 

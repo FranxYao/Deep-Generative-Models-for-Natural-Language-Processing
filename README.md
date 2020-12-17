@@ -1,6 +1,7 @@
 
-# Deep-Generative-Models-for-Natural-Language-Processing
+
 DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap. 
+![title](src/titlepage.jpeg)
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
@@ -9,8 +10,6 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 \*\*TODO 1\*\*: Decoding and Search, Efficient Inference; More on gradient estimation and optimization for discrete structures
 
 \*\*TODO 2\*\*: Matrix Factorization; Kernels; Non-autoregressive Generation; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
-
-![title](src/titlepage.jpeg)
 
 ----
 

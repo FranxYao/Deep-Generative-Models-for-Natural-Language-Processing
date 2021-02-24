@@ -6,6 +6,8 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
+\*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). 
+
 \*\*Update\*\*: Re-organized sections, expand NLP section; Semantics, compositionality, optimization for discrete structures
 
 \*\*TODO 1\*\*: Decoding and Search, Efficient Inference; More on gradient estimation and optimization for discrete structures

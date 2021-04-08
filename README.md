@@ -219,14 +219,13 @@ TBC
 
 ### Compositionality
 
+NOTE: this direction is currently my major focus. See the new [Compositional Generalization in NLP](https://github.com/FranxYao/CompositionalGeneralizationNLP) page for a more comprehensive reading list. 
+
 * Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks. ICML 2019
   * Brenden Lake and Marco Baroni 
 
 * Improving Text-to-SQL Evaluation Methodology. ACL 2018 
   * Catherine Finegan-Dollak, Jonathan K. Kummerfeld, Li Zhang, Karthik Ramanathan, Sesh Sadasivam, Rui Zhang, Dragomir Radev
-
-* Span-based Semantic Parsing for Compositional Generalization. 2020 
-  * Jonathan Herzig, Jonathan Berant
 
 ----
 

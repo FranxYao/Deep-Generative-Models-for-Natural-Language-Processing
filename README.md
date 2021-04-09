@@ -25,6 +25,8 @@ Let us begin the journey.
 (This list originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/) then extended this far)
 
 ### Table of Content 
+TODO: github already supports TOC in the webpage, then we may want to change this to a figure
+
 * [Resources](#resources)
   * [DGM Seminars](#DGM-Seminars)
   * [Courses](#Courses)

@@ -68,7 +68,7 @@ Citation:
 @article{yao2019DGM4NLP,
   title   = "Deep Generative Models for Natual Language Processing",
   author  = "Yao Fu",
-  year    = "2018",
+  year    = "2019",
   url     = "https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing"
 }
 ```

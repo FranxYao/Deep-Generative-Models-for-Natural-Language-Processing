@@ -16,9 +16,9 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 ----
 
-Why do we want deep generative models? Because we want to learn the latent representations for language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. They are latent since we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
+Why do we want deep generative models? Because we want to learn the factors that generate language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. Many of them are latent as in most cases, we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
-How to model them in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicit supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
+How to model the generative process of language in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicit supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
 
@@ -77,15 +77,14 @@ Citation:
 
 ### DGM Seminars
 
-* ♦︎ John's DGM: Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+* ♦︎ Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
   * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
-  * The discussion about [wesserstein GANs](http://stat.columbia.edu/~cunningham/teaching/GR8201/STAT_GR8201_2019_SPRG_slides_lec12.pdf) is amazing. Do take a look. 
 
-* ♦︎ Sasha's tutorial: A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
+* A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
   * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
-* Wilker Aziz's [DGM Landscape](http://wilkeraziz.github.io/pages/landscape) and their [tutorial](https://github.com/vitutorial/VITutorial)
-  * A great guidebook for VI. A graph over the VI literature and discusses the connections of different techniques. 
+* Latent Structure Models for NLP. ACL 2019 tutorial [link](https://deep-spin.github.io/tutorial/)
+  * André Martinns, Tsvetomila Mihaylova, Nikita Nangia, Vlad Niculae.
 
 * Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
@@ -136,14 +135,11 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 ## NLP Side 
 
-We will focus on two topics: generation and structural inference, and the advanced neural network architectures for them. We start from generation
 
 ### Generation
 
 * ♦︎ Generating Sentences from a Continuous Space, CoNLL 15
   * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
-  * Seems to be the first paper using VAEs for NLP
-  * An important point of this paper is about the posterior collapse problems, which has many follow-ups
 
 * Neural variational inference for text processing, ICML 16 
   * Yishu Miao, Lei Yu, Phil Blunsom, Deepmind
@@ -159,15 +155,27 @@ We will focus on two topics: generation and structural inference, and the advanc
 
 * Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
   * Yao Fu, Yansong Feng, and John P. Cunningham. Columbia 
-  * Learning bag of words as discrete latent variables, differentiable subset sampling via gumbel-topk reparameterization. 
 
-* ♦︎ Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
-  * Wouter Kool, Herke van Hoof, Max Welling
-  * Gumbel topk, stochastic differentiable beam search 
+
 
 ### Decoding and Search
 
-TBC 
+* ♦︎♦︎ Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
+
+* Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+  * Wouter Kool, Herke van Hoof, Max Welling
+
+* Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search. ACL 2017
+  * Chris Hokamp, Qun Liu
+
+* Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation. NAACL 2018 
+  * Matt Post, David Vilar
+
+* The Curious Case of Neural Text Degeneration. ICLR 2020 
+  * Ari Holtzman, Jan Buys, Li Du, Maxwell Forbes, Yejin Choi
+
+* Comparison of Diverse Decoding Methods from Conditional Language Models. ACL 2019
+  * Daphne Ippolito, Reno Kriz, Maria Kustikova, Joa ̃o Sedoc, Chris Callison-Burch
 
 ### Structured Prediction
 
@@ -176,14 +184,14 @@ TBC
   * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
   * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
-* Latent Structure Models for NLP. ACL 2019 tutorial [link](https://deep-spin.github.io/tutorial/)
-  * André Martinns, Tsvetomila Mihaylova, Nikita Nangia, Vlad Niculae.
-
 * ♦︎ An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
   * Linear-chain CRFs. Modeling, inference and parameter estimation
 
 * ♦︎ Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
   * The relationships between CRF inference and Autograd. 
+
+* Learning with Fenchel-Young Losses. JMLR 2019 
+  * Mathieu Blondel, André F. T. Martins, Vlad Niculae
 
 * ♦︎ Structured Attention Networks. ICLR 2017 
   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
@@ -282,6 +290,12 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 * ♦︎ Auto-Encoding Variational Bayes, ICLR 14
   * Diederik P. Kingma, Max Welling
 
+* beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework. ICLR 2017
+  * Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, Alexander Lerchner
+
+* Importance Weighted Autoencoders. ICLR 2015 
+  * Yuri Burda, Roger Grosse, Ruslan Salakhutdinov
+
 * Stochastic Backpropagation and Approximate Inference in Deep Generative Models. ICML 14
   * Danilo Jimenez Rezende, Shakir Mohamed, Daan Wierstra
   * Reparameterization w. deep gaussian models. 
@@ -348,8 +362,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 
 
-
-
 ### Flows
 
 * ♦︎ Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html) 
@@ -375,6 +387,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Variational Neural Machine Translation with Normalizing Flows. ACL 2020 
   * Hendra Setiawan, Matthias Sperber, Udhay Nallasamy, Matthias Paulik. Apple 
 
+* On the Sentence Embeddings from Pre-trained Language Models. EMNLP 2020 
+  * Bohan Li, Hao Zhou, Junxian He, Mingxuan Wang, Yiming Yang, Lei Li
+
 
 ----
 ## Advanced Topics
@@ -383,6 +398,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
+
+* [[Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability)]. Yao Fu
 
 #### RNNs
 
@@ -469,17 +486,22 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Efficient Marginalization of Discrete and Structured Latent Variables via Sparsity. NeurIPS 2020 
   * Gonçalo M. Correia, Vlad Niculae, Wilker Aziz, André F. T. Martins
 
-#### Structured Family
-
-TBC 
 
 #### Posterior Regularization 
 
-* Posterior Regularization for Structured Latent Variable Models
-  * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. JMLR 2010. 
+* Posterior Regularization for Structured Latent Variable Models. JMLR 2010
+  * Kuzman Ganchev, João Graça, Jennifer Gillenwater, Ben Taskar. 
 
-* Posterior Control of Blackbox Generation 
-  * Xiang Lisa Li and Alexander M. Rush. 2019.
+* Posterior Control of Blackbox Generation. 2019
+  * Xiang Lisa Li and Alexander M. Rush. 
+
+* Dependency Grammar Induction with a Neural Variational Transition-based Parser. AAAI 2019
+  * Bowen Li, Jianpeng Cheng, Yang Liu, Frank Keller
+
+### Generalization Thoery
+
+* CS229T. Statistical Learning Theory. 2016
+  * Percy Liang 
 
 
 ### Representation
@@ -559,6 +581,11 @@ TBC
 * Effective Estimation of Deep Generative Language Models. ACL 2020 
   * Tom Pelsmaeker and Wilker Aziz. University of Edinburgh and University of Amsterdam 
 
+* How Good is the Bayes Posterior in Deep Neural Networks Really? ICML 2020 
+  * Florian Wenzel, Kevin Roth, Bastiaan S. Veeling, Jakub Świątkowski, Linh Tran, Stephan Mandt, Jasper Snoek, Tim Salimans, Rodolphe Jenatton, Sebastian Nowozin
+
+* A statistical theory of cold posteriors in deep neural networks. ICLR 2021 
+  * Laurence Aitchison
 
 ### Applications
 

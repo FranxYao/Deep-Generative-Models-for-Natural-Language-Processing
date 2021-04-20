@@ -62,7 +62,6 @@ Let us begin the journey.
     * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
     * [Invariance](#Invariance)
   * [Analysis and Critics](#Analysis-and-Critics)
-* [Applications](#Applications)
 
 Citation:
 ```
@@ -588,20 +587,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * A statistical theory of cold posteriors in deep neural networks. ICLR 2021 
   * Laurence Aitchison
 
-### Applications
 
-TODO: summarization; machine translation; dialog
-
-* Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
-  * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
-
-* Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
-  * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
-
-* TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
-  * Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
-
-* Topic Aware Neural Response Generation, AAAI 17 
-  * Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma
 
 

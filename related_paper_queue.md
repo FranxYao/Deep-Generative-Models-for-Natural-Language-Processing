@@ -22,8 +22,19 @@
 * Direct Optimization through arg max for Discrete Variational Auto-Encoder
   * Guy Lorberbom, Andreea Gane, Tommi Jaakkola, Tamir Hazan
 
-* Backpropagating through Structured Argmax using a SPIGOT
-  * Hao Peng, Sam Thomson, Noah A. Smith
+
 
 * My [notes on mutual information](src/MINotes.md). Yao Fu, 2019. [pdf](src/MINotes.pdf)
   * Basics of information theory 
+
+* Generating Informative and Diverse Conversational Responses via Adversarial Information Maximization, NIPS 18
+  * Yizhe Zhang, Michel Galley, Jianfeng Gao, Zhe Gan, Xiujun Li, Chris Brockett, Bill Dolan
+
+* Discovering Discrete Latent Topics with Neural Variational Inference, ICML 17 
+  * Yishu Miao, Edward Grefenstette, Phil Blunsom. Oxford
+
+* TopicRNN: A Recurrent Neural Network with Long-Range Semantic Dependency, ICLR 17 
+  * Adji B. Dieng, Chong Wang, Jianfeng Gao, John William Paisley
+
+* Topic Aware Neural Response Generation, AAAI 17 
+  * Chen Xing, Wei Wu, Yu Wu, Jie Liu, Yalou Huang, Ming Zhou, Wei-Ying Ma

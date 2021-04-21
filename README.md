@@ -500,9 +500,11 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Generalization Thoery
 
-* CS229T. Statistical Learning Theory. 2016
+* Stanford CS229T. Statistical Learning Theory. 2016
   * Percy Liang 
 
+* Stanford STATS214 / CS229M: Machine Learning Theory. 
+  * Tengyu Ma 
 
 ### Representation
 

@@ -445,6 +445,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Understanding the Mechanics of SPIGOT: Surrogate Gradients for Latent Structure Learning. EMNLP 2020 
   * Tsvetomila Mihaylova, Vlad Niculae, and Andre ́ F. T. Martins
 
+* ♦︎ Randomized Automatic Differentiation. ICLR 2021
+  * Deniz Oktay, Nick McGreivy, Joshua Aduol, Alex Beatson, Ryan P. Adams
 
 
 
@@ -475,6 +477,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Inference
 
+* Topics in Advanced Inference. Yingzhen Li. ([Link](http://yingzhenli.net/home/pdf/topics_approx_infer.pdf))
+
 #### Efficient Inference
 
 * Nested Named Entity Recognition with Partially-Observed TreeCRFs. AAAI 2021
@@ -500,11 +504,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Generalization Thoery
 
-* Stanford CS229T. Statistical Learning Theory. 2016
+* CS229T. Statistical Learning Theory. 2016
   * Percy Liang 
 
-* Stanford STATS214 / CS229M: Machine Learning Theory. 
-  * Tengyu Ma 
 
 ### Representation
 

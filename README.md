@@ -37,6 +37,7 @@ Let us begin the journey.
 * [NLP Side](#nlp-side)
   * [Generation](#Generation)
   * [Decoding and Search](#Decoding-and-Search)
+  * [Non-autoregressive Decoding](#Non-autoregressive-Decoding)
   * [Structured Prediction](#Structured-Prediction)
   * [Syntax](#Syntax)
   * [Semantics](#Semantics)

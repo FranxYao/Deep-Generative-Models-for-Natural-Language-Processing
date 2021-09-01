@@ -8,11 +8,11 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
 
-\*\*Update\*\*: Re-organized sections, expand NLP section; Semantics, compositionality, optimization for discrete structures
+\*\*Update\*\*: Decoding and Search
 
-\*\*TODO 1\*\*: Decoding and Search, Efficient Inference; More on gradient estimation and optimization for discrete structures
+\*\*TODO 1\*\*: Matrix Factorization and Word embedding; Non-autoregressive Generation
 
-\*\*TODO 2\*\*: Matrix Factorization; Kernels; Non-autoregressive Generation; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
+\*\*TODO 2\*\*: Efficient Inference; More on gradient estimation and optimization for discrete structures; Kernels; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
 
 ----
 
@@ -23,6 +23,8 @@ How to model the generative process of language in a statistically principled wa
 Let us begin the journey. 
 
 (This list originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/) then extended this far)
+
+
 
 ### Table of Content 
 
@@ -150,9 +152,6 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 * Residual Energy Based Models for Text Generation. ICLR 20
   * Yuntian Deng, Anton Bakhtin, Myle Ott, Arthur Szlam, Marc' Aurelio Ranzato. Havard and FAIR
 
-* ♦︎ Cascaded Text Generation with Markov Transformers. Arxiv 20
-  * Yuntian Deng and Alexander Rush
-
 * Paraphrase Generation with Latent Bag of Words. NeurIPS 2019.
   * Yao Fu, Yansong Feng, and John P. Cunningham. Columbia 
 
@@ -161,9 +160,6 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 ### Decoding and Search
 
 * ♦︎♦︎ Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
-
-* Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
-  * Wouter Kool, Herke van Hoof, Max Welling
 
 * Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search. ACL 2017
   * Chris Hokamp, Qun Liu
@@ -176,6 +172,34 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 * Comparison of Diverse Decoding Methods from Conditional Language Models. ACL 2019
   * Daphne Ippolito, Reno Kriz, Maria Kustikova, Joa ̃o Sedoc, Chris Callison-Burch
+
+* Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
+  * Wouter Kool, Herke van Hoof, Max Welling
+
+* Controlled Text Generation as Continuous Optimization with Multiple Constraints. 2021 
+  * Sachin Kumar, Eric Malmi, Aliaksei Severyn, Yulia Tsvetkov
+
+* Towards Decoding as Continuous Optimisation in Neural Machine Translation. EMNLP 2017
+  * Cong Duy Vu Hoang, Gholamreza Haffari and Trevor Cohn. 
+
+### Non-autoregressive Decoding 
+
+Note:  I have not fully gone through this chapter, please give me suggestions! 
+
+* Non-Autoregressive Neural Machine Translation. ICLR 2018 
+  * Jiatao Gu, James Bradbury, Caiming Xiong, Victor O.K. Li, Richard Socher
+
+* Fully Non-autoregressive Neural Machine Translation: Tricks of the Trade. 
+  * Jiatao Gu, Xiang Kong. 
+
+* Cascaded Text Generation with Markov Transformers. Arxiv 20
+  * Yuntian Deng and Alexander Rush
+
+* Glancing Transformer for Non-Autoregressive Neural Machine Translation. ACL 2021 
+  * Lihua Qian, Hao Zhou, Yu Bao, Mingxuan Wang, Lin Qiu, Weinan Zhang, Yong Yu, Lei Li
+  * This one is now deployed inside Bytedance
+
+
 
 ### Structured Prediction
 

@@ -6,9 +6,9 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
-
 \*\*Update\*\*: Decoding and Search
+
+\*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
 
 \*\*TODO 1\*\*: Matrix Factorization and Word embedding; Non-autoregressive Generation
 
@@ -286,8 +286,6 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 
 * ♦︎ A* Sampling. NIPS 2014 Best paper award
   * Chris J. Maddison, Daniel Tarlow, Tom Minka. University of Toronto and MSR
-
-
 
 
 

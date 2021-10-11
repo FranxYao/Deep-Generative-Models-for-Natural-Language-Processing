@@ -10,9 +10,11 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
 
-\*\*TODO 1\*\*: Long-range transformers; Matrix Factorization and Word embedding; Non-autoregressive Generation
+\*\*TODO 1\*\*: Constrastive Learning; Prompting
 
-\*\*TODO 2\*\*: Efficient Inference; More on gradient estimation and optimization for discrete structures; Kernels; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
+\*\*TODO 2\*\*: Long-range transformers; Matrix Factorization and Word embedding; Non-autoregressive Generation
+
+\*\*TODO 3\*\*: Efficient Inference; More on gradient estimation and optimization for discrete structures; Kernels; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
 
 ----
 

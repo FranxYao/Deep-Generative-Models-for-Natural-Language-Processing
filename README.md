@@ -19,7 +19,7 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 ### Prelude
 
-(written in 2019, originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
+(written in early 2019, originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
 
 Why do we want deep generative models? Because we want to learn basic factors that generate language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. Many of them are latent as in most cases, we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
@@ -28,7 +28,7 @@ How to model the generative process of language in a statistically principled wa
 Let us begin the journey. 
 
 ### Invariant factors across environment and time
-(New thoughts in 2021)
+(New thoughts in Nov 2021)
 
 Three years after the introduction of this roadmap, the field has developed substentially. We observe the following trend: 
 

@@ -244,6 +244,8 @@ Note:  I have not fully gone through this chapter, please give me suggestions!
 
 TODO: more about it
 
+* Prompt Papers, ThuNLP ([link](https://github.com/thunlp/PromptPapers))
+
 * CTRL: A Conditional Transformer Language Model for Controllable Generation. Arxiv 2019
   * Nitish Shirish Keskar, Bryan McCann, Lav R. Varshney, Caiming Xiong, Richard Socher
 

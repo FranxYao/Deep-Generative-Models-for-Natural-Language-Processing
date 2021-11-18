@@ -6,67 +6,87 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: Decoding and Search
-
-\*\*Update\*\*: [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
+\*\*Update\*\*: Constrained / Conditional / Controllable decoding
 
 \*\*TODO 1\*\*: Constrastive Learning; Prompting
 
 \*\*TODO 2\*\*: Long-range transformers; Matrix Factorization and Word embedding; Non-autoregressive Generation
 
-\*\*TODO 3\*\*: Efficient Inference; More on gradient estimation and optimization for discrete structures; Kernels; Score-based Generative Models; A* sampling; Contrastive Divergence; EBM; Langevin Dynamics; Invariance and identifiability
+\*\*TODO 3\*\*: Efficient Inference; Kernels; Langevin Dynamics
 
 ----
+## Introduction 
 
-Why do we want deep generative models? Because we want to learn the factors that generate language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. Many of them are latent as in most cases, we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
+### Prelude
+
+(written in 2019, originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/))
+
+Why do we want deep generative models? Because we want to learn basic factors that generate language. Human language contains rich latent factors, the continuous ones might be emotion, intention, and others, the discrete/ structural factors might be POS/ NER tags or syntax trees. Many of them are latent as in most cases, we just observe the sentence. They are also generative: human should produce language based on the overall idea, the current emotion, the syntax, and all other things we can or cannot name. 
 
 How to model the generative process of language in a statistically principled way? Can we have a flexible framework that allows us to incorporate explicit supervision signals when we have labels, or add distant supervision or logical/ statistical constraints when we do not have labels but have other prior knowledge, or simply infer whatever makes the most sense when we have no labels or a priori? Is it possible that we exploit the modeling power of advanced neural architectures while still being mathematical and probabilistic? DGMs allow us to achieve these goals. 
 
 Let us begin the journey. 
 
-(This list originated from the [DGM seminar at Columbia](http://stat.columbia.edu/~cunningham/teaching/GR8201/) then extended this far)
+### Invariant factors across environment and time
+(New thoughts in 2021)
 
+Three years after the introduction of this roadmap, the field has developed substentially. We observe the following trend: 
 
+* BERT was introduced at the end of 2018, then language model pretraining becomes the dominate paradigm. 
+* Contrastive learning becomes popular again in 2020, achieving most SOTA results when combined with LM pretraining. 
+* Robustness becomes more and more important and is discussed in nearly all subareas. Generalization under distributional shift is
+* Interpretability and controllability consistently receive vast interests, and the discussions become more in-depth. 
 
-### Table of Content 
+To tackle fundamental questions, we study fundamental techniques. We believe the fundamental generative factors and process of human language, being both logical and probabilistic, generalizable and robust to distributional shift, adaptable to  environmental changes, will consistently serve as key ingredients towards artificial general intelligence. 
+
+## Table of Content 
 
 ![roadmap](src/roadmap.01.png)
 
-* [Resources](#resources)
-  * [DGM Seminars](#DGM-Seminars)
-  * [Courses](#Courses)
-  * [Books](#Books)
-* [NLP Side](#nlp-side)
-  * [Generation](#Generation)
-  * [Decoding and Search](#Decoding-and-Search)
-  * [Non-autoregressive Decoding](#Non-autoregressive-Decoding)
-  * [Structured Prediction](#Structured-Prediction)
-  * [Syntax](#Syntax)
-  * [Semantics](#Semantics)
-  * [Compositionality](#Compositionality)
-* [ML Side](#ml-side)
-  * [Samplig Methods](#Samplig-Methods)
-  * [Variational Inference](#Variational-Inference,-VI)
-  * [VAEs](#VAEs)
-  * [Reparameterization](#Reparameterization)
-  * [GANs](#GANs)
-  * [Flows](#Flows)
-* [Advanced Topics](#Advanced-Topics)
-  * [Neural Architextures](#Neural-Architectures)
-    * [RNNs](#RNNs)
-    * [Transformers](#Transformers)
-  * [Optimization](#Optimization)
-    * [Gradient Estimation](#Gradient-Estimation)
-    * [Discrete Structures](#Discrete-Structures)
-  * [Inference](#Inference)
-    * [Efficient Inference](#Efficient-Inference)
-    * [Posterior Regularization](#Posterior-Regularization)
-  * [Generalization Theory](#Generalization-Theory)
-  * [Representation](#Representation)
-    * [Information Theory](#Information-Theory)
-    * [Disentanglement and Interpretability](#Disentanglement-and-Interpretability)
-    * [Invariance](#Invariance)
-  * [Analysis and Critics](#Analysis-and-Critics)
+- [Introduction](#introduction)
+  - [Prelude](#prelude)
+  - [Invariant factors across environment and time](#invariant-factors-across-environment-and-time)
+- [Table of Content](#table-of-content)
+- [Resources](#resources)
+  - [DGM Seminars](#dgm-seminars)
+  - [Courses](#courses)
+  - [Books](#books)
+- [NLP Side](#nlp-side)
+  - [Generation](#generation)
+  - [Decoding and Search, General](#decoding-and-search-general)
+  - [Constrained Decoding](#constrained-decoding)
+  - [Non-autoregressive Decoding](#non-autoregressive-decoding)
+  - [Decoding from Pretrained Language Model](#decoding-from-pretrained-language-model)
+  - [Structured Prediction](#structured-prediction)
+  - [Syntax](#syntax)
+  - [Semantics](#semantics)
+  - [Grammar Induction](#grammar-induction)
+  - [Compositionality](#compositionality)
+- [ML Side](#ml-side)
+  - [Samplig Methods](#samplig-methods)
+  - [Variational Inference, VI](#variational-inference-vi)
+  - [VAEs](#vaes)
+  - [Reparameterization](#reparameterization)
+  - [GANs](#gans)
+  - [Flows](#flows)
+- [Advanced Topics](#advanced-topics)
+  - [Neural Architectures](#neural-architectures)
+    - [RNNs](#rnns)
+    - [Transformers](#transformers)
+    - [Language Model Pretraining](#language-model-pretraining)
+    - [Neural Network Learnability](#neural-network-learnability)
+  - [Optimization](#optimization)
+    - [Gradient Estimation](#gradient-estimation)
+    - [Discrete Structures](#discrete-structures)
+  - [Inference](#inference)
+    - [Efficient Inference](#efficient-inference)
+    - [Posterior Regularization](#posterior-regularization)
+  - [Generalization Thoery](#generalization-thoery)
+  - [Representation](#representation)
+    - [Information Theory](#information-theory)
+    - [Disentanglement and Interpretability](#disentanglement-and-interpretability)
+    - [Invariance](#invariance)
+  - [Analysis and Critics](#analysis-and-critics)
 
 Citation:
 ```
@@ -80,16 +100,18 @@ Citation:
 
 ## Resources 
 
-### DGM Seminars
-
-* ♦︎ Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
-  * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
+* [How to write Variational Inference and Generative Models for NLP: a recipe](https://github.com/FranxYao/Deep-Generative-Models-for-Natural-Language-Processing/blob/master/src/VI4NLP_Recipe.pdf). This is strongly suggested for beginners writing papers about VAEs for NLP.
 
 * A Tutorial on Deep Latent Variable Models of Natural Language ([link](https://arxiv.org/abs/1812.06834)), EMNLP 18 
   * Yoon Kim, Sam Wiseman and Alexander M. Rush, Havard
 
 * Latent Structure Models for NLP. ACL 2019 tutorial [link](https://deep-spin.github.io/tutorial/)
   * André Martinns, Tsvetomila Mihaylova, Nikita Nangia, Vlad Niculae.
+
+### DGM Seminars
+
+* ♦︎ Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+  * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
 
 * Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
 
@@ -160,15 +182,9 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 
 
-### Decoding and Search
+### Decoding and Search, General
 
 * ♦︎♦︎ Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
-
-* Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search. ACL 2017
-  * Chris Hokamp, Qun Liu
-
-* Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation. NAACL 2018 
-  * Matt Post, David Vilar
 
 * The Curious Case of Neural Text Degeneration. ICLR 2020 
   * Ari Holtzman, Jan Buys, Li Du, Maxwell Forbes, Yejin Choi
@@ -179,11 +195,27 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 * Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
   * Wouter Kool, Herke van Hoof, Max Welling
 
+
+
+### Constrained Decoding
+* Lexically Constrained Decoding for Sequence Generation Using Grid Beam Search. ACL 2017
+  * Chris Hokamp, Qun Liu
+
+* Fast Lexically Constrained Decoding with Dynamic Beam Allocation for Neural Machine Translation. NAACL 2018 
+  * Matt Post, David Vilar
+
+* Improved Lexically Constrained Decoding for Translation and Monolingual Rewriting. NAACL 2019
+  * J. Edward Hu, Huda Khayrallah, Ryan Culkin, Patrick Xia, Tongfei Chen, Matt Post, Benjamin Van Durme
+  
+* Towards Decoding as Continuous Optimisation in Neural Machine Translation. EMNLP 2017
+  * Cong Duy Vu Hoang, Gholamreza Haffari and Trevor Cohn. 
+
+* Gradient-guided Unsupervised Lexically Constrained Text Generation. EMNLP 2020
+  * Lei Sha
+
 * Controlled Text Generation as Continuous Optimization with Multiple Constraints. 2021 
   * Sachin Kumar, Eric Malmi, Aliaksei Severyn, Yulia Tsvetkov
 
-* Towards Decoding as Continuous Optimisation in Neural Machine Translation. EMNLP 2017
-  * Cong Duy Vu Hoang, Gholamreza Haffari and Trevor Cohn. 
 
 ### Non-autoregressive Decoding 
 
@@ -195,6 +227,9 @@ Note:  I have not fully gone through this chapter, please give me suggestions!
 * Fully Non-autoregressive Neural Machine Translation: Tricks of the Trade. 
   * Jiatao Gu, Xiang Kong. 
 
+* Fast Decoding in Sequence Models Using Discrete Latent Variables. ICML 2021
+  * Łukasz Kaiser, Aurko Roy, Ashish Vaswani, Niki Parmar, Samy Bengio, Jakob Uszkoreit, Noam Shazeer
+
 * Cascaded Text Generation with Markov Transformers. Arxiv 20
   * Yuntian Deng and Alexander Rush
 
@@ -203,6 +238,15 @@ Note:  I have not fully gone through this chapter, please give me suggestions!
   * This one is now deployed inside Bytedance
 
 
+### Decoding from Pretrained Language Model 
+
+TODO: more about it
+
+* CTRL: A Conditional Transformer Language Model for Controllable Generation. Arxiv 2019
+  * Nitish Shirish Keskar, Bryan McCann, Lav R. Varshney, Caiming Xiong, Richard Socher
+
+* Plug and Play Language Models: a Simple Approach to Controlled Text Generation
+  * Sumanth Dathathri, Andrea Madotto, Janice Lan, Jane Hung, Eric Frank, Piero Molino, Jason Yosinski, Rosanne Liu
 
 ### Structured Prediction
 
@@ -253,6 +297,10 @@ Note:  I have not fully gone through this chapter, please give me suggestions!
 
 * Semantic Parsing with Semi-Supervised Sequential Autoencoders. 2016
   * Tomas Kocisky, Gabor Melis, Edward Grefenstette, Chris Dyer, Wang Ling, Phil Blunsom, Karl Moritz Hermann
+
+### Grammar Induction 
+* Grammar Induction and Unsupervised Learning, paper list. ([link](https://github.com/FranxYao/nlp-fundamental-frontier/blob/main/nlp/grammar_induction.md))
+  * Yao Fu 
 
 ### Compositionality
 
@@ -421,10 +469,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Neural Architectures
 
-* THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
-  * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
-
-* [[Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability)]. Yao Fu
 
 #### RNNs
 
@@ -447,6 +491,15 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Rethinking Attention with Performers. 2020
   * Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song, Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin, Lukasz Kaiser, David Belanger, Lucy Colwell, Adrian Weller
+
+#### Language Model Pretraining
+
+* THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
+  * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
+
+#### Neural Network Learnability
+* [[Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability)]. Yao Fu
+
 
 ### Optimization
 

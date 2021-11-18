@@ -186,6 +186,8 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 * ♦︎♦︎ Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
 
+* Controllabel Neural Text Generation [[Lil'Log](https://lilianweng.github.io/lil-log/2021/01/02/controllable-neural-text-generation.html)]
+
 * The Curious Case of Neural Text Degeneration. ICLR 2020 
   * Ari Holtzman, Jan Buys, Li Du, Maxwell Forbes, Yejin Choi
 

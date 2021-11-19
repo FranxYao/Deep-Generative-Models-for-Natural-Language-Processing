@@ -32,10 +32,9 @@ Let us begin the journey.
 
 Three years after the introduction of this roadmap, the field has developed substentially. We observe the following trend: 
 
-* BERT was introduced at the end of 2018, then language model pretraining becomes the dominate paradigm. 
-* Contrastive learning becomes popular again in 2020, achieving most SOTA results when combined with LM pretraining. 
+* BERT was introduced at the end of 2018, then language model pretraining becomes the dominate paradigm. Contrastive learning becomes popular again in 2020, achieving most SOTA results when combined with LM pretraining. 
 * Robustness becomes more and more important and is discussed in nearly all subareas. Generalization under distributional shift is a core challenge as it directly violates the iid assumption of machine learning. 
-* Interpretability and controllability consistently receive vast interests, and the discussions become more in-depth. 
+* Better understanding and exploitation of pretrained language models becomes central to NLP tasks. Interpretability and controllability consistently receive vast interests, and the discussions become more in-depth. 
 
 To tackle fundamental questions, we study fundamental techniques. We believe the fundamental generative factors and process of human language, being both logical and probabilistic, generalizable and robust to distributional shift, adaptable to  environmental changes, will consistently serve as key ingredients towards artificial general intelligence. 
 

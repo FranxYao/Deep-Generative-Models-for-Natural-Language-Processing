@@ -38,7 +38,6 @@ Let us begin the journey.
 * 2020. GPT3; Contrastive Learning; Robustness
 * 2021. Prompts 
 
-
 ## Table of Content 
 
 ![roadmap](src/roadmap.01.png)

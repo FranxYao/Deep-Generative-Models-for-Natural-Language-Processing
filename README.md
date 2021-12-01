@@ -27,17 +27,17 @@ How to model the generative process of language in a statistically principled wa
 
 Let us begin the journey. 
 
-### Invariant factors across environment and time
-(New thoughts in Nov 2021)
+### chronology
+* 2013. VAE
+* 2014. GAN; Sequence to sequence; Attention
+* 2015. Normalizing Flow
+* 2016. Gumbel-softmax
+* 2017. Transformers
+* 2018. BERT
+* 2019. Probing and Bertology
+* 2020. GPT3; Contrastive Learning; Robustness
+* 2021. Prompts 
 
-Three years after the introduction of this roadmap, the field has developed substentially. We observe the following trend: 
-
-* BERT was introduced at the end of 2018, then language model pretraining becomes the dominate paradigm. 
-* Contrastive learning becomes popular again in 2020, achieving most SOTA results when combined with LM pretraining. 
-* Robustness becomes more and more important and is discussed in nearly all subareas. Generalization under distributional shift is a core challenge as it directly violates the iid assumption of machine learning. 
-* Interpretability and controllability consistently receive vast interests, and the discussions become more in-depth. 
-
-To tackle fundamental questions, we study fundamental techniques. We believe the fundamental generative factors and process of human language, being both logical and probabilistic, generalizable and robust to distributional shift, adaptable to  environmental changes, will consistently serve as key ingredients towards artificial general intelligence. 
 
 ## Table of Content 
 
@@ -45,7 +45,7 @@ To tackle fundamental questions, we study fundamental techniques. We believe the
 
 - [Introduction](#introduction)
   - [Prelude](#prelude)
-  - [Invariant factors across environment and time](#invariant-factors-across-environment-and-time)
+  - [chronology](#chronology)
 - [Table of Content](#table-of-content)
 - [Resources](#resources)
   - [DGM Seminars](#dgm-seminars)
@@ -188,6 +188,9 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 * Controllabel Neural Text Generation [[Lil'Log](https://lilianweng.github.io/lil-log/2021/01/02/controllable-neural-text-generation.html)]
 
+* Best-First Beam Search. TACL 2020
+  * Clara Meister, Tim Vieira, Ryan Cotterell
+
 * The Curious Case of Neural Text Degeneration. ICLR 2020 
   * Ari Holtzman, Jan Buys, Li Du, Maxwell Forbes, Yejin Choi
 
@@ -196,6 +199,9 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 * Stochastic Beams and Where to Find Them: The Gumbel-Top-k Trick for Sampling Sequences Without Replacement. ICML 19
   * Wouter Kool, Herke van Hoof, Max Welling
+
+* Conditional Poisson Stochastic Beam Search. EMNLP 2021
+  * Clara Meister, Afra Amini, Tim Vieira, Ryan Cotterell
 
 
 

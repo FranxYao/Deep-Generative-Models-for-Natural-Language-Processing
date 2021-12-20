@@ -202,6 +202,9 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 * Conditional Poisson Stochastic Beam Search. EMNLP 2021
   * Clara Meister, Afra Amini, Tim Vieira, Ryan Cotterell
 
+* Massive-scale Decoding for Text Generation using Lattices. 2021
+  * Jiacheng Xu and Greg Durrett
+
 
 
 ### Constrained Decoding

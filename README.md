@@ -6,11 +6,13 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
+\*\*Update\*\*: Randomization, Minimizing Expectations
+
 \*\*Update\*\*: Constrained / Conditional / Controllable decoding
 
 \*\*TODO 1\*\*: Constrastive Learning; Prompting
 
-\*\*TODO 2\*\*: Long-range transformers; Matrix Factorization and Word embedding; Non-autoregressive Generation
+\*\*TODO 2\*\*: Long-range transformers; Matrix Factorization and Word embedding
 
 \*\*TODO 3\*\*: Efficient Inference; Kernels; Langevin Dynamics
 
@@ -80,6 +82,7 @@ Let us begin the journey.
   - [Inference](#inference)
     - [Efficient Inference](#efficient-inference)
     - [Posterior Regularization](#posterior-regularization)
+  - [Randomization](#randomization)
   - [Generalization Thoery](#generalization-thoery)
   - [Representation](#representation)
     - [Information Theory](#information-theory)
@@ -109,18 +112,19 @@ Citation:
 
 ### DGM Seminars
 
-* ♦︎ Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
-  * The DGM seminar at Columbia. The first part of this course focuses on VAEs and the second part focuses on GANs. 
+* Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
 
-* Stanford CS 236, Deep Generative Models ([link](https://deepgenerativemodels.github.io/))
+* Stanford CS 236, [Deep Generative Models](https://deepgenerativemodels.github.io/), by Stefano Ermon
 
-* NYU Deep Generative Models ([link](https://cs.nyu.edu/courses/spring18/CSCI-GA.3033-022/))
+* U Toronto CS 2541 [Differentiable Inference and Generative Models](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html), CS 2547 [Learning Discrete Latent Structures](https://duvenaud.github.io/learn-discrete/), CSC 2547 Fall 2019: [Learning to Search](https://duvenaud.github.io/learning-to-search/). By David Duvenaud
 
-* U Toronto [CS 2541](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html) Differentiable Inference and Generative Models, [CS 2547](https://duvenaud.github.io/learn-discrete/) Learning Discrete Latent Structures.  
+* U Toronto STA 4273 Winter 2021: [Minimizing Expectations](https://www.cs.toronto.edu/~cmaddis/courses/sta4273_w21/). By Chris Maddison
 
-* Berkeley [CS294-158](https://sites.google.com/view/berkeley-cs294-158-sp19/home) Deep Unsupervised Learning.
+* Berkeley CS294-158 [Deep Unsupervised Learning]((https://sites.google.com/view/berkeley-cs294-158-sp19/home)). By Pieter Abbeel
 
-* Columbia [STCS 8101](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html) Representation Learning: A Probabilistic Perspective
+* Columbia STCS 8101 [Representation Learning: A Probabilistic Perspective](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html). By David Blei
+
+* Stanford CS324 - [Large Language Models](https://stanford-cs324.github.io/winter2022/). By Percy Liang, Tatsunori Hashimoto and Christopher Re
 
 ### Courses
 
@@ -134,9 +138,9 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
   * 5 modules in total: exact inference, approximate inference, DGMs, reinforcement learning, and non-parameterics. 
   * All the lecture notes, vedio recordings, and homeworks are open-sourced. 
 
-* ♦︎ Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
-  * Many inference methods for structured models are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
-  * Also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
+*  Collins' Natural Language Processing, COMS 4995 at Columbia ([link](http://www.cs.columbia.edu/~mcollins/cs4705-spring2019/))
+   * Many inference methods for structured models are introduced. Also take a look at related notes from [Collins' homepage](http://www.cs.columbia.edu/~mcollins/)
+   * Also checkout [bilibili](https://www.bilibili.com/video/av29608234?from=search&seid=10252913399572988135)
 
 ### Books
 
@@ -164,7 +168,7 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 ### Generation
 
-* ♦︎ Generating Sentences from a Continuous Space, CoNLL 15
+*  Generating Sentences from a Continuous Space, CoNLL 15
   * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
 
 * Neural variational inference for text processing, ICML 16 
@@ -183,7 +187,7 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 ### Decoding and Search, General
 
-* ♦︎♦︎ Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
+*  Fairseq Decoding Library. [[github](https://github.com/pytorch/fairseq/blob/master/fairseq/search.py)]
 
 * Controllabel Neural Text Generation [[Lil'Log](https://lilianweng.github.io/lil-log/2021/01/02/controllable-neural-text-generation.html)]
 
@@ -262,21 +266,21 @@ TODO: more about it
 
 ### Structured Prediction
 
-* ♦︎♦︎ Torch-Struct: Deep Structured Prediction Library
+*  Torch-Struct: Deep Structured Prediction Library
   * Alexander M. Rush. Cornell University 
   * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
   * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
 
-* ♦︎ An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
+*  An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
   * Linear-chain CRFs. Modeling, inference and parameter estimation
 
-* ♦︎ Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
+*  Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
   * The relationships between CRF inference and Autograd. 
 
 * Learning with Fenchel-Young Losses. JMLR 2019 
   * Mathieu Blondel, André F. T. Martins, Vlad Niculae
 
-* ♦︎ Structured Attention Networks. ICLR 2017 
+*  Structured Attention Networks. ICLR 2017 
   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
   * Structured attention w. linear chain and tree crfs. 
 
@@ -331,7 +335,7 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 
 ### Samplig Methods
 
-* ♦︎ Probabilistic inference using Markov chain Monte Carlo methods. 1993 
+*  Probabilistic inference using Markov chain Monte Carlo methods. 1993 
   * Radford M Neal 
   * Markov Chains; Gibbs Sampling; Metropolis-Hastings 
 
@@ -347,17 +351,17 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 * Noise-constrastive estimation: A new estimation principle for unnormalized statistical models. AISTATA 2010 
   * Michael Gutmann, Hyvarinen. University of Helsinki
 
-* ♦︎ A* Sampling. NIPS 2014 Best paper award
+*  A* Sampling. NIPS 2014 Best paper award
   * Chris J. Maddison, Daniel Tarlow, Tom Minka. University of Toronto and MSR
 
 
 
 ### Variational Inference, VI 
 
-* ♦︎ Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
+*  Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
   * Sam Power. University of Cambridge 
 
-* ♦︎ Variational Inference: A Review for Statisticians. 
+*  Variational Inference: A Review for Statisticians. 
   * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
   * Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
 
@@ -372,7 +376,7 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 
 ### VAEs 
 
-* ♦︎ Auto-Encoding Variational Bayes, ICLR 14
+*  Auto-Encoding Variational Bayes, ICLR 14
   * Diederik P. Kingma, Max Welling
 
 * beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework. ICLR 2017
@@ -413,7 +417,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
   * Eric Jang, Shixiang Gu, Ben Poole
 
-* ♦︎ The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
+*  The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
   * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
 * Invertible Gaussian Reparameterization:  Revisiting the Gumbel-Softmax. 2020
@@ -437,7 +441,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Martin Arjovsky and Leon Bottou
   * Discusses the distance between distributions, but uses many hacky methods.
 
-* ♦︎ Wasserstein GAN 
+*  Wasserstein GAN 
   * Martin Arjovsky, Soumith Chintala, Léon Bottou
   * The principled methods, born from hacky methods. 
 
@@ -449,7 +453,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 ### Flows
 
-* ♦︎ Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html) 
+*  Flow Based Deep Generative Models, from [Lil's log](https://lilianweng.github.io/lil-log/2018/10/13/flow-based-deep-generative-models.html) 
 
 * Variational Inference with Normalizing Flows, ICML 15 
   * Danilo Jimenez Rezende, Shakir Mohamed
@@ -517,7 +521,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Gradient Estimation
 
-* ♦︎ Monte Carlo Gradient Estimation in Machine Learning 
+*  Monte Carlo Gradient Estimation in Machine Learning 
   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
 
 * Variational Inference for Monte Carlo Objectives. ICML 16
@@ -526,7 +530,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * REBAR: Low-variance, unbiased gradient estimates for discrete latent variable models. NIPS 17
   * George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
 
-* ♦︎ Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
+*  Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
   
 * Backpropagating through Structured Argmax using a SPIGOT. ACL 2018 Best Paper Honorable Mention. 
@@ -535,7 +539,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Understanding the Mechanics of SPIGOT: Surrogate Gradients for Latent Structure Learning. EMNLP 2020 
   * Tsvetomila Mihaylova, Vlad Niculae, and Andre ́ F. T. Martins
 
-* ♦︎ Randomized Automatic Differentiation. ICLR 2021
+*  Randomized Automatic Differentiation. ICLR 2021
   * Deniz Oktay, Nick McGreivy, Joshua Aduol, Alex Beatson, Ryan P. Adams
 
 
@@ -592,6 +596,25 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Dependency Grammar Induction with a Neural Variational Transition-based Parser. AAAI 2019
   * Bowen Li, Jianpeng Cheng, Yang Liu, Frank Keller
 
+### Randomization 
+* Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. SIAM 2011
+  * Nathan Halko, Per-Gunnar Martinsson, Joel A. Tropp
+
+* Efficient optimization of loops and limits with randomized telescoping sums. ICML 2019
+  * Alex Beatson, Ryan P Adams 
+
+* Telescoping Density-Ratio Estimation. NeurIPS 2020
+  * Benjamin Rhodes, Kai Xu, Michael U. Gutmann
+
+* Bias-Free Scalable Gaussian Processes via Randomized Truncations. ICML 2021
+  * Andres Potapczynski, Luhuan Wu, Dan Biderman, Geoff Pleiss, John P Cunningham 
+
+* Randomized Automatic Differentiation. ICLR 2021
+  * Deniz Oktay, Nick McGreivy, Joshua Aduol, Alex Beatson, Ryan P. Adams
+
+
+
+
 ### Generalization Thoery
 
 * CS229T. Statistical Learning Theory. 2016
@@ -602,9 +625,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Information Theory 
 
-* ♦︎ Elements of Information Theory. Cover and Thomas. 1991 
+*  Elements of Information Theory. Cover and Thomas. 1991 
 
-* ♦︎ On Variational Bounds of Mutual Information. ICML 2019 
+*  On Variational Bounds of Mutual Information. ICML 2019 
   * Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
   * A comprehensive discussion of all these MI variational bounds 
 

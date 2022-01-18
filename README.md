@@ -120,7 +120,7 @@ Citation:
 
 * U Toronto STA 4273 Winter 2021: [Minimizing Expectations](https://www.cs.toronto.edu/~cmaddis/courses/sta4273_w21/). By Chris Maddison
 
-* Berkeley CS294-158 [Deep Unsupervised Learning]((https://sites.google.com/view/berkeley-cs294-158-sp19/home)). By Pieter Abbeel
+* Berkeley CS294-158 [Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp20/home). By Pieter Abbeel
 
 * Columbia STCS 8101 [Representation Learning: A Probabilistic Perspective](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html). By David Blei
 

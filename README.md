@@ -627,9 +627,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Information Theory 
 
-*  Elements of Information Theory. Cover and Thomas. 1991 
+* Elements of Information Theory. Cover and Thomas. 1991 
 
-*  On Variational Bounds of Mutual Information. ICML 2019 
+* On Variational Bounds of Mutual Information. ICML 2019 
   * Ben Poole, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, George Tucker
   * A comprehensive discussion of all these MI variational bounds 
 
@@ -641,7 +641,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * R Devon Hjelm, Alex Fedorov, Samuel Lavoie-Marchildon, Karan Grewal, Phil Bachman, Adam Trischler, Yoshua Bengio
 
 * Deep Variational Information Bottleneck. ICLR 2017 
-* Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
+  * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
 
 
 

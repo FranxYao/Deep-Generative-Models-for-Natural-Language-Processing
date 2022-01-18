@@ -612,6 +612,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Randomized Automatic Differentiation. ICLR 2021
   * Deniz Oktay, Nick McGreivy, Joshua Aduol, Alex Beatson, Ryan P. Adams
 
+* Scaling Structured Inference with Randomization. 2021
+  * Yao Fu, John Cunningham, Mirella Lapata
 
 
 

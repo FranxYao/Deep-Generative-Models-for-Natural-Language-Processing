@@ -494,6 +494,12 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * RNNs can generate bounded hierarchical languages with optimal memory
   * John Hewitt, Michael Hahn, Surya Ganguli, Percy Liang, Christopher D. Manning
 
+* HiPPO: Recurrent Memory with Optimal Polynomial Projections. NeurIPS 2020
+  * Albert Gu, Tri Dao, Stefano Ermon, Atri Rudra, Christopher Ré 
+
+* Efficiently Modeling Long Sequences with Structured State Spaces. 2021
+  * Albert Gu, Karan Goel, and Christopher Ré 
+
 #### Transformers
 
 * Long Range Arena: A Benchmark for Efficient Transformers
@@ -514,7 +520,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
 
 #### Neural Network Learnability
-* [[Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability)]. Yao Fu
+* [Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability). Yao Fu
 
 
 ### Optimization

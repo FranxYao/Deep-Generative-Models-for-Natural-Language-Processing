@@ -511,8 +511,10 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 #### Gradient Estimation
 
+* [Minimizing Expectations](https://www.cs.toronto.edu/~cmaddis/courses/sta4273_w21/). Chris Maddison
+
 *  Monte Carlo Gradient Estimation in Machine Learning 
-  * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
+   * Schakir Mohamed, Mihaela Rosca, Michael Figurnov, Andriy Mnih. DeepMind
 
 * Variational Inference for Monte Carlo Objectives. ICML 16
   * Andriy Mnih,  Danilo J. Rezende. DeepMind
@@ -521,16 +523,13 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * George Tucker, Andriy Mnih, Chris J. Maddison, Dieterich Lawson, Jascha Sohl-Dickstein. Google Brain, DeepMind, Oxford
 
 *  Backpropagation Through the Void: Optimizing Control Variates for Black-box Gradient Estimation. ICLR 18
-  * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
+   * Will Grathwohl, Dami Choi, Yuhuai Wu, Geoffrey Roeder, David Duvenaud. U Toronto and Vector Institute
   
 * Backpropagating through Structured Argmax using a SPIGOT. ACL 2018 Best Paper Honorable Mention. 
   * Hao Peng, Sam Thomson, and Noah A. Smith
   
 * Understanding the Mechanics of SPIGOT: Surrogate Gradients for Latent Structure Learning. EMNLP 2020 
   * Tsvetomila Mihaylova, Vlad Niculae, and Andre ́ F. T. Martins
-
-*  Randomized Automatic Differentiation. ICLR 2021
-  * Deniz Oktay, Nick McGreivy, Joshua Aduol, Alex Beatson, Ryan P. Adams
 
 
 

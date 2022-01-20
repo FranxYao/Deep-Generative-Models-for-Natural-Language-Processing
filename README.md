@@ -266,41 +266,36 @@ TODO: more about it
 
 ### Structured Prediction
 
-*  Torch-Struct: Deep Structured Prediction Library
-  * Alexander M. Rush. Cornell University 
-  * [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
-  * Instantiate different CRFs with different Semirings. The backward part of inference algorithms are implemented with Autograd. Sasha implmented all these stuff alone, including the CUDA codes. 
+*  Torch-Struct: Deep Structured Prediction Library. [github](https://github.com/harvardnlp/pytorch-struct), [paper](https://arxiv.org/abs/2002.00876), [documentation](http://nlp.seas.harvard.edu/pytorch-struct/)
+   * Alexander M. Rush. Cornell University 
 
-*  An introduction to Conditional Random Fields. Charles Sutton and Andrew McCallum. 2012 
-  * Linear-chain CRFs. Modeling, inference and parameter estimation
+*  An introduction to Conditional Random Fields. 2012 
+   *  Charles Sutton and Andrew McCallum. 
 
-*  Inside-Outside and Forward-Backward Algorithms Are Just Backprop. Jason Eisner. 2016. 
-  * The relationships between CRF inference and Autograd. 
 
+*  Inside-Outside and Forward-Backward Algorithms Are Just Backprop. 2016. 
+   *  Jason Eisner
 * Learning with Fenchel-Young Losses. JMLR 2019 
   * Mathieu Blondel, André F. T. Martins, Vlad Niculae
 
 *  Structured Attention Networks. ICLR 2017 
-  * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
-  * Structured attention w. linear chain and tree crfs. 
+   * Yoon Kim, Carl Denton, Luong Hoang, Alexander M. Rush
 
-* Differentiable Dynamic Programming for Structured Prediction and Attention. Arthur Mensch and Mathieu Blondel. ICML 2018 
-  * To differentiate the max operator in dynamic programming. 
+* Differentiable Dynamic Programming for Structured Prediction and Attention. ICML 2018 
+  * Arthur Mensch and Mathieu Blondel.
+
 
 
 ### Syntax
 
 * Recurrent Neural Network Grammars. NAACL 16
   * Chris Dyer, Adhiguna Kuncoro, Miguel Ballesteros, and Noah Smith.
-  * A transaction based generative model to model the joint prob of trees and sentences. 
-  * Inference: use importance sampling to calculate the sentence marginal prob. Use the discriminative model as the proposal dist. 
 
 * Unsupervised Recurrent Neural Network Grammars, NAACL 19 
   * Yoon Kin, Alexander Rush, Lei Yu, Adhiguna Kuncoro, Chris Dyer, and Gabor Melis
 
 * Differentiable Perturb-and-Parse: Semi-Supervised Parsing with a Structured Variational Autoencoder, ICLR 19
   * Caio Corro, Ivan Titov, Edinburgh
-  * Reparameterize the sampling from a CRF by using gumbel perturbation and continuous relexation of Eisner Algo. 
 
 
 ### Semantics
@@ -320,7 +315,8 @@ TODO: more about it
 
 ### Compositionality
 
-NOTE: this direction is currently my major focus. See the new [Compositional Generalization in NLP](https://github.com/FranxYao/CompositionalGeneralizationNLP) page for a more comprehensive reading list. 
+* [Compositional Generalization in NLP](https://github.com/FranxYao/CompositionalGeneralizationNLP). Paper list
+  * Yao Fu
 
 * Generalization without Systematicity: On the Compositional Skills of Sequence-to-Sequence Recurrent Networks. ICML 2019
   * Brenden Lake and Marco Baroni 
@@ -336,8 +332,7 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 ### Samplig Methods
 
 *  Probabilistic inference using Markov chain Monte Carlo methods. 1993 
-  * Radford M Neal 
-  * Markov Chains; Gibbs Sampling; Metropolis-Hastings 
+   * Radford M Neal 
 
 * Elements of Sequential Monte Carlo ([link](https://arxiv.org/abs/1903.04797))
   * Christian A. Naesseth, Fredrik Lindsten, Thomas B. Schön
@@ -352,22 +347,20 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
   * Michael Gutmann, Hyvarinen. University of Helsinki
 
 *  A* Sampling. NIPS 2014 Best paper award
-  * Chris J. Maddison, Daniel Tarlow, Tom Minka. University of Toronto and MSR
+   * Chris J. Maddison, Daniel Tarlow, Tom Minka. University of Toronto and MSR
 
 
 
 ### Variational Inference, VI 
 
 *  Cambridge Variational Inference Reading Group ([link](http://www.statslab.cam.ac.uk/~sp825/vi.html))
-  * Sam Power. University of Cambridge 
+   * Sam Power. University of Cambridge 
 
 *  Variational Inference: A Review for Statisticians. 
-  * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
-  * Mean-field variational family; coordinate ascent algorithm; bayesian mixture of gaussians; VI w. exponential families. 
+   * David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. 
 
 * Stochastic Variational Inference
   * Matthew D. Hoffman, David M. Blei, Chong Wang, John Paisley
-  * Natural gradient of the ELBO; stochastic optimization; bayesian non-parameterics for the hierarchical dirichlet process. 
 
 * Variational Bayesian Inference with Stochastic Search. ICML 12
   * John Paisley, David Blei, Michael Jordan. Berkeley and Princeton 
@@ -377,7 +370,7 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
 ### VAEs 
 
 *  Auto-Encoding Variational Bayes, ICLR 14
-  * Diederik P. Kingma, Max Welling
+   * Diederik P. Kingma, Max Welling
 
 * beta-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework. ICLR 2017
   * Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, Alexander Lerchner
@@ -393,9 +386,7 @@ NOTE: this direction is currently my major focus. See the new [Compositional Gen
   * Yoon Kim, Sam Wiseman, Andrew C. Miller, David Sontag, Alexander M. Rush, Havard
 
 * Adversarially Regularized Autoencoders, ICML 18 
-  * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. NYU, Havard, FAIR
-  * A wrapup of the major VAE/ GANs 
-  * The presentation of [this paper](src/annotated_arae.pdf) at the Columbia DGM seminar course. 
+  * Jake (Junbo) Zhao, Yoon Kim, Kelly Zhang, Alexander M. Rush, Yann LeCun. 
 
 
 
@@ -405,20 +396,18 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Stochastic Backpropagation through Mixture Density Distributions, Arxiv 16
   * Alex Graves
-  * To reparameterize Gaussian Mixture 
 
 * Reparameterization Gradients through Acceptance-Rejection Sampling Algorithms. AISTATS 2017 
   * Christian A. Naesseth, Francisco J. R. Ruiz, Scott W. Linderman, David M. Blei
 
 * Implicit Reparameterization Gradients. NeurIPS 2018. 
   * Michael Figurnov, Shakir Mohamed, and Andriy Mnih
-  * Really smart way to reparameterize many complex distributions.
 
 * Categorical Reparameterization with Gumbel-Softmax. ICLR 2017 
   * Eric Jang, Shixiang Gu, Ben Poole
 
 *  The Concrete Distribution: A Continuous Relaxation of Discrete Random Variables. ICLR 2017 
-  * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
+   * Chris J. Maddison, Andriy Mnih, and Yee Whye Teh
 
 * Invertible Gaussian Reparameterization:  Revisiting the Gumbel-Softmax. 2020
   *  Andres Potapczynski, Gabriel Loaiza-Ganem, John P. Cunningham 
@@ -434,20 +423,15 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Generative Adversarial Networks, NIPS 14
   * Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio
-  * GAN origin 
-  * This original GAN paper use the KL divergence to measure the distance between probability distributions, which may lead to the vanishing of gradient. To tackle this problem, the wassertein GAN is proposed with the earch mover distance. The following two papers shows the birth of wGAN.
 
 * Towards principled methods for training generative adversarial networks, ICLR 2017 
   * Martin Arjovsky and Leon Bottou
-  * Discusses the distance between distributions, but uses many hacky methods.
 
 *  Wasserstein GAN 
-  * Martin Arjovsky, Soumith Chintala, Léon Bottou
-  * The principled methods, born from hacky methods. 
+   * Martin Arjovsky, Soumith Chintala, Léon Bottou
 
 * InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets. NIPS 2016
   * Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel. UC Berkeley. OpenAI
-  * Variational mutual information maximization; unsupervised disentangled representation learning. 
 
 
 
@@ -657,10 +641,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Identifying Bayesian Mixture Models 
   * Michael Betancourt
-  * The source of non-identifiability is symmetry and exchangability in both prior and conditional.
-  * Two ways of breaking the symmetry:
-    * Ordering of the mixture component
-    * non-exchangeable prior 
 
 * Disentangling Disentanglement in Variational Autoencoders. ICML 2019 
   * Emile Mathieu, Tom Rainforth, N. Siddharth, Yee Whye Teh

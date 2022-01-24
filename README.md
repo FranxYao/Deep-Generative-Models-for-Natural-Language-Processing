@@ -10,11 +10,13 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: Constrained / Conditional / Controllable decoding
 
-\*\*TODO 1\*\*: Constrastive Learning; Prompting
+\*\*TODO 1\*\*: Diffusion models; Relationship between inference and RL
 
-\*\*TODO 2\*\*: Long-range transformers; Matrix Factorization and Word embedding
+\*\*TODO 2\*\*: Constrastive Learning; Prompting
 
-\*\*TODO 3\*\*: Efficient Inference; Kernels; Langevin Dynamics
+\*\*TODO 3\*\*: Long-range transformers; Matrix Factorization and Word embedding
+
+\*\*TODO 4\*\*: Efficient Inference; Kernels
 
 ----
 ## Introduction 
@@ -169,7 +171,7 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 ### Generation
 
 *  Generating Sentences from a Continuous Space, CoNLL 15
-  * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
+   * Samuel R. Bowman, Luke Vilnis, Oriol Vinyals, Andrew M. Dai, Rafal Jozefowicz, Samy Bengio
 
 * Neural variational inference for text processing, ICML 16 
   * Yishu Miao, Lei Yu, Phil Blunsom, Deepmind

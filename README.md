@@ -72,6 +72,7 @@ Let us begin the journey.
   - [Reparameterization](#reparameterization)
   - [GANs](#gans)
   - [Flows](#flows)
+  - [Diffusion Models](#diffusion-models)
 - [Advanced Topics](#advanced-topics)
   - [Neural Architectures](#neural-architectures)
     - [RNNs](#rnns)
@@ -464,6 +465,14 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * On the Sentence Embeddings from Pre-trained Language Models. EMNLP 2020 
   * Bohan Li, Hao Zhou, Junxian He, Mingxuan Wang, Yiming Yang, Lei Li
+
+### Diffusion Models 
+
+* [What are Diffusion Models?](https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html) 2021
+  * Lilian Weng
+
+* [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.github.io/blog/2021/score/). 2021
+  * Yang Song
 
 
 ----

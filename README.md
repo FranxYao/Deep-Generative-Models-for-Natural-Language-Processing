@@ -6,9 +6,9 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: Randomization, Minimizing Expectations
+\*\*Update\*\*: Long-range Dependency; [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
-\*\*Update\*\*: Constrained / Conditional / Controllable decoding
+\*\*Update\*\*: Randomization; Minimizing Expectations
 
 \*\*TODO 1\*\*: Diffusion models; Relationship between inference and RL
 
@@ -79,6 +79,7 @@ Let us begin the journey.
     - [Transformers](#transformers)
     - [Language Model Pretraining](#language-model-pretraining)
     - [Neural Network Learnability](#neural-network-learnability)
+    - [Long-range Dependency](#long-range-dependency)
   - [Optimization](#optimization)
     - [Gradient Estimation](#gradient-estimation)
     - [Discrete Structures](#discrete-structures)
@@ -489,16 +490,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * RNNs can generate bounded hierarchical languages with optimal memory
   * John Hewitt, Michael Hahn, Surya Ganguli, Percy Liang, Christopher D. Manning
 
-* HiPPO: Recurrent Memory with Optimal Polynomial Projections. NeurIPS 2020
-  * Albert Gu, Tri Dao, Stefano Ermon, Atri Rudra, Christopher Ré 
-
-* Efficiently Modeling Long Sequences with Structured State Spaces. 2021
-  * Albert Gu, Karan Goel, and Christopher Ré 
-
 #### Transformers
-
-* Long Range Arena: A Benchmark for Efficient Transformers
-  * Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
 
 * Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned. ACL 2019
   * Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, Ivan Titov
@@ -517,6 +509,23 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 #### Neural Network Learnability
 * [Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability). Yao Fu
 
+
+#### Long-range Dependency 
+
+* Long Range Arena: A Benchmark for Efficient Transformers
+  * Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
+
+* HiPPO: Recurrent Memory with Optimal Polynomial Projections. NeurIPS 2020
+  * Albert Gu, Tri Dao, Stefano Ermon, Atri Rudra, Christopher Ré 
+  
+* Combining Recurrent, Convolutional, and Continuous-time Models with the Linear State Space Layer. NeurIPS 2021
+  * Albert Gu, Isys Johnson, Karan Goel, Khaled Saab, Tri Dao, Atri Rudra, Christopher Ré
+
+* Efficiently Modeling Long Sequences with Structured State Spaces. ICLR 2022
+  * Albert Gu, Karan Goel, and Christopher Ré 
+
+* [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation.](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f) 2022
+  * Yao Fu
 
 ### Optimization
 

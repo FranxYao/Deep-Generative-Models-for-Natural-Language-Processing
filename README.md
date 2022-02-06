@@ -116,19 +116,21 @@ Citation:
 
 ### DGM Seminars
 
-* Columbia STAT 8201, [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
+* Columbia STAT 8201 - [Deep Generative Models](http://stat.columbia.edu/~cunningham/teaching/GR8201/), by [John Cunningham](https://stat.columbia.edu/~cunningham/)
 
-* Stanford CS 236, [Deep Generative Models](https://deepgenerativemodels.github.io/), by Stefano Ermon
+* Stanford CS 236 - [Deep Generative Models](https://deepgenerativemodels.github.io/), by Stefano Ermon
 
-* U Toronto CS 2541 [Differentiable Inference and Generative Models](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html), CS 2547 [Learning Discrete Latent Structures](https://duvenaud.github.io/learn-discrete/), CSC 2547 Fall 2019: [Learning to Search](https://duvenaud.github.io/learning-to-search/). By David Duvenaud
+* U Toronto CS 2541 - [Differentiable Inference and Generative Models](https://www.cs.toronto.edu/~duvenaud/courses/csc2541/index.html), CS 2547 [Learning Discrete Latent Structures](https://duvenaud.github.io/learn-discrete/), CSC 2547 Fall 2019: [Learning to Search](https://duvenaud.github.io/learning-to-search/). By David Duvenaud
 
-* U Toronto STA 4273 Winter 2021: [Minimizing Expectations](https://www.cs.toronto.edu/~cmaddis/courses/sta4273_w21/). By Chris Maddison
+* U Toronto STA 4273 Winter 2021 - [Minimizing Expectations](https://www.cs.toronto.edu/~cmaddis/courses/sta4273_w21/). By Chris Maddison
 
-* Berkeley CS294-158 [Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp20/home). By Pieter Abbeel
+* Berkeley CS294-158 - [Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp20/home). By Pieter Abbeel
 
-* Columbia STCS 8101 [Representation Learning: A Probabilistic Perspective](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html). By David Blei
+* Columbia STCS 8101 - [Representation Learning: A Probabilistic Perspective](http://www.cs.columbia.edu/~blei/seminar/2020-representation/index.html). By David Blei
 
 * Stanford CS324 - [Large Language Models](https://stanford-cs324.github.io/winter2022/). By Percy Liang, Tatsunori Hashimoto and Christopher Re
+
+* U Toronto CSC2541 - [Neural Net Training Dynamics](https://www.cs.toronto.edu/~rgrosse/courses/csc2541_2021/). By Roger Grosse. 
 
 ### Courses
 

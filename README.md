@@ -437,7 +437,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets. NIPS 2016
   * Xi Chen, Yan Duan, Rein Houthooft, John Schulman, Ilya Sutskever, Pieter Abbeel. UC Berkeley. OpenAI
 
-
+* Adversarially Learned Inference. ICLR 2017
+  * Vincent Dumoulin, Ishmael Belghazi, Ben Poole, Olivier Mastropietro, Alex Lamb, Martin Arjovsky, Aaron Courville
 
 ### Flows
 
@@ -446,20 +447,26 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Variational Inference with Normalizing Flows, ICML 15 
   * Danilo Jimenez Rezende, Shakir Mohamed
 
+* Learning About Language with Normalizing Flows 
+  * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+
 * Improved Variational Inference with Inverse Autoregressive Flow
   * Diederik P Kingma, Tim Salimans, Rafal Jozefowicz, Xi Chen, Ilya Sutskever, Max Welling
 
 * Density estimation using Real NVP. ICLR 17 
   * Laurent Dinh, Jascha Sohl-Dickstein, Samy Bengio
 
-* Learning About Language with Normalizing Flows 
-  * Graham Neubig, CMU, [slides](http://www.phontron.com/slides/neubig19generative.pdf)
+* Unsupervised Learning of Syntactic Structure with Invertible Neural Projections. EMNLP 2018
+  * Junxian He, Graham Neubig, Taylor Berg-Kirkpatrick
 
 * Latent Normalizing Flows for Discrete Sequences. ICML 2019. 
   * Zachary M. Ziegler and Alexander M. Rush
 
 * Discrete Flows: Invertible Generative Models of Discrete Data. 2019 
   * Dustin Tran, Keyon Vafa, Kumar Krishna Agrawal, Laurent Dinh, Ben Poole
+
+* FlowSeq: Non-Autoregressive Conditional Sequence Generation with Generative Flow. EMNLP 2019
+  * Xuezhe Ma, Chunting Zhou, Xian Li, Graham Neubig, Eduard Hovy
 
 * Variational Neural Machine Translation with Normalizing Flows. ACL 2020 
   * Hendra Setiawan, Matthias Sperber, Udhay Nallasamy, Matthias Paulik. Apple 
@@ -711,6 +718,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * A statistical theory of cold posteriors in deep neural networks. ICLR 2021 
   * Laurence Aitchison
 
-
-
+* Limitations of Autoregressive Models and Their Alternatives. NAACL 2021
+  * Chu-Cheng Lin, Aaron Jaech, Xin Li, Matthew R. Gormley, Jason Eisner
 

@@ -515,6 +515,8 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * THUNLP: Pre-trained Languge Model paper list ([link](https://github.com/thunlp/PLMpapers))
   * Xiaozhi Wang and Zhengyan Zhang, Tsinghua University 
 
+* Tomohide Shibata's [BERT-related Papers](https://github.com/tomohideshibata/BERT-related-papers)
+
 #### Neural Network Learnability
 * [Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability). Yao Fu
 

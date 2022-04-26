@@ -485,6 +485,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Yang Song
 
 * [Awesome-Diffusion-Models](https://github.com/heejkoo/Awesome-Diffusion-Models)
+  * Heejoon Koo
 
 ----
 ## Advanced Topics

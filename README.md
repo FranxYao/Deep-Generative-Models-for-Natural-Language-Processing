@@ -484,6 +484,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.github.io/blog/2021/score/). 2021
   * Yang Song
 
+* [Awesome-Diffusion-Models](https://github.com/heejkoo/Awesome-Diffusion-Models)
 
 ----
 ## Advanced Topics
@@ -617,6 +618,10 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
   * Bowen Li, Jianpeng Cheng, Yang Liu, Frank Keller
 
 ### Randomization 
+
+* Random Features for Large-Scale Kernel Machines. NeurIPS 2007
+  * Ali Rahimi, Benjamin Recht
+
 * Finding structure with randomness: Probabilistic algorithms for constructing approximate matrix decompositions. SIAM 2011
   * Nathan Halko, Per-Gunnar Martinsson, Joel A. Tropp
 

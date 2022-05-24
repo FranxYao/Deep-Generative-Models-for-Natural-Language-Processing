@@ -6,9 +6,9 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
+\*\*Update\*\*: [Geometry](#Geometry)
 
-\*\*Update\*\*: Geometry
+\*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
 \*\*TODO 1\*\*: Diffusion models; Relationship between inference and RL
 

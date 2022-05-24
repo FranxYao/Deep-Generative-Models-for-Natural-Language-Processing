@@ -8,7 +8,7 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
-\*\*Update\*\*: Randomization; Minimizing Expectations
+\*\*Update\*\*: Geometry
 
 \*\*TODO 1\*\*: Diffusion models; Relationship between inference and RL
 
@@ -86,6 +86,7 @@ Let us begin the journey.
   - [Inference](#inference)
     - [Efficient Inference](#efficient-inference)
     - [Posterior Regularization](#posterior-regularization)
+  - [Geometry](#geometry)
   - [Randomization](#randomization)
   - [Generalization Thoery](#generalization-thoery)
   - [Representation](#representation)
@@ -617,6 +618,24 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Dependency Grammar Induction with a Neural Variational Transition-based Parser. AAAI 2019
   * Bowen Li, Jianpeng Cheng, Yang Liu, Frank Keller
+
+
+### Geometry
+
+* (In Chinese) 微分几何与拓扑学简明教程
+  * 米先珂，福明珂
+
+* Only Bayes Should Learn a Manifold (On the Estimation of Differential Geometric Structure from Data). Arxiv 2018
+  * Soren Hauberg
+
+* The Riemannian Geometry of Deep Generative Models. CVPRW 2018
+  * Hang Shao, Abhishek Kumar, P. Thomas Fletcher
+
+* The Geometry of Deep Generative Image Models and Its Applications. ICLR 2021
+  * Binxu Wang and Carlos R. Ponce
+
+* Metrics for Deep Generative Models. AISTATS 2017
+  * Nutan Chen, Alexej Klushyn, Richard Kurle, Xueyan Jiang, Justin Bayer, Patrick van der Smagt
 
 ### Randomization 
 

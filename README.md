@@ -36,7 +36,7 @@ Let us begin the journey.
 * 2014: GAN; Sequence to sequence; Attention Mechanism
 * 2015: Normalizing Flow
 * 2016: Gumbel-softmax; Google's Neural Machine Translation System (GNMT)
-* 2017: Transformers, ELMo
+* 2017: Transformers; ELMo
 * 2018: BERT
 * 2019: Probing and Bertology; GPT2
 * 2020: GPT3; Contrastive Learning; Compositional Generalization

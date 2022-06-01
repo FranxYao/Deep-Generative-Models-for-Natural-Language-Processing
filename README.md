@@ -33,14 +33,14 @@ Let us begin the journey.
 
 ### chronology
 * 2013: VAE
-* 2014: GAN; Sequence to sequence; Attention
+* 2014: GAN; Sequence to sequence; Attention Mechanism
 * 2015: Normalizing Flow
-* 2016: Gumbel-softmax
-* 2017: Transformers
+* 2016: Gumbel-softmax; Google's Neural Machine Translation System (GNMT)
+* 2017: Transformers; ELMo
 * 2018: BERT
-* 2019: Probing and Bertology
-* 2020: GPT3; Contrastive Learning; Robustness
-* 2021: Prompts 
+* 2019: Probing and Bertology; GPT2
+* 2020: GPT3; Contrastive Learning; Compositional Generalization
+* 2021: Prompting; Score-based Generative Models; Difussion Models 
 
 ## Table of Content 
 

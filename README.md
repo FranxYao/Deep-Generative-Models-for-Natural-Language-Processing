@@ -6,11 +6,11 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: [Geometry](#Geometry)
+\*\*Update\*\*: [Geometry](#Geometry), [Difussion models](#diffusion-models-score-based-generative-models)
 
 \*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
-\*\*TODO 1\*\*: Diffusion models; Relationship between inference and RL
+\*\*TODO 1\*\*: Relationship between inference and RL
 
 \*\*TODO 2\*\*: Constrastive Learning; Prompting
 
@@ -72,7 +72,7 @@ Let us begin the journey.
   - [Reparameterization](#reparameterization)
   - [GANs](#gans)
   - [Flows](#flows)
-  - [Diffusion Models](#diffusion-models)
+  - [Diffusion Models/ Score-based Generative Models](#diffusion-models-score-based-generative-models)
 - [Advanced Topics](#advanced-topics)
   - [Neural Architectures](#neural-architectures)
     - [RNNs](#rnns)
@@ -477,7 +477,7 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * On the Sentence Embeddings from Pre-trained Language Models. EMNLP 2020 
   * Bohan Li, Hao Zhou, Junxian He, Mingxuan Wang, Yiming Yang, Lei Li
 
-### Diffusion Models 
+### Diffusion Models/ Score-based Generative Models 
 
 * [What are Diffusion Models?](https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html) 2021
   * Lilian Weng
@@ -487,6 +487,19 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * [Awesome-Diffusion-Models](https://github.com/heejkoo/Awesome-Diffusion-Models)
   * Heejoon Koo
+
+* [Score Based Generative Modeling Papers](https://scorebasedgenerativemodeling.github.io/)
+  * researchers at the University of Oxford
+
+* [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](). 2022
+  * Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily Denton, Seyed Kamyar Seyed Ghasemipour, Burcu Karagol Ayan, S. Sara Mahdavi, Rapha Gontijo Lopes, Tim Salimans, Jonathan Ho, David J Fleet, Mohammad Norouzi
+
+* [Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions](https://arxiv.org/abs/2102.05379). NeurIPS 2021
+  * Emiel Hoogeboom, Didrik Nielsen, Priyank Jaini, Patrick Forré, Max Welling
+
+* [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217) 2022
+  * Xiang Lisa Li, John Thickstun, Ishaan Gulrajani, Percy Liang, Tatsunori B. Hashimoto
+
 
 ----
 ## Advanced Topics

@@ -34,13 +34,13 @@ Let us begin the journey.
 ### chronology
 * 2013: VAE
 * 2014: GAN; Sequence to sequence; Attention Mechanism
-* 2015: Normalizing Flow
+* 2015: Normalizing Flow; Difussion Models 
 * 2016: Gumbel-softmax; Google's Neural Machine Translation System (GNMT)
 * 2017: Transformers; ELMo
 * 2018: BERT
 * 2019: Probing and Bertology; GPT2
 * 2020: GPT3; Contrastive Learning; Compositional Generalization
-* 2021: Prompting; Score-based Generative Models; Difussion Models 
+* 2021: Prompting; Score-based Generative Models; 
 
 ## Table of Content 
 
@@ -72,7 +72,8 @@ Let us begin the journey.
   - [Reparameterization](#reparameterization)
   - [GANs](#gans)
   - [Flows](#flows)
-  - [Diffusion Models/ Score-based Generative Models](#diffusion-models-score-based-generative-models)
+  - [Score-based Generative Models](#score-based-generative-models)
+  - [Diffusion Models](#diffusion-models)
 - [Advanced Topics](#advanced-topics)
   - [Neural Architectures](#neural-architectures)
     - [RNNs](#rnns)
@@ -236,6 +237,15 @@ The fundation of the DGMs is built upon probabilistic graphical models. So we ta
 
 * Controlled Text Generation as Continuous Optimization with Multiple Constraints. 2021 
   * Sachin Kumar, Eric Malmi, Aliaksei Severyn, Yulia Tsvetkov
+
+* NeuroLogic Decoding: (Un)supervised Neural Text Generation with Predicate Logic Constraints. NAACL 2021
+  * Ximing Lu, Peter West, Rowan Zellers, Ronan Le Bras, Chandra Bhagavatula, Yejin Choi
+
+* NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics. 2021
+  * Ximing Lu, Sean Welleck, Peter West, Liwei Jiang, Jungo Kasai, Daniel Khashabi, Ronan Le Bras, Lianhui Qin, Youngjae Yu, Rowan Zellers, Noah A. Smith, Yejin Choi
+
+* COLD Decoding: Energy-based Constrained Text Generation with Langevin Dynamics. 2022
+  * Lianhui Qin, Sean Welleck, Daniel Khashabi, Yejin Choi
 
 
 ### Non-autoregressive Decoding 
@@ -477,29 +487,46 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * On the Sentence Embeddings from Pre-trained Language Models. EMNLP 2020 
   * Bohan Li, Hao Zhou, Junxian He, Mingxuan Wang, Yiming Yang, Lei Li
 
-### Diffusion Models/ Score-based Generative Models 
+### Score-based Generative Models
+> FY: Need to see how score-based generative models and diffusion models can be used for discrete sequences
 
-* [What are Diffusion Models?](https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html) 2021
-  * Lilian Weng
-
-* [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.github.io/blog/2021/score/). 2021
+* [Generative Modeling by Estimating Gradients of the Data Distribution](https://yang-song.github.io/blog/2021/score/). Blog 2021
   * Yang Song
-
-* [Awesome-Diffusion-Models](https://github.com/heejkoo/Awesome-Diffusion-Models)
-  * Heejoon Koo
 
 * [Score Based Generative Modeling Papers](https://scorebasedgenerativemodeling.github.io/)
   * researchers at the University of Oxford
 
-* [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](). 2022
-  * Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily Denton, Seyed Kamyar Seyed Ghasemipour, Burcu Karagol Ayan, S. Sara Mahdavi, Rapha Gontijo Lopes, Tim Salimans, Jonathan Ho, David J Fleet, Mohammad Norouzi
+* [Generative Modeling by Estimating Gradients of the Data Distribution](https://arxiv.org/abs/1907.05600). NeurIPS 2019
+  * Yang Song, Stefano Ermon
+
+### Diffusion Models
+
+* [What are Diffusion Models?](https://lilianweng.github.io/lil-log/2021/07/11/diffusion-models.html) 2021
+  * Lilian Weng
+
+* [Awesome-Diffusion-Models](https://github.com/heejkoo/Awesome-Diffusion-Models)
+  * Heejoon Koo
+
+* [Deep Unsupervised Learning using Nonequilibrium Thermodynamics](https://arxiv.org/abs/1503.03585). 2015
+  * Jascha Sohl-Dickstein, Eric A. Weiss, Niru Maheswaranathan, Surya Ganguli
+
+* [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239). NeurIPS 2020
+  * Jonathan Ho, Ajay Jain, Pieter Abbeel
 
 * [Argmax Flows and Multinomial Diffusion: Learning Categorical Distributions](https://arxiv.org/abs/2102.05379). NeurIPS 2021
   * Emiel Hoogeboom, Didrik Nielsen, Priyank Jaini, Patrick Forré, Max Welling
 
-* [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217) 2022
+*  [Structured Denoising Diffusion Models in Discrete State-Spaces](https://arxiv.org/abs/2107.03006). NeurIPS 2021
+   *  Jacob Austin, Daniel D. Johnson, Jonathan Ho, Daniel Tarlow, Rianne van den Berg
+
+* [Autoregressive Diffusion Models](https://arxiv.org/abs/2110.02037). ICLR 2022
+  * Emiel Hoogeboom, Alexey A. Gritsenko, Jasmijn Bastings, Ben Poole, Rianne van den Berg, Tim Salimans
+
+* [Diffusion-LM Improves Controllable Text Generation](https://arxiv.org/abs/2205.14217). 2022
   * Xiang Lisa Li, John Thickstun, Ishaan Gulrajani, Percy Liang, Tatsunori B. Hashimoto
 
+* [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](). 2022
+  * Chitwan Saharia, William Chan, Saurabh Saxena, Lala Li, Jay Whang, Emily Denton, Seyed Kamyar Seyed Ghasemipour, Burcu Karagol Ayan, S. Sara Mahdavi, Rapha Gontijo Lopes, Tim Salimans, Jonathan Ho, David J Fleet, Mohammad Norouzi
 
 ----
 ## Advanced Topics
@@ -650,6 +677,9 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Metrics for Deep Generative Models. AISTATS 2017
   * Nutan Chen, Alexej Klushyn, Richard Kurle, Xueyan Jiang, Justin Bayer, Patrick van der Smagt
 
+* First-Order Algorithms for Min-Max Optimization in Geodesic Metric Spaces. 2022
+  * Michael I. Jordan, Tianyi Lin, Emmanouil V. Vlatakis-Gkaragkounis
+
 ### Randomization 
 
 * Random Features for Large-Scale Kernel Machines. NeurIPS 2007
@@ -700,8 +730,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * Deep Variational Information Bottleneck. ICLR 2017 
   * Alexander A. Alemi, Ian Fischer, Joshua V. Dillon, Kevin Murphy. Google Research 
-
-
 
 
 

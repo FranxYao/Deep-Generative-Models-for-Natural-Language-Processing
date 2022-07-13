@@ -10,13 +10,13 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
-\*\*TODO 1\*\*: Relationship between inference and RL
+\*\*TODO 1\*\*: Long-range transformers; State-space Models
 
-\*\*TODO 2\*\*: Constrastive Learning; Prompting
+\*\*TODO 2\*\*: Matrix Factorization and Word embedding; Kernels; Gaussian Process
 
-\*\*TODO 3\*\*: Long-range transformers; Matrix Factorization and Word embedding
+\*\*TODO 3\*\*: Relationship between inference and RL; Prompting
 
-\*\*TODO 4\*\*: Efficient Inference; Kernels
+
 
 ----
 ## Introduction 
@@ -39,8 +39,9 @@ Let us begin the journey.
 * 2017: Transformers; ELMo
 * 2018: BERT
 * 2019: Probing and Bertology; GPT2
-* 2020: GPT3; Contrastive Learning; Compositional Generalization
+* 2020: GPT3; Contrastive Learning; Compositional Generalization; Diffusion Models
 * 2021: Prompting; Score-based Generative Models; 
+* 2022: State-spece Models
 
 ## Table of Content 
 
@@ -80,7 +81,8 @@ Let us begin the journey.
     - [Transformers](#transformers)
     - [Language Model Pretraining](#language-model-pretraining)
     - [Neural Network Learnability](#neural-network-learnability)
-    - [Long-range Dependency](#long-range-dependency)
+    - [Long-range Transformers](#long-range-transformers)
+    - [State-Spece Models](#state-spece-models)
   - [Optimization](#optimization)
     - [Gradient Estimation](#gradient-estimation)
     - [Discrete Structures](#discrete-structures)
@@ -564,10 +566,13 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * [Neural Network Learnability](https://github.com/FranxYao/Semantics-and-Compositional-Generalization-in-Natural-Language-Processing#neural-network-learnability). Yao Fu
 
 
-#### Long-range Dependency 
+#### Long-range Transformers 
 
 * Long Range Arena: A Benchmark for Efficient Transformers
   * Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
+
+
+#### State-Spece Models
 
 * HiPPO: Recurrent Memory with Optimal Polynomial Projections. NeurIPS 2020
   * Albert Gu, Tri Dao, Stefano Ermon, Atri Rudra, Christopher Ré 

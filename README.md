@@ -6,7 +6,7 @@ DGMs 4 NLP. Deep Generative Models for Natural Language Processing. A Roadmap.
 
 Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
-\*\*Update\*\*: [Geometry](#Geometry), [Difussion models](#diffusion-models)
+\*\*Update\*\*: [Large Languge Models](#large-language-models)
 
 \*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
@@ -83,6 +83,10 @@ Let us begin the journey.
     - [Neural Network Learnability](#neural-network-learnability)
     - [Long-range Transformers](#long-range-transformers)
     - [State-Spece Models](#state-spece-models)
+  - [Large Language Models](#large-language-models)
+    - [Solutions and Frameworks for Running Large Language Models](#solutions-and-frameworks-for-running-large-language-models)
+    - [List of Large Language Models](#list-of-large-language-models)
+    - [Emergent Abilities](#emergent-abilities)
   - [Optimization](#optimization)
     - [Gradient Estimation](#gradient-estimation)
     - [Discrete Structures](#discrete-structures)
@@ -571,7 +575,6 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 * Long Range Arena: A Benchmark for Efficient Transformers
   * Yi Tay, Mostafa Dehghani, Samira Abnar, Yikang Shen, Dara Bahri, Philip Pham, Jinfeng Rao, Liu Yang, Sebastian Ruder, Donald Metzler
 
-
 #### State-Spece Models
 
 * HiPPO: Recurrent Memory with Optimal Polynomial Projections. NeurIPS 2020
@@ -585,6 +588,38 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation.](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f) 2022
   * Yao Fu
+
+
+### Large Language Models 
+
+#### Solutions and Frameworks for Running Large Language Models
+
+* Serving OPT-175B using Alpa (350 GB GPU memory in total) [link](https://alpa.ai/tutorials/opt_serving.html)
+
+#### List of Large Language Models 
+
+* GPT3 (175B). Language Models are Few-Shot Learners. May 2020
+
+* Megatron-Turing NLG (530B). Using DeepSpeed and Megatron to Train Megatron-Turing NLG 530B, A Large-Scale Generative Language Model. Jan 2022
+
+* LaMDA (137B). LaMDA: Language Models for Dialog Applications. Jan 2022
+
+* Gopher (280B). Scaling Language Models: Methods, Analysis & Insights from Training Gopher. Dec 2021
+
+* Chinchilla (70B). Training Compute-Optimal Large Language Models. Mar 2022
+
+* PaLM (540B). PaLM: Scaling Language Modeling with Pathways. Apr 2022
+
+* OPT (175B). OPT: Open Pre-trained Transformer Language Models. May 2022 
+
+#### Emergent Abilities
+
+* Scaling Laws for Neural Language Models. 2020
+  * Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei
+
+* Emergent Abilities of Large Language Models. 2022
+  * Jason Wei, Yi Tay, Rishi Bommasani, Colin Raffel, Barret Zoph, Sebastian Borgeaud, Dani Yogatama, Maarten Bosma, Denny Zhou, Donald Metzler, Ed H. Chi, Tatsunori Hashimoto, Oriol Vinyals, Percy Liang, Jeff Dean, William Fedus.
+
 
 ### Optimization
 

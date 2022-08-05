@@ -10,11 +10,11 @@ Yao Fu, University of Edinburgh, yao.fu@ed.ac.uk
 
 \*\*Update\*\*: [Long-range Dependency](#long-range-dependency); [Why S4 is Good at Long Sequence: Remembering a Sequence with Online Function Approximation](https://yaofu.notion.site/Why-S4-is-Good-at-Long-Sequence-Remembering-a-Sequence-with-Online-Function-Approximation-836fc54a49aa413b84997a265132f13f)
 
-\*\*TODO 1\*\*: Long-range transformers; State-space Models
+\*\*TODO 1\*\*: Calibration; Prompting; Long-range transformers; State-space Models
 
 \*\*TODO 2\*\*: Matrix Factorization and Word embedding; Kernels; Gaussian Process
 
-\*\*TODO 3\*\*: Relationship between inference and RL; Prompting
+\*\*TODO 3\*\*: Relationship between inference and RL; 
 
 
 

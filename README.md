@@ -612,6 +612,12 @@ More on reparameterization: to reparameterize gaussian mixture, permutation matr
 
 * OPT (175B). OPT: Open Pre-trained Transformer Language Models. May 2022 
 
+* BLOOM (176B): BigScience Large Open-science Open-access Multilingual Language Model. May 2022
+
+* BlenderBot 3 (175B): a deployed conversational agent that continually learns to responsibly engage. Aug 2022
+  
+
+
 #### Emergent Abilities
 
 * Scaling Laws for Neural Language Models. 2020
